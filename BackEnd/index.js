@@ -10,6 +10,7 @@ require("dotenv").config();
 
 const app = express();
 
+
 // =====================================================
 // PORT
 // =====================================================
@@ -37,31 +38,48 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 
 // =====================================================
-// BASIC MIDDLEWARE
-// =====================================================
-
-app.use(express.json());
-
-app.use(cookieParser());
-
-
-// =====================================================
 // CORS
 // =====================================================
 
-// Local frontend:
+// Local React frontend
 // http://localhost:5173
 //
-// Production frontend:
-// https://your-project.vercel.app
+// Production React frontend
+// https://moviestream-two-iota.vercel.app
 
-const allowedOrigin =
-    process.env.FRONTEND_URL || "http://localhost:5173";
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://moviestream-two-iota.vercel.app"
+];
+
+
+// =====================================================
+// CORS MIDDLEWARE
+// =====================================================
 
 app.use(
     cors({
-        origin: allowedOrigin,
+        origin: function (origin, callback) {
+
+            // Allow requests that do not contain an origin
+            // Example: Postman / server-to-server requests
+            if (!origin) {
+                return callback(null, true);
+            }
+
+            // Check whether origin is allowed
+            if (allowedOrigins.includes(origin)) {
+                return callback(null, true);
+            }
+
+            // Block unknown origins
+            return callback(
+                new Error("Not allowed by CORS")
+            );
+        },
+
         credentials: true,
+
         methods: [
             "GET",
             "POST",
@@ -70,12 +88,22 @@ app.use(
             "DELETE",
             "OPTIONS"
         ],
+
         allowedHeaders: [
             "Content-Type",
             "Authorization"
         ]
     })
 );
+
+
+// =====================================================
+// BASIC MIDDLEWARE
+// =====================================================
+
+app.use(express.json());
+
+app.use(cookieParser());
 
 
 // =====================================================
@@ -303,8 +331,12 @@ const startServer = async () => {
             );
 
             console.log(
-                `Frontend allowed origin: ${allowedOrigin}`
+                "Allowed frontend origins:"
             );
+
+            allowedOrigins.forEach((origin) => {
+                console.log(`- ${origin}`);
+            });
 
         });
 
@@ -321,5 +353,9 @@ const startServer = async () => {
 
 };
 
+
+// =====================================================
+// START
+// =====================================================
 
 startServer();

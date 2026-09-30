@@ -1,11 +1,72 @@
 /* =========================================================
+   MOVIESTREAM SIGNIN PAGE
+========================================================= */
+
+
+/* =========================================================
    RESET
 ========================================================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --background: #080B14;
+
+    --surface: #0F1422;
+
+    --card: #151B2F;
+
+    --modal: #181F33;
+
+    --hover: #202842;
+
+    --primary: #7C3AED;
+
+    --primary-light: #A855F7;
+
+    --secondary: #9333EA;
+
+    --dark-purple: #5B21B6;
+
+    --text: #E5E7EB;
+
+    --text-secondary: #9CA3AF;
+
+    --text-muted: #6B7280;
+
+    --border: #232B3F;
+
+    --input-bg: #0F1422;
+
+    --input-border: #2A334A;
+
+    --placeholder: #6B7280;
+
+    --btn-active: #5B21B6;
+
+    --gradient-primary:
+        linear-gradient(
+            135deg,
+            #7C3AED,
+            #9333EA
+        );
+
+    --transition:
+        all 0.25s ease;
+
+    --shadow-md:
+        0 15px 40px
+        rgba(0, 0, 0, 0.45);
 }
 
 
@@ -15,17 +76,19 @@
 
 body {
 
-  margin: 0;
+    margin: 0;
 
-  font-family:
-    "Inter",
-    "Segoe UI",
-    Arial,
-    sans-serif;
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
-  background: var(--background);
+    background:
+        var(--background);
 
-  color: var(--text);
+    color:
+        var(--text);
 }
 
 
@@ -35,130 +98,138 @@ body {
 
 .signup-container {
 
-  width: 100%;
+    width: 100%;
 
-  min-height: 100vh;
+    min-height: 100vh;
 
-  position: relative;
+    position: relative;
 
-  display: flex;
+    display: flex;
 
-  align-items: center;
+    align-items: center;
 
-  justify-content: center;
+    justify-content: center;
 
-  padding: 30px 20px;
+    padding: 30px 20px;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  background-color: var(--background);
+    background-color:
+        var(--background);
 
-  /*
-    Replace this URL with your own movie background.
-  */
+    background-image:
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=2000&q=85");
 
-  background-image:
-    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=2000&q=85"
-    );
+    background-size: cover;
 
-  background-size: cover;
+    background-position: center;
 
-  background-position: center;
 }
 
 
 /* =========================================================
-   BACKGROUND OVERLAY
+   DARK OVERLAY
 ========================================================= */
 
 .overlay {
 
-  position: absolute;
+    position: absolute;
 
-  inset: 0;
+    inset: 0;
 
-  z-index: 1;
+    z-index: 1;
 
-  background:
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 11, 20, 0.96),
+            rgba(8, 11, 20, 0.72),
+            rgba(8, 11, 20, 0.96)
+        );
 
-    linear-gradient(90deg,
-      rgba(8, 11, 20, .95),
-      rgba(8, 11, 20, .72),
-      rgba(8, 11, 20, .95));
-
-  backdrop-filter: blur(4px);
+    backdrop-filter:
+        blur(4px);
 }
 
 
 /* =========================================================
-   PURPLE BACKGROUND GLOW
+   PURPLE GLOW
 ========================================================= */
 
 .signup-container::before {
 
-  content: "";
+    content: "";
 
-  position: absolute;
+    position: absolute;
 
-  width: 500px;
+    width: 500px;
 
-  height: 500px;
+    height: 500px;
 
-  border-radius: 50%;
+    border-radius: 50%;
 
-  background:
-    rgba(124, 58, 237, .15);
+    background:
+        rgba(124, 58, 237, 0.15);
 
-  filter: blur(100px);
+    filter:
+        blur(100px);
 
-  top: 50%;
+    top: 50%;
 
-  left: 50%;
+    left: 50%;
 
-  transform:
-    translate(-50%, -50%);
+    transform:
+        translate(-50%, -50%);
 
-  z-index: 1;
+    z-index: 1;
 }
 
 
 /* =========================================================
-   SIGNUP CARD
+   SIGNIN CARD
 ========================================================= */
 
 .signup-card {
 
-  position: relative;
+    position: relative;
 
-  z-index: 2;
+    z-index: 2;
 
-  width: 100%;
+    width: 100%;
 
-  max-width: 440px;
+    max-width: 440px;
 
-  padding: 30px 32px;
+    padding: 30px 32px;
 
-  border-radius: 20px;
+    border-radius: 20px;
 
-  background:
+    background:
+        linear-gradient(
+            180deg,
+            rgba(24, 31, 51, 0.97),
+            rgba(8, 11, 20, 0.98)
+        );
 
-    linear-gradient(180deg,
-      rgba(24, 31, 51, .96),
-      rgba(8, 11, 20, .97));
+    border:
+        1px solid
+        rgba(124, 58, 237, 0.55);
 
-  border: 1px solid var(--primary);
+    box-shadow:
 
-  box-shadow:
+        var(--shadow-md),
 
-    var(--shadow-md),
+        0 0 40px
+        rgba(124, 58, 237, 0.20),
 
-    0 0 40px rgba(124, 58, 237, .20),
+        inset 0 0 30px
+        rgba(124, 58, 237, 0.04);
 
-    inset 0 0 30px rgba(124, 58, 237, .04);
+    backdrop-filter:
+        blur(20px);
 
-  backdrop-filter: blur(20px);
+    animation:
+        cardAppear 0.6s ease;
 
-  animation: cardAppear .6s ease;
 }
 
 
@@ -168,67 +239,26 @@ body {
 
 @keyframes cardAppear {
 
-  from {
+    from {
 
-    opacity: 0;
+        opacity: 0;
 
-    transform:
-      translateY(25px) scale(.97);
-  }
+        transform:
+            translateY(25px)
+            scale(0.97);
 
-  to {
+    }
 
-    opacity: 1;
+    to {
 
-    transform:
-      translateY(0) scale(1);
-  }
-}
+        opacity: 1;
 
+        transform:
+            translateY(0)
+            scale(1);
 
-/* =========================================================
-   LOGO WRAPPER
-========================================================= */
+    }
 
-.logo-wrapper {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 8px;
-}
-
-
-/* =========================================================
-   LOGO ICON
-========================================================= */
-
-.logo-icon {
-
-  width: 35px;
-
-  height: 35px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius: 9px;
-
-  background: var(--gradient-primary);
-
-  color: white;
-
-  font-size: 14px;
-
-  box-shadow:
-
-    0 0 20px rgba(124, 58, 237, .45);
 }
 
 
@@ -238,139 +268,167 @@ body {
 
 .logo {
 
-  font-size: 25px;
+    text-align: center;
 
-  font-weight: 800;
+    font-size: 25px;
 
-  letter-spacing: -1px;
+    font-weight: 800;
 
-  color: var(--text);
+    letter-spacing: -1px;
+
+    color:
+        var(--text);
+
+    margin-bottom: 8px;
+
 }
 
 
 .logo span {
 
-  color: var(--primary-light);
+    color:
+        var(--primary-light);
+
 }
 
 
 /* =========================================================
-   TAGLINE
+   DESCRIPTION
 ========================================================= */
 
-.tagline {
+.signup-card > p {
 
-  text-align: center;
+    text-align: center;
 
-  color: var(--text-secondary);
+    color:
+        var(--text-secondary);
 
-  font-size: 12px;
+    font-size: 12px;
 
-  margin-top: 5px;
+    margin-top: 5px;
 
-  margin-bottom: 24px;
+    margin-bottom: 24px;
+
 }
 
 
 /* =========================================================
-   SIGNUP TITLE
+   FORM
 ========================================================= */
 
-.signup-title {
+.signup-card form {
 
-  text-align: center;
+    width: 100%;
 
-  font-size: 26px;
-
-  font-weight: 700;
-
-  margin-bottom: 5px;
-
-  color: var(--text);
 }
 
 
 /* =========================================================
-   SUBTITLE
+   ERROR MESSAGE
 ========================================================= */
 
-.signup-subtitle {
+.message {
 
-  text-align: center;
+    width: 100%;
 
-  color: var(--text-secondary);
+    display: flex;
 
-  font-size: 13px;
+    align-items: center;
 
-  margin-bottom: 22px;
-}
+    justify-content: center;
 
+    gap: 8px;
 
-.signup-subtitle span {
+    padding:
+        10px 12px;
 
-  color: var(--primary-light);
+    border-radius: 8px;
 
-  font-weight: 500;
-}
+    font-size: 12px;
 
+    line-height: 1.4;
 
-/* =========================================================
-   INPUT GROUP
-========================================================= */
+    margin-bottom: 15px;
 
-.input-group {
+    text-align: center;
 
-  width: 100%;
+    animation:
+        errorAppear 0.25s ease;
 
-  height: 48px;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  padding: 0 14px;
-
-  margin-bottom: 12px;
-
-  background: var(--input-bg);
-
-  border: 1px solid var(--input-border);
-
-  border-radius: 8px;
-
-  transition: var(--transition);
 }
 
 
 /* =========================================================
-   INPUT FOCUS
+   ERROR MESSAGE STYLE
 ========================================================= */
 
-.input-group:focus-within {
+.error-message {
 
-  border-color: var(--primary);
+    background:
+        rgba(239, 68, 68, 0.10);
 
-  box-shadow:
+    border:
+        1px solid
+        rgba(239, 68, 68, 0.30);
 
-    0 0 0 2px rgba(124, 58, 237, .12),
+    color:
+        #F87171;
 
-    0 0 15px rgba(124, 58, 237, .08);
 }
 
 
 /* =========================================================
-   INPUT ICON
+   ERROR ICON
 ========================================================= */
 
-.input-icon {
+.error-icon {
 
-  flex-shrink: 0;
+    font-size: 14px;
 
-  color: var(--primary-light);
+    flex-shrink: 0;
 
-  font-size: 14px;
+}
+
+
+/* =========================================================
+   ERROR ANIMATION
+========================================================= */
+
+@keyframes errorAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-5px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.input-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 18px;
+
 }
 
 
@@ -378,155 +436,151 @@ body {
    INPUT
 ========================================================= */
 
-.input-group input {
+.input-wrapper input {
 
-  width: 100%;
+    width: 100%;
 
-  height: 100%;
+    height: 48px;
 
-  border: none;
+    padding:
+        14px 45px
+        14px 14px;
 
-  outline: none;
+    border:
+        1px solid
+        var(--input-border);
 
-  background: transparent;
+    border-radius: 8px;
 
-  color: var(--text);
+    outline: none;
 
-  font-size: 13px;
+    background:
+        var(--input-bg);
 
-  font-family: inherit;
+    color:
+        var(--text);
+
+    font-size: 13px;
+
+    font-family: inherit;
+
+    transition:
+        var(--transition);
+
 }
 
 
 /* =========================================================
-   PLACEHOLDER
+   INPUT PLACEHOLDER
 ========================================================= */
 
-.input-group input::placeholder {
+.input-wrapper input::placeholder {
 
-  color: var(--placeholder);
+    color:
+        var(--placeholder);
 
-  opacity: 1;
+    opacity: 1;
+
 }
 
 
 /* =========================================================
-   PASSWORD TOGGLE
+   INPUT FOCUS
 ========================================================= */
 
-.password-toggle {
+.input-wrapper input:focus {
 
-  border: none;
+    border-color:
+        var(--primary);
 
-  outline: none;
+    box-shadow:
 
-  background: transparent;
+        0 0 0 2px
+        rgba(124, 58, 237, 0.12),
 
-  color: var(--text-muted);
+        0 0 15px
+        rgba(124, 58, 237, 0.08);
 
-  cursor: pointer;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 4px;
-
-  transition: var(--transition);
-}
-
-
-.password-toggle:hover {
-
-  color: var(--primary-light);
 }
 
 
 /* =========================================================
-   MESSAGE
+   PASSWORD EYE ICON
 ========================================================= */
 
-.message {
+.eye-icon {
 
-  width: 100%;
+    position: absolute;
 
-  padding: 10px 12px;
+    right: 15px;
 
-  border-radius: 8px;
+    top: 50%;
 
-  font-size: 12px;
+    transform:
+        translateY(-50%);
 
-  margin-bottom: 15px;
+    font-size: 18px;
 
-  text-align: center;
+    cursor: pointer;
+
+    z-index: 2;
+
+    color:
+        var(--text-muted);
+
+    transition:
+        var(--transition);
+
 }
 
 
 /* =========================================================
-   ERROR
+   EYE HOVER
 ========================================================= */
 
-.error-message {
+.eye-icon:hover {
 
-  background:
-    rgba(239, 68, 68, .10);
+    color:
+        var(--primary-light);
 
-  border:
-    1px solid rgba(239, 68, 68, .30);
-
-  color: #F87171;
 }
 
 
 /* =========================================================
-   SUCCESS
-========================================================= */
-
-.success-message {
-
-  background:
-    rgba(34, 197, 94, .10);
-
-  border:
-    1px solid rgba(34, 197, 94, .30);
-
-  color: #4ADE80;
-}
-
-
-/* =========================================================
-   SIGNUP BUTTON
+   LOGIN BUTTON
 ========================================================= */
 
 .signup-button {
 
-  width: 100%;
+    width: 100%;
 
-  height: 48px;
+    height: 48px;
 
-  margin-top: 5px;
+    margin-top: 5px;
 
-  border: none;
+    border: none;
 
-  border-radius: 8px;
+    border-radius: 8px;
 
-  background: var(--gradient-primary);
+    background:
+        var(--gradient-primary);
 
-  color: var(--text);
+    color:
+        var(--text);
 
-  font-size: 14px;
+    font-size: 14px;
 
-  font-weight: 700;
+    font-weight: 700;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  transition: var(--transition);
+    transition:
+        var(--transition);
 
-  box-shadow:
+    box-shadow:
+        0 8px 20px
+        rgba(124, 58, 237, 0.25);
 
-    0 8px 20px rgba(124, 58, 237, .25);
 }
 
 
@@ -534,19 +588,22 @@ body {
    BUTTON HOVER
 ========================================================= */
 
-.signup-button:hover {
+.signup-button:hover:not(:disabled) {
 
-  background:
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-light),
+            var(--secondary)
+        );
 
-    linear-gradient(135deg,
-      var(--primary-light),
-      var(--secondary));
+    transform:
+        translateY(-2px);
 
-  transform: translateY(-2px);
+    box-shadow:
+        0 10px 25px
+        rgba(124, 58, 237, 0.40);
 
-  box-shadow:
-
-    0 10px 25px rgba(124, 58, 237, .40);
 }
 
 
@@ -556,132 +613,178 @@ body {
 
 .signup-button:active {
 
-  transform: translateY(0);
+    transform:
+        translateY(0);
 
-  background: var(--btn-active);
+    background:
+        var(--btn-active);
+
 }
 
 
 /* =========================================================
-   LOGIN TEXT
+   DISABLED BUTTON
 ========================================================= */
 
-.login-text {
+.signup-button:disabled {
 
-  text-align: center;
+    opacity: 0.6;
 
-  color: var(--text-secondary);
+    cursor: not-allowed;
 
-  font-size: 12px;
+    transform: none;
 
-  margin-top: 18px;
-
-  margin-bottom: 0;
 }
 
 
 /* =========================================================
-   LOGIN LINK
+   BOTTOM TEXT
 ========================================================= */
 
-.login-text a {
+.bottom-text {
 
-  color: var(--primary-light);
+    display: flex;
 
-  text-decoration: none;
+    align-items: center;
 
-  font-weight: 600;
+    justify-content: center;
 
-  margin-left: 4px;
+    gap: 5px;
 
-  transition: var(--transition);
-}
+    text-align: center;
 
+    color:
+        var(--text-secondary);
 
-.login-text a:hover {
+    font-size: 12px;
 
-  color: var(--text);
+    margin-top: 18px;
 
-  text-decoration: underline;
+    margin-bottom: 0;
+
 }
 
 
 /* =========================================================
-   RESPONSIVE TABLET
+   SIGN UP LINK
+========================================================= */
+
+.signupStyle {
+
+    color:
+        var(--primary-light);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition:
+        var(--transition);
+
+}
+
+
+/* =========================================================
+   SIGN UP LINK HOVER
+========================================================= */
+
+.signupStyle:hover {
+
+    color:
+        var(--text);
+
+    text-decoration:
+        underline;
+
+}
+
+
+/* =========================================================
+   MOBILE
 ========================================================= */
 
 @media (max-width: 768px) {
 
-  .signup-container {
+    .signup-container {
 
-    padding: 20px 15px;
-  }
+        padding:
+            20px 15px;
 
-  .signup-card {
+    }
 
-    max-width: 420px;
 
-    padding: 28px 25px;
-  }
+    .signup-card {
+
+        max-width:
+            420px;
+
+        padding:
+            28px 25px;
+
+    }
+
 }
 
 
 /* =========================================================
-   RESPONSIVE MOBILE
+   SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 480px) {
 
-  .signup-container {
+    .signup-container {
 
-    padding: 15px;
-  }
+        padding:
+            15px;
 
-
-  .signup-card {
-
-    padding: 25px 20px;
-
-    border-radius: 16px;
-  }
+    }
 
 
-  .logo {
+    .signup-card {
 
-    font-size: 22px;
-  }
+        padding:
+            25px 20px;
 
+        border-radius:
+            16px;
 
-  .logo-icon {
-
-    width: 31px;
-
-    height: 31px;
-  }
+    }
 
 
-  .signup-title {
+    .logo {
 
-    font-size: 23px;
-  }
+        font-size:
+            22px;
 
-
-  .signup-subtitle {
-
-    font-size: 12px;
-  }
+    }
 
 
-  .input-group {
+    .input-wrapper input {
 
-    height: 46px;
-  }
+        height:
+            46px;
+
+    }
 
 
-  .signup-button {
+    .signup-button {
 
-    height: 46px;
-  }
+        height:
+            46px;
+
+    }
+
+
+    .message {
+
+        font-size:
+            11px;
+
+        padding:
+            9px 10px;
+
+    }
+
 }
 
 
@@ -691,71 +794,19 @@ body {
 
 @media (max-width: 360px) {
 
-  .signup-card {
+    .signup-card {
 
-    padding: 22px 16px;
-  }
+        padding:
+            22px 16px;
 
-
-  .logo {
-
-    font-size: 20px;
-  }
+    }
 
 
-  .signup-title {
+    .logo {
 
-    font-size: 21px;
-  }
-}
+        font-size:
+            20px;
 
+    }
 
-
-.signupStyle a {
-  text-decoration: none;
-  color: white;
-
-}
-
-.signupStyle:hover {
-  color: white;
-}
-
-
-.bottom-text{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.input-wrapper {
-  position: relative;
-  width: 100%;
-  margin-bottom: 18px;
-}
-
-.input-wrapper input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 14px 45px;
-}
-
-.input-icon {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 18px;
-  z-index: 2;
-}
-
-.eye-icon {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 18px;
-  cursor: pointer;
-  z-index: 2;
 }
