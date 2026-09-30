@@ -80,18 +80,12 @@ function SinglePage() {
                 localStorage.getItem("user");
 
             if (!storedUser) {
-
                 return null;
-
             }
 
-            return JSON.parse(
-                storedUser
-            );
+            return JSON.parse(storedUser);
 
-        }
-
-        catch (error) {
+        } catch (error) {
 
             console.log(
                 "USER ERROR:",
@@ -115,9 +109,7 @@ function SinglePage() {
             getUser();
 
         if (!user) {
-
             return null;
-
         }
 
         return (
@@ -152,10 +144,7 @@ function SinglePage() {
 
     useEffect(() => {
 
-        if (
-            type &&
-            id
-        ) {
+        if (type && id) {
 
             getContentDetails();
 
@@ -212,9 +201,7 @@ function SinglePage() {
             // NORMAL MOVIE
             // =================================================
 
-            if (
-                type === "movie"
-            ) {
+            if (type === "movie") {
 
                 url =
                     `${API_URL}/api/MainMovieCard/${id}`;
@@ -223,21 +210,7 @@ function SinglePage() {
 
 
             // =================================================
-            // ADMIN POSTED MOVIE
-            // =================================================
-
-            else if (
-                type === "newmovie"
-            ) {
-
-                url =
-                    `${API_URL}/api/newMoviePostData/movie/${id}`;
-
-            }
-
-
-            // =================================================
-            // ADMIN POSTED WEB SERIES
+            // WEB SERIES
             // =================================================
 
             else if (
@@ -246,21 +219,31 @@ function SinglePage() {
             ) {
 
                 url =
-                    `${API_URL}/api/newMoviePostData/webseries/${id}`;
+                    `${API_URL}/api/HomeWebSeriesCard/${id}`;
 
             }
 
 
             // =================================================
-            // ADMIN POSTED ANIME
+            // ANIME
             // =================================================
 
-            else if (
-                type === "anime"
-            ) {
+            else if (type === "anime") {
 
                 url =
-                    `${API_URL}/api/newMoviePostData/anime/${id}`;
+                    `${API_URL}/api/HomePageAnime/${id}`;
+
+            }
+
+
+            // =================================================
+            // ADMIN POSTED MOVIE
+            // =================================================
+
+            else if (type === "newmovie") {
+
+                url =
+                    `${API_URL}/api/newMoviePostData/movie/${id}`;
 
             }
 
@@ -298,9 +281,7 @@ function SinglePage() {
             // =================================================
 
             const response =
-                await axios.get(
-                    url
-                );
+                await axios.get(url);
 
 
             // =================================================
@@ -339,13 +320,9 @@ function SinglePage() {
                     content
                 );
 
-                setMovie(
-                    content
-                );
+                setMovie(content);
 
-            }
-
-            else {
+            } else {
 
                 console.log(
                     "CONTENT NOT FOUND"
@@ -355,9 +332,7 @@ function SinglePage() {
 
             }
 
-        }
-
-        catch (error) {
+        } catch (error) {
 
             console.log(
                 "========================================"
@@ -388,9 +363,7 @@ function SinglePage() {
 
             setMovie(null);
 
-        }
-
-        finally {
+        } finally {
 
             setLoading(false);
 
@@ -514,9 +487,7 @@ function SinglePage() {
 
             if (existingItem) {
 
-                setIsInWishlist(
-                    true
-                );
+                setIsInWishlist(true);
 
                 setWishlistId(
                     existingItem._id
@@ -530,19 +501,13 @@ function SinglePage() {
 
             else {
 
-                setIsInWishlist(
-                    false
-                );
+                setIsInWishlist(false);
 
-                setWishlistId(
-                    null
-                );
+                setWishlistId(null);
 
             }
 
-        }
-
-        catch (error) {
+        } catch (error) {
 
             console.log(
                 "WISHLIST CHECK ERROR:",
@@ -575,9 +540,7 @@ function SinglePage() {
                 "Please login to add content to your wishlist."
             );
 
-            navigate(
-                "/signin"
-            );
+            navigate("/signin");
 
             return;
 
@@ -585,17 +548,13 @@ function SinglePage() {
 
 
         if (!movie) {
-
             return;
-
         }
 
 
         try {
 
-            setWishlistLoading(
-                true
-            );
+            setWishlistLoading(true);
 
 
             // =================================================
@@ -615,13 +574,9 @@ function SinglePage() {
                 );
 
 
-                setIsInWishlist(
-                    false
-                );
+                setIsInWishlist(false);
 
-                setWishlistId(
-                    null
-                );
+                setWishlistId(null);
 
                 return;
 
@@ -711,17 +666,13 @@ function SinglePage() {
             );
 
 
-            setIsInWishlist(
-                true
-            );
+            setIsInWishlist(true);
 
             setWishlistId(
                 response.data?.data?._id
             );
 
-        }
-
-        catch (error) {
+        } catch (error) {
 
             console.log(
                 "WISHLIST ERROR:",
@@ -735,13 +686,9 @@ function SinglePage() {
                 "Unable to update wishlist"
             );
 
-        }
+        } finally {
 
-        finally {
-
-            setWishlistLoading(
-                false
-            );
+            setWishlistLoading(false);
 
         }
 
@@ -856,9 +803,7 @@ function SinglePage() {
     function getYoutubeEmbedUrl(url) {
 
         if (!url) {
-
             return "";
-
         }
 
 
@@ -895,15 +840,11 @@ function SinglePage() {
 
                 &&
 
-                parsedUrl.searchParams.get(
-                    "v"
-                )
+                parsedUrl.searchParams.get("v")
             ) {
 
                 videoId =
-                    parsedUrl.searchParams.get(
-                        "v"
-                    );
+                    parsedUrl.searchParams.get("v");
 
             }
 
@@ -918,9 +859,7 @@ function SinglePage() {
             ) {
 
                 videoId =
-                    parsedUrl.pathname.substring(
-                        1
-                    );
+                    parsedUrl.pathname.substring(1);
 
             }
 
@@ -955,9 +894,7 @@ function SinglePage() {
 
                 videoId =
                     parsedUrl.pathname
-                        .split(
-                            "/embed/"
-                        )[1];
+                        .split("/embed/")[1];
 
             }
 
@@ -990,9 +927,7 @@ function SinglePage() {
 
 
             if (!videoId) {
-
                 return "";
-
             }
 
 
@@ -1004,9 +939,7 @@ function SinglePage() {
                 `https://www.youtube-nocookie.com/embed/${videoId}`
             );
 
-        }
-
-        catch (error) {
+        } catch (error) {
 
             console.log(
                 "TRAILER URL ERROR:",
@@ -1036,9 +969,7 @@ function SinglePage() {
         }
 
 
-        if (
-            type === "anime"
-        ) {
+        if (type === "anime") {
 
             return "ANIME";
 
@@ -1318,7 +1249,6 @@ function SinglePage() {
                     <div className="genre-list">
 
                         {
-
                             Array.isArray(
                                 movie.genre
                             )
@@ -1355,7 +1285,6 @@ function SinglePage() {
                                     </span>
 
                                 )
-
                         }
 
                     </div>
@@ -1455,7 +1384,6 @@ function SinglePage() {
                         {/* ADMIN EDIT */}
 
                         {
-
                             isAdmin() && (
 
                                 <button
@@ -1473,7 +1401,6 @@ function SinglePage() {
                                 </button>
 
                             )
-
                         }
 
                     </div>
