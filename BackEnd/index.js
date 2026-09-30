@@ -6,6 +6,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+
 require("dotenv").config();
 
 const app = express();
@@ -40,16 +41,29 @@ const JWT_SECRET = process.env.JWT_SECRET;
 // =====================================================
 // CORS
 // =====================================================
-
-// Local React frontend
+//
+// Local React frontend:
 // http://localhost:5173
 //
-// Production React frontend
+// Old production frontend:
 // https://moviestream-two-iota.vercel.app
+//
+// Current production frontend:
+// https://moviestream-wbyv.vercel.app
+//
+// =====================================================
 
 const allowedOrigins = [
+
+    // Local development
     "http://localhost:5173",
-    "https://moviestream-two-iota.vercel.app"
+
+    // Old Vercel frontend
+    "https://moviestream-two-iota.vercel.app",
+
+    // Current Vercel frontend
+    "https://moviestream-wbyv.vercel.app"
+
 ];
 
 
@@ -58,42 +72,89 @@ const allowedOrigins = [
 // =====================================================
 
 app.use(
+
     cors({
+
         origin: function (origin, callback) {
 
-            // Allow requests that do not contain an origin
-            // Example: Postman / server-to-server requests
+            // =================================================
+            // ALLOW REQUESTS WITHOUT ORIGIN
+            // =================================================
+            // Example:
+            // Postman
+            // Server-to-server requests
+            // =================================================
+
             if (!origin) {
+
                 return callback(null, true);
+
             }
 
-            // Check whether origin is allowed
+
+            // =================================================
+            // CHECK ALLOWED ORIGIN
+            // =================================================
+
             if (allowedOrigins.includes(origin)) {
+
                 return callback(null, true);
+
             }
 
-            // Block unknown origins
+
+            // =================================================
+            // BLOCK UNKNOWN ORIGIN
+            // =================================================
+
+            console.log(
+                "Blocked CORS origin:",
+                origin
+            );
+
             return callback(
                 new Error("Not allowed by CORS")
             );
+
         },
+
+
+        // =================================================
+        // COOKIES
+        // =================================================
 
         credentials: true,
 
+
+        // =================================================
+        // ALLOWED METHODS
+        // =================================================
+
         methods: [
+
             "GET",
             "POST",
             "PUT",
             "PATCH",
             "DELETE",
             "OPTIONS"
+
         ],
 
+
+        // =================================================
+        // ALLOWED HEADERS
+        // =================================================
+
         allowedHeaders: [
+
             "Content-Type",
             "Authorization"
+
         ]
+
     })
+
 );
 
 
@@ -113,14 +174,18 @@ app.use(cookieParser());
 const carouselController =
     require("./controllers/Main-Carousel.js");
 
+
 const card =
     require("./controllers/cardsController.js");
+
 
 const mainMovieCard =
     require("./controllers/mainmoviesCards.js");
 
+
 const shortCardMovie =
     require("./controllers/shortcardmovie.js");
+
 
 const MainWebSeriesCarousel =
     require("./controllers/mainWebSeriesWebCarouselController.js");
@@ -133,6 +198,7 @@ const MainWebSeriesCarousel =
 const userController =
     require("./controllers/signup.js");
 
+
 const verificationJwt =
     require("./controllers/JWTverificationController.js");
 
@@ -144,8 +210,10 @@ const verificationJwt =
 const HomePageWebSeries =
     require("./controllers/HomepageWebSeriesController.js");
 
+
 const HomePageAnime =
     require("./controllers/HomePageAnimeController.js");
+
 
 const HomePageShowsCard =
     require("./controllers/HomePageShowsController.js");
@@ -178,35 +246,42 @@ app.use(
     carouselController
 );
 
+
 app.use(
     "/api/card",
     card
 );
+
 
 app.use(
     "/api/MainMovieCard",
     mainMovieCard
 );
 
+
 app.use(
     "/api/HomeWebSeriesCard",
     HomePageWebSeries
 );
+
 
 app.use(
     "/api/HomePageAnime",
     HomePageAnime
 );
 
+
 app.use(
     "/api/HomePageShowsCard",
     HomePageShowsCard
 );
 
+
 app.use(
     "/api/shortCardMovies",
     shortCardMovie
 );
+
 
 app.use(
     "/api/MainWebSeriesCarousel",
@@ -219,7 +294,10 @@ app.use(
 // =====================================================
 
 const WebseriesShortCards =
-    require("./controllers/mainWebseries/webSeriesCardsController.js");
+    require(
+        "./controllers/mainWebseries/webSeriesCardsController.js"
+    );
+
 
 app.use(
     "/api/WebseriesShortCards",
@@ -232,15 +310,22 @@ app.use(
 // =====================================================
 
 const MainAnimeCarousel =
-    require("./controllers/MainAnime/AnimeMainCarouselController.js");
+    require(
+        "./controllers/MainAnime/AnimeMainCarouselController.js"
+    );
+
 
 const MainAnimeShortCards =
-    require("./controllers/MainAnime/AnimeshortCardsController.js");
+    require(
+        "./controllers/MainAnime/AnimeshortCardsController.js"
+    );
+
 
 app.use(
     "/api/AnimeMainCarousel",
     MainAnimeCarousel
 );
+
 
 app.use(
     "/api/AnimeShortCards",
@@ -263,7 +348,10 @@ app.use(
 // =====================================================
 
 const Wishlist =
-    require("./controllers/WishlistController/WishlistController.js");
+    require(
+        "./controllers/WishlistController/WishlistController.js"
+    );
+
 
 app.use(
     "/api/wishlist",
@@ -278,9 +366,14 @@ app.use(
 app.get("/", (req, res) => {
 
     res.status(200).json({
+
         success: true,
-        message: "MOVIESTREAM Backend API is running",
+
+        message:
+            "MOVIESTREAM Backend API is running",
+
         port: PORT
+
     });
 
 });
@@ -298,9 +391,13 @@ const connectDB = async () => {
             process.env.DB_Connection_String
         );
 
-        console.log("Connected to MongoDB!");
+        console.log(
+            "Connected to MongoDB!"
+        );
 
-    } catch (err) {
+    }
+
+    catch (err) {
 
         console.error(
             "Database Connection Error:",
@@ -322,25 +419,47 @@ const startServer = async () => {
 
     try {
 
+        // =================================================
+        // CONNECT DATABASE
+        // =================================================
+
         await connectDB();
 
-        app.listen(PORT, () => {
 
-            console.log(
-                `Server is running on port ${PORT}`
-            );
+        // =================================================
+        // START EXPRESS SERVER
+        // =================================================
 
-            console.log(
-                "Allowed frontend origins:"
-            );
+        app.listen(
+            PORT,
+            () => {
 
-            allowedOrigins.forEach((origin) => {
-                console.log(`- ${origin}`);
-            });
+                console.log(
+                    `Server is running on port ${PORT}`
+                );
 
-        });
 
-    } catch (error) {
+                console.log(
+                    "Allowed frontend origins:"
+                );
+
+
+                allowedOrigins.forEach(
+                    (origin) => {
+
+                        console.log(
+                            `- ${origin}`
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    }
+
+    catch (error) {
 
         console.error(
             "Server startup error:",
@@ -355,7 +474,7 @@ const startServer = async () => {
 
 
 // =====================================================
-// START
+// START APPLICATION
 // =====================================================
 
 startServer();
