@@ -386,14 +386,8 @@ function MovieEditForm() {
                     id
                 );
 
-                console.log(
-                    "GET URL:",
-                    `http://localhost:8080/api/newMoviePostData/${backendType}/${id}`
-                );
-
-                console.log(
-                    "=================================="
-                );
+                console.log("GET URL:", `${import.meta.env.VITE_API_URL}/api/newMoviePostData/${backendType}/${id}`);
+                console.log("==================================");
 
 
                 // =================================================
@@ -427,16 +421,12 @@ function MovieEditForm() {
                 // GET FROM BACKEND
                 // =================================================
 
-                const response =
-                    await axios.get(
-
-                        `http://localhost:8080/api/newMoviePostData/${backendType}/${id}`,
-
-                        {
-                            withCredentials: true
-                        }
-
-                    );
+                const response = await axios.get(
+                    `${import.meta.env.VITE_API_URL}/api/newMoviePostData/${backendType}/${id}`,
+                    {
+                        withCredentials: true
+                    }
+                );
 
 
                 console.log(
@@ -853,7 +843,7 @@ function MovieEditForm() {
 
             console.log(
                 "PUT URL:",
-                `http://localhost:8080/api/newMoviePostData/${backendType}/${id}`
+                `${import.meta.env.VITE_API_URL}/api/newMoviePostData/${backendType}/${id}`
             );
 
             console.log(
@@ -873,7 +863,7 @@ function MovieEditForm() {
             const response =
                 await axios.put(
 
-                    `http://localhost:8080/api/newMoviePostData/${backendType}/${id}`,
+                    `${import.meta.env.VITE_API_URL}/api/newMoviePostData/${backendType}/${id}`,
 
                     movieData,
 
@@ -881,12 +871,8 @@ function MovieEditForm() {
                         withCredentials: true,
 
                         headers: {
-
-                            "Content-Type":
-                                "application/json"
-
+                            "Content-Type": "application/json"
                         }
-
                     }
 
                 );

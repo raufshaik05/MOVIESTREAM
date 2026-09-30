@@ -36,23 +36,36 @@ function SinglePage() {
 
 
     // =====================================================
-    // CONTENT
+    // API URL
     // =====================================================
 
-    const [movie, setMovie] = useState(null);
-
-    const [loading, setLoading] = useState(true);
+    const API_URL =
+        import.meta.env.VITE_API_URL;
 
 
     // =====================================================
-    // WISHLIST
+    // CONTENT STATE
     // =====================================================
 
-    const [isInWishlist, setIsInWishlist] = useState(false);
+    const [movie, setMovie] =
+        useState(null);
 
-    const [wishlistId, setWishlistId] = useState(null);
+    const [loading, setLoading] =
+        useState(true);
 
-    const [wishlistLoading, setWishlistLoading] = useState(false);
+
+    // =====================================================
+    // WISHLIST STATE
+    // =====================================================
+
+    const [isInWishlist, setIsInWishlist] =
+        useState(false);
+
+    const [wishlistId, setWishlistId] =
+        useState(null);
+
+    const [wishlistLoading, setWishlistLoading] =
+        useState(false);
 
 
     // =====================================================
@@ -67,12 +80,18 @@ function SinglePage() {
                 localStorage.getItem("user");
 
             if (!storedUser) {
+
                 return null;
+
             }
 
-            return JSON.parse(storedUser);
+            return JSON.parse(
+                storedUser
+            );
 
-        } catch (error) {
+        }
+
+        catch (error) {
 
             console.log(
                 "USER ERROR:",
@@ -80,7 +99,9 @@ function SinglePage() {
             );
 
             return null;
+
         }
+
     }
 
 
@@ -90,10 +111,13 @@ function SinglePage() {
 
     function getUserId() {
 
-        const user = getUser();
+        const user =
+            getUser();
 
         if (!user) {
+
             return null;
+
         }
 
         return (
@@ -101,31 +125,37 @@ function SinglePage() {
             user.id ||
             user.userId
         );
+
     }
 
 
     // =====================================================
-    // ADMIN CHECK
+    // CHECK ADMIN
     // =====================================================
 
     function isAdmin() {
 
-        const user = getUser();
+        const user =
+            getUser();
 
         return (
             user &&
             user.role === "admin"
         );
+
     }
 
 
     // =====================================================
-    // GET SINGLE CONTENT
+    // FETCH SINGLE CONTENT
     // =====================================================
 
     useEffect(() => {
 
-        if (type && id) {
+        if (
+            type &&
+            id
+        ) {
 
             getContentDetails();
 
@@ -133,6 +163,10 @@ function SinglePage() {
 
     }, [type, id]);
 
+
+    // =====================================================
+    // GET SINGLE CONTENT DETAILS
+    // =====================================================
 
     async function getContentDetails() {
 
@@ -144,7 +178,7 @@ function SinglePage() {
 
 
             console.log(
-                "================================"
+                "========================================"
             );
 
             console.log(
@@ -162,7 +196,12 @@ function SinglePage() {
             );
 
             console.log(
-                "================================"
+                "API URL:",
+                API_URL
+            );
+
+            console.log(
+                "========================================"
             );
 
 
@@ -170,32 +209,35 @@ function SinglePage() {
 
 
             // =================================================
-            // MOVIE
+            // NORMAL MOVIE
             // =================================================
 
             if (
-                type === "movie" ||
-                type === "newmovie"
+                type === "movie"
             ) {
 
-                /*
-                    MainMovies.jsx uses:
-
-                    /content/movie/:id
-
-                    So fetch the movie from:
-
-                    /api/MainMovieCard/:id
-                */
-
                 url =
-                    `http://localhost:8080/api/MainMovieCard/${id}`;
+                    `${API_URL}/api/MainMovieCard/${id}`;
 
             }
 
 
             // =================================================
-            // WEB SERIES
+            // ADMIN POSTED MOVIE
+            // =================================================
+
+            else if (
+                type === "newmovie"
+            ) {
+
+                url =
+                    `${API_URL}/api/newMoviePostData/movie/${id}`;
+
+            }
+
+
+            // =================================================
+            // ADMIN POSTED WEB SERIES
             // =================================================
 
             else if (
@@ -204,13 +246,13 @@ function SinglePage() {
             ) {
 
                 url =
-                    `http://localhost:8080/api/HomeWebSeriesCard/${id}`;
+                    `${API_URL}/api/newMoviePostData/webseries/${id}`;
 
             }
 
 
             // =================================================
-            // ANIME
+            // ADMIN POSTED ANIME
             // =================================================
 
             else if (
@@ -218,7 +260,7 @@ function SinglePage() {
             ) {
 
                 url =
-                    `http://localhost:8080/api/HomePageAnime/${id}`;
+                    `${API_URL}/api/newMoviePostData/anime/${id}`;
 
             }
 
@@ -237,8 +279,13 @@ function SinglePage() {
                 setMovie(null);
 
                 return;
+
             }
 
+
+            // =================================================
+            // REQUEST URL
+            // =================================================
 
             console.log(
                 "REQUEST URL:",
@@ -251,17 +298,23 @@ function SinglePage() {
             // =================================================
 
             const response =
-                await axios.get(url);
+                await axios.get(
+                    url
+                );
 
+
+            // =================================================
+            // RESPONSE
+            // =================================================
 
             console.log(
-                "API RESPONSE:",
+                "SINGLE PAGE RESPONSE:",
                 response.data
             );
 
 
             // =================================================
-            // EXTRACT DATA
+            // GET CONTENT DATA
             // =================================================
 
             const content =
@@ -286,22 +339,28 @@ function SinglePage() {
                     content
                 );
 
-                setMovie(content);
+                setMovie(
+                    content
+                );
 
-            } else {
+            }
+
+            else {
 
                 console.log(
                     "CONTENT NOT FOUND"
                 );
 
                 setMovie(null);
+
             }
 
+        }
 
-        } catch (error) {
+        catch (error) {
 
             console.log(
-                "================================"
+                "========================================"
             );
 
             console.log(
@@ -324,13 +383,14 @@ function SinglePage() {
             );
 
             console.log(
-                "================================"
+                "========================================"
             );
-
 
             setMovie(null);
 
-        } finally {
+        }
+
+        finally {
 
             setLoading(false);
 
@@ -340,7 +400,7 @@ function SinglePage() {
 
 
     // =====================================================
-    // CHECK WISHLIST
+    // CHECK WISHLIST WHEN CONTENT LOADS
     // =====================================================
 
     useEffect(() => {
@@ -351,8 +411,16 @@ function SinglePage() {
 
         }
 
-    }, [movie, type, id]);
+    }, [
+        movie,
+        type,
+        id
+    ]);
 
+
+    // =====================================================
+    // CHECK WISHLIST
+    // =====================================================
 
     async function checkWishlist() {
 
@@ -372,12 +440,16 @@ function SinglePage() {
                 setWishlistId(null);
 
                 return;
+
             }
 
 
             const response =
                 await axios.get(
-                    `http://localhost:8080/api/wishlist/${userId}`
+                    `${API_URL}/api/wishlist/${userId}`,
+                    {
+                        withCredentials: true
+                    }
                 );
 
 
@@ -386,7 +458,7 @@ function SinglePage() {
 
 
             // =================================================
-            // WISHLIST TYPE
+            // DETERMINE WISHLIST TYPE
             // =================================================
 
             let wishlistType =
@@ -401,7 +473,9 @@ function SinglePage() {
                 wishlistType =
                     "webseries";
 
-            } else if (
+            }
+
+            else if (
                 type === "anime"
             ) {
 
@@ -412,42 +486,63 @@ function SinglePage() {
 
 
             // =================================================
-            // FIND EXISTING ITEM
+            // FIND CONTENT
             // =================================================
 
             const existingItem =
                 wishlist.find(
-                    (item) =>
+                    (item) => {
 
-                        String(
-                            item.contentId
-                        ) === String(id)
+                        return (
+                            String(
+                                item.contentId
+                            ) === String(id)
 
-                        &&
+                            &&
 
-                        item.contentType ===
-                        wishlistType
+                            item.contentType ===
+                            wishlistType
+                        );
+
+                    }
                 );
 
 
+            // =================================================
+            // FOUND
+            // =================================================
+
             if (existingItem) {
 
-                setIsInWishlist(true);
+                setIsInWishlist(
+                    true
+                );
 
                 setWishlistId(
                     existingItem._id
                 );
 
-            } else {
+            }
 
-                setIsInWishlist(false);
+            // =================================================
+            // NOT FOUND
+            // =================================================
 
-                setWishlistId(null);
+            else {
+
+                setIsInWishlist(
+                    false
+                );
+
+                setWishlistId(
+                    null
+                );
 
             }
 
+        }
 
-        } catch (error) {
+        catch (error) {
 
             console.log(
                 "WISHLIST CHECK ERROR:",
@@ -480,9 +575,12 @@ function SinglePage() {
                 "Please login to add content to your wishlist."
             );
 
-            navigate("/signin");
+            navigate(
+                "/signin"
+            );
 
             return;
+
         }
 
 
@@ -495,7 +593,9 @@ function SinglePage() {
 
         try {
 
-            setWishlistLoading(true);
+            setWishlistLoading(
+                true
+            );
 
 
             // =================================================
@@ -508,21 +608,28 @@ function SinglePage() {
             ) {
 
                 await axios.delete(
-                    `http://localhost:8080/api/wishlist/${wishlistId}`
+                    `${API_URL}/api/wishlist/${wishlistId}`,
+                    {
+                        withCredentials: true
+                    }
                 );
 
 
-                setIsInWishlist(false);
+                setIsInWishlist(
+                    false
+                );
 
-                setWishlistId(null);
-
+                setWishlistId(
+                    null
+                );
 
                 return;
+
             }
 
 
             // =================================================
-            // WISHLIST TYPE
+            // DETERMINE CONTENT TYPE
             // =================================================
 
             let wishlistType =
@@ -537,7 +644,9 @@ function SinglePage() {
                 wishlistType =
                     "webseries";
 
-            } else if (
+            }
+
+            else if (
                 type === "anime"
             ) {
 
@@ -572,6 +681,7 @@ function SinglePage() {
 
                 year:
                     movie.year
+
             };
 
 
@@ -587,8 +697,11 @@ function SinglePage() {
 
             const response =
                 await axios.post(
-                    "http://localhost:8080/api/wishlist",
-                    wishlistData
+                    `${API_URL}/api/wishlist`,
+                    wishlistData,
+                    {
+                        withCredentials: true
+                    }
                 );
 
 
@@ -598,14 +711,17 @@ function SinglePage() {
             );
 
 
-            setIsInWishlist(true);
+            setIsInWishlist(
+                true
+            );
 
             setWishlistId(
                 response.data?.data?._id
             );
 
+        }
 
-        } catch (error) {
+        catch (error) {
 
             console.log(
                 "WISHLIST ERROR:",
@@ -619,10 +735,13 @@ function SinglePage() {
                 "Unable to update wishlist"
             );
 
+        }
 
-        } finally {
+        finally {
 
-            setWishlistLoading(false);
+            setWishlistLoading(
+                false
+            );
 
         }
 
@@ -649,6 +768,7 @@ function SinglePage() {
             );
 
             return;
+
         }
 
 
@@ -662,6 +782,7 @@ function SinglePage() {
             );
 
             return;
+
         }
 
 
@@ -681,7 +802,9 @@ function SinglePage() {
             frontendType =
                 "webseries";
 
-        } else if (
+        }
+
+        else if (
             type === "anime"
         ) {
 
@@ -750,7 +873,7 @@ function SinglePage() {
 
 
             // =================================================
-            // youtube.com/watch?v=
+            // NORMAL YOUTUBE URL
             // =================================================
 
             if (
@@ -772,17 +895,21 @@ function SinglePage() {
 
                 &&
 
-                parsedUrl.searchParams.get("v")
+                parsedUrl.searchParams.get(
+                    "v"
+                )
             ) {
 
                 videoId =
-                    parsedUrl.searchParams.get("v");
+                    parsedUrl.searchParams.get(
+                        "v"
+                    );
 
             }
 
 
             // =================================================
-            // youtu.be
+            // SHORT YOUTUBE URL
             // =================================================
 
             else if (
@@ -791,13 +918,15 @@ function SinglePage() {
             ) {
 
                 videoId =
-                    parsedUrl.pathname.substring(1);
+                    parsedUrl.pathname.substring(
+                        1
+                    );
 
             }
 
 
             // =================================================
-            // youtube.com/embed
+            // EMBED URL
             // =================================================
 
             else if (
@@ -826,12 +955,23 @@ function SinglePage() {
 
                 videoId =
                     parsedUrl.pathname
-                        .split("/embed/")[1];
+                        .split(
+                            "/embed/"
+                        )[1];
 
             }
 
 
+            // =================================================
+            // INVALID URL
+            // =================================================
+
             else {
+
+                console.log(
+                    "Invalid YouTube trailer URL:",
+                    url
+                );
 
                 return "";
 
@@ -856,12 +996,17 @@ function SinglePage() {
             }
 
 
+            // =================================================
+            // YOUTUBE EMBED
+            // =================================================
+
             return (
                 `https://www.youtube-nocookie.com/embed/${videoId}`
             );
 
+        }
 
-        } catch (error) {
+        catch (error) {
 
             console.log(
                 "TRAILER URL ERROR:",
@@ -917,7 +1062,9 @@ function SinglePage() {
 
                 <button
                     className="back-button"
-                    onClick={() => navigate(-1)}
+                    onClick={() =>
+                        navigate(-1)
+                    }
                 >
 
                     <FaArrowLeft />
@@ -958,7 +1105,9 @@ function SinglePage() {
 
                 <button
                     className="back-button"
-                    onClick={() => navigate(-1)}
+                    onClick={() =>
+                        navigate(-1)
+                    }
                 >
 
                     <FaArrowLeft />
@@ -980,11 +1129,16 @@ function SinglePage() {
                         This content could not be found.
                     </p>
 
+
                     <button
                         className="back-home-button"
-                        onClick={() => navigate("/")}
+                        onClick={() =>
+                            navigate("/")
+                        }
                     >
+
                         Go Home
+
                     </button>
 
                 </div>
@@ -1015,7 +1169,7 @@ function SinglePage() {
 
 
     // =====================================================
-    // PAGE
+    // MAIN PAGE
     // =====================================================
 
     return (
@@ -1029,7 +1183,9 @@ function SinglePage() {
 
             <button
                 className="back-button"
-                onClick={() => navigate(-1)}
+                onClick={() =>
+                    navigate(-1)
+                }
             >
 
                 <FaArrowLeft />
@@ -1070,13 +1226,13 @@ function SinglePage() {
 
 
                 {/* =================================================
-                    INFORMATION
+                    CONTENT INFORMATION
                 ================================================= */}
 
                 <div className="content-info">
 
 
-                    {/* TYPE */}
+                    {/* CONTENT TYPE */}
 
                     <span className="content-type">
 
@@ -1088,12 +1244,14 @@ function SinglePage() {
                     {/* TITLE */}
 
                     <h1>
+
                         {movie.title}
+
                     </h1>
 
 
                     {/* =================================================
-                        META
+                        META INFORMATION
                     ================================================= */}
 
                     <div className="content-meta">
@@ -1160,7 +1318,10 @@ function SinglePage() {
                     <div className="genre-list">
 
                         {
-                            Array.isArray(movie.genre)
+
+                            Array.isArray(
+                                movie.genre
+                            )
 
                                 ?
 
@@ -1173,7 +1334,9 @@ function SinglePage() {
                                         <span
                                             key={index}
                                         >
+
                                             {genre}
+
                                         </span>
 
                                     )
@@ -1184,10 +1347,15 @@ function SinglePage() {
                                 movie.genre && (
 
                                     <span>
-                                        {movie.genre}
+
+                                        {
+                                            movie.genre
+                                        }
+
                                     </span>
 
                                 )
+
                         }
 
                     </div>
@@ -1208,7 +1376,7 @@ function SinglePage() {
 
 
                     {/* =================================================
-                        ACTIONS
+                        ACTION BUTTONS
                     ================================================= */}
 
                     <div className="content-actions">
@@ -1239,11 +1407,16 @@ function SinglePage() {
                                         : ""
                                 }`
                             }
-                            onClick={handleWishlist}
-                            disabled={wishlistLoading}
+                            onClick={
+                                handleWishlist
+                            }
+                            disabled={
+                                wishlistLoading
+                            }
                         >
 
                             {
+
                                 wishlistLoading
 
                                     ?
@@ -1282,12 +1455,15 @@ function SinglePage() {
                         {/* ADMIN EDIT */}
 
                         {
+
                             isAdmin() && (
 
                                 <button
                                     type="button"
                                     className="edit-button"
-                                    onClick={handleEdit}
+                                    onClick={
+                                        handleEdit
+                                    }
                                 >
 
                                     <FaEdit />
@@ -1297,6 +1473,7 @@ function SinglePage() {
                                 </button>
 
                             )
+
                         }
 
                     </div>
@@ -1331,18 +1508,22 @@ function SinglePage() {
                         <strong>
 
                             {
+
                                 Array.isArray(
                                     movie.language
                                 )
 
                                     ?
 
-                                    movie.language.join(", ")
+                                    movie.language.join(
+                                        ", "
+                                    )
 
                                     :
 
                                     movie.language ||
                                     "N/A"
+
                             }
 
                         </strong>
@@ -1421,18 +1602,22 @@ function SinglePage() {
                         <strong>
 
                             {
+
                                 Array.isArray(
                                     movie.cast
                                 )
 
                                     ?
 
-                                    movie.cast.join(", ")
+                                    movie.cast.join(
+                                        ", "
+                                    )
 
                                     :
 
                                     movie.cast ||
                                     "N/A"
+
                             }
 
                         </strong>
@@ -1458,6 +1643,7 @@ function SinglePage() {
                 <div className="trailer-container">
 
                     {
+
                         trailerUrl
 
                             ?
@@ -1493,6 +1679,7 @@ function SinglePage() {
                                 </p>
 
                             </div>
+
                     }
 
                 </div>

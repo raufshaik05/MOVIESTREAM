@@ -26,7 +26,7 @@ function AnimeCarousel() {
         try {
 
             const response = await axios.get(
-                "http://localhost:8080/api/AnimeMainCarousel"
+                `${import.meta.env.VITE_API_URL}/api/AnimeMainCarousel`
             );
 
             setAnimeData(response.data.data);

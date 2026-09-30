@@ -25,9 +25,8 @@ function WebSeriesShortCards() {
     async function ShortCardsAPiData() {
 
         try {
-
             const ShortCardsDatainfo = await axios.get(
-                "http://localhost:8080/api/newMoviePostData?type=webseries"
+                `${import.meta.env.VITE_API_URL}/api/newMoviePostData?type=webseries`
             );
 
 

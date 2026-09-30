@@ -17,7 +17,7 @@ function TopRated() {
         try {
 
             const response = await axios.get(
-                "http://localhost:8080/api/MainMovieCard?page=1&limit=10"
+                `${import.meta.env.VITE_API_URL}/api/MainMovieCard?page=1&limit=10`
             );
 
             const movies = response.data.movies || response.data;

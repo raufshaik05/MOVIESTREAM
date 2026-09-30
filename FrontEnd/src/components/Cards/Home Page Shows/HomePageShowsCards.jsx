@@ -18,7 +18,9 @@ function HomePageShowsCards() {
 
         try {
 
-            const ShowsCardsData = await axios.get(`http://localhost:8080/api/HomePageShowsCard?page=${page}&limit=10`)
+            const ShowsCardsData = await axios.get(
+                `${import.meta.env.VITE_API_URL}/api/HomePageShowsCard?page=${page}&limit=10`
+            );
             // console.log("hi");
             // console.log(AnimeCardsData.data.data);
             setShowsData((prev) => [...prev, ...ShowsCardsData.data.data])

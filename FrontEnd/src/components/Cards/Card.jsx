@@ -27,11 +27,11 @@ function Card() {
                 await Promise.all([
 
                     axios.get(
-                        "http://localhost:8080/api/newMoviePostData?type=web-series"
+                        `${import.meta.env.VITE_API_URL}/api/newMoviePostData?type=web-series`
                     ),
 
                     axios.get(
-                        "http://localhost:8080/api/newMoviePostData?type=anime"
+                        `${import.meta.env.VITE_API_URL}/api/newMoviePostData?type=anime`
                     )
 
                 ]);

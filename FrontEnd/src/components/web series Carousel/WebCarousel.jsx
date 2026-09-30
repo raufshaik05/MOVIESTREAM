@@ -22,7 +22,7 @@ function WebCarousel() {
         try {
 
             const response = await axios.get(
-                "http://localhost:8080/api/MainWebSeriesCarousel"
+                `${import.meta.env.VITE_API_URL}/api/MainWebSeriesCarousel`
             );
 
             setWebData(response.data.data);

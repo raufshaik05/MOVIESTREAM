@@ -25,7 +25,7 @@ function Signin() {
     async function handleSubmit(e) {
         e.preventDefault()
         try {
-            const userLoginData = await axios.post("http://localhost:8080/Validation/signin", LoginUser, {
+            const userLoginData = await axios.post(`${import.meta.env.VITE_API_URL}/Validation/signin`, LoginUser, {
                 withCredentials: true
             })
             console.log("LOGIN RESPONSE:", userLoginData.data);

@@ -132,7 +132,7 @@ function Wishlist() {
 
             const response = await axios.get(
 
-                `http://localhost:8080/api/wishlist/${userId}`
+                `${import.meta.env.VITE_API_URL}/api/wishlist/${userId}`
 
             );
 
@@ -184,7 +184,7 @@ function Wishlist() {
 
             await axios.delete(
 
-                `http://localhost:8080/api/wishlist/${wishlistId}`
+                `${import.meta.env.VITE_API_URL}/api/wishlist/${wishlistId}`
 
             );
 

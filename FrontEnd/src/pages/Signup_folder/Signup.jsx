@@ -52,7 +52,7 @@ function Signup() {
 
         try {
 
-            const userData = await axios.post("http://localhost:8080/Validation/signup", details)
+            const userData = await axios.post(`${import.meta.env.VITE_API_URL}/Validation/signup`, details)
             console.log(userData.data);
 
             alert("Welcome! Your account was successfully created.");

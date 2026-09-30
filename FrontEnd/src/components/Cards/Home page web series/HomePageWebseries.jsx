@@ -52,8 +52,7 @@ function HomePageWebseries({ language = "All" }) {
             setLoading(true);
 
 
-            let url =
-                `http://localhost:8080/api/HomeWebSeriesCard?page=${page}&limit=10`;
+         let url = `${import.meta.env.VITE_API_URL}/api/HomeWebSeriesCard?page=${page}&limit=10`;
 
 
             // =================================================

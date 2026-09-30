@@ -25,7 +25,7 @@ function NewMoviesCarts() {
         try {
 
             const apiData = await axios.get(
-                "http://localhost:8080/api/newMoviePostData?type=movie"
+                `${import.meta.env.VITE_API_URL}/api/newMoviePostData?type=movie`
             );
 
             const movies = apiData.data.data || [];

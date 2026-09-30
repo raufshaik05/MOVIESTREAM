@@ -48,11 +48,8 @@ function HomePageAnime({ search = "" }) {
 
 
                 const response = await axios.get(
-
-                    `http://localhost:8080/api/HomePageAnime?page=${page}&limit=10&search=${encodeURIComponent(cleanSearch)}`
-
+                    `${import.meta.env.VITE_API_URL}/api/HomePageAnime?page=${page}&limit=10&search=${encodeURIComponent(cleanSearch)}`
                 );
-
 
                 console.log(
                     "================================"

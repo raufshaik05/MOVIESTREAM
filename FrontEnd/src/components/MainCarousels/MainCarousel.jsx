@@ -20,7 +20,7 @@ function Maincarousel() {
             try {
 
                 const response = await axios.get(
-                    "http://localhost:8080/api/carousel"
+                    `${import.meta.env.VITE_API_URL}/api/carousel`
                 );
 
                 console.log("Carousel Data:", response.data);

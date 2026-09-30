@@ -61,8 +61,7 @@ function MoviePostForm() {
             console.log("Sending Movie:", movieData);
 
 
-            const apiData = await axios.post(
-                "http://localhost:8080/api/newMoviePostData",
+            const apiData = await axios.post(`${import.meta.env.VITE_API_URL}/api/newMoviePostData`,
                 movieData,
                 {
                     withCredentials: true

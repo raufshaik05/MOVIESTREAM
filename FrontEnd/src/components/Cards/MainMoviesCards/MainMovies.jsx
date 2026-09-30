@@ -44,9 +44,7 @@ function MainMovies({ selectedLanguage  = "All" }) {
 
         try {
 
-            let url =
-                `http://localhost:8080/api/MainMovieCard?page=${currentPage}&limit=10`;
-
+            let url = `${import.meta.env.VITE_API_URL}/api/MainMovieCard?page=${currentPage}&limit=10`;
 
             // ==================================
             // LANGUAGE FILTER

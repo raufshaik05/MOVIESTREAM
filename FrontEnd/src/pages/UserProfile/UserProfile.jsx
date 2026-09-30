@@ -32,7 +32,7 @@ function UserProfile() {
         try {
 
             await axios.post(
-                "http://localhost:8080/Validation/logout",
+                `${import.meta.env.VITE_API_URL}/Validation/logout`,
                 {},
                 {
                     withCredentials: true
@@ -67,8 +67,8 @@ function UserProfile() {
             try {
 
                 const response = await axios.get(
-                    "http://localhost:8080/Validation/me",
-                    {
+                    `${import.meta.env.VITE_API_URL}/Validation/me`,
+             {
                         withCredentials: true
                     }
                 );
