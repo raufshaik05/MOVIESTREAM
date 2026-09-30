@@ -4,11 +4,10 @@ import { useNavigate } from "react-router-dom";
 import "./Card.css";
 
 function Card() {
-
     const [trendingData, setTrendingData] = useState([]);
-
     const navigate = useNavigate();
 
+    const API_URL = import.meta.env.VITE_API_URL;
 
     // =====================================================
     // GET WEB SERIES + ANIME
@@ -18,67 +17,57 @@ function Card() {
         getTrendingData();
     }, []);
 
-
     async function getTrendingData() {
-
         try {
-
             const [webSeriesResponse, animeResponse] =
                 await Promise.all([
-
                     axios.get(
-                        `${import.meta.env.VITE_API_URL}/api/newMoviePostData?type=web-series`
+                        `${API_URL}/api/newMoviePostData?type=web-series`
                     ),
 
                     axios.get(
-                        `${import.meta.env.VITE_API_URL}/api/newMoviePostData?type=anime`
+                        `${API_URL}/api/newMoviePostData?type=anime`
                     )
-
                 ]);
-
 
             // =====================================================
             // WEB SERIES
             // =====================================================
 
-            const webSeries =
-                Array.isArray(webSeriesResponse.data?.data)
-                    ? webSeriesResponse.data.data.map((item) => ({
-                        ...item,
-                        frontendType: "webseries"
-                    }))
-                    : [];
-
+            const webSeries = Array.isArray(
+                webSeriesResponse.data?.data
+            )
+                ? webSeriesResponse.data.data.map((item) => ({
+                      ...item,
+                      frontendType: "webseries"
+                  }))
+                : [];
 
             // =====================================================
             // ANIME
             // =====================================================
 
-            const anime =
-                Array.isArray(animeResponse.data?.data)
-                    ? animeResponse.data.data.map((item) => ({
-                        ...item,
-                        frontendType: "anime"
-                    }))
-                    : [];
-
+            const anime = Array.isArray(
+                animeResponse.data?.data
+            )
+                ? animeResponse.data.data.map((item) => ({
+                      ...item,
+                      frontendType: "anime"
+                  }))
+                : [];
 
             // =====================================================
-            // COMBINE WEB SERIES + ANIME
+            // COMBINE
             // =====================================================
 
             const combinedData = [];
-
 
             const maxLength = Math.max(
                 webSeries.length,
                 anime.length
             );
 
-
-            // Alternate Web Series + Anime
             for (let i = 0; i < maxLength; i++) {
-
                 if (webSeries[i]) {
                     combinedData.push(webSeries[i]);
                 }
@@ -86,16 +75,9 @@ function Card() {
                 if (anime[i]) {
                     combinedData.push(anime[i]);
                 }
-
             }
 
-
-            // =====================================================
-            // SHOW TRENDING ITEMS
-            // =====================================================
-
             setTrendingData(combinedData);
-
 
             console.log(
                 "TRENDING WEB SERIES:",
@@ -111,18 +93,13 @@ function Card() {
                 "COMBINED TRENDING:",
                 combinedData
             );
-
         } catch (error) {
-
             console.log(
                 "TRENDING ERROR:",
                 error.response?.data || error.message
             );
-
         }
-
     }
-
 
     // =====================================================
     // SEE ALL
@@ -132,39 +109,33 @@ function Card() {
         navigate("/webseries");
     };
 
-
     // =====================================================
     // CARD CLICK
     // =====================================================
 
     const handleCardClick = (item) => {
-
         if (!item?._id) {
             console.log("CONTENT ID IS MISSING");
             return;
         }
 
-
         if (item.frontendType === "anime") {
-
             navigate(`/content/anime/${item._id}`);
-
         } else {
-
             navigate(`/content/webseries/${item._id}`);
-
         }
-
     };
 
+    // =====================================================
+    // RENDER
+    // =====================================================
 
     return (
-
         <section className="trending-section">
 
-            {/* =====================================================
+            {/* =================================================
                 HEADER
-            ===================================================== */}
+            ================================================= */}
 
             <div className="section-header">
 
@@ -180,7 +151,6 @@ function Card() {
 
                 </h2>
 
-
                 <button
                     type="button"
                     className="see-all"
@@ -191,10 +161,9 @@ function Card() {
 
             </div>
 
-
-            {/* =====================================================
+            {/* =================================================
                 TRENDING CARDS
-            ===================================================== */}
+            ================================================= */}
 
             <div className="series-row">
 
@@ -205,7 +174,9 @@ function Card() {
                         <div
                             className="series-card"
                             key={`${item.frontendType}-${item._id}`}
-                            onClick={() => handleCardClick(item)}
+                            onClick={() =>
+                                handleCardClick(item)
+                            }
                         >
 
                             {/* POSTER */}
@@ -219,7 +190,6 @@ function Card() {
                                 loading="lazy"
                             />
 
-
                             {/* INFORMATION */}
 
                             <div className="series-info">
@@ -229,10 +199,10 @@ function Card() {
                                         "Untitled"}
                                 </h3>
 
-
                                 <p>
 
-                                    ⭐ {item.rating ?? "N/A"}
+                                    ⭐{" "}
+                                    {item.rating ?? "N/A"}
 
                                     <span className="card-separator">
                                         •
@@ -242,30 +212,26 @@ function Card() {
 
                                 </p>
 
-
                                 <span>
-
                                     {Array.isArray(item.genre)
                                         ? item.genre.join(", ")
                                         : item.genre || "N/A"}
-
                                 </span>
 
                             </div>
-
 
                             {/* PLAY BUTTON */}
 
                             <button
                                 type="button"
                                 className="play-btn"
-                                aria-label={`Open ${item.title || "content"}`}
+                                aria-label={`Open ${
+                                    item.title ||
+                                    "content"
+                                }`}
                                 onClick={(e) => {
-
                                     e.stopPropagation();
-
                                     handleCardClick(item);
-
                                 }}
                             >
                                 ▶
@@ -286,9 +252,7 @@ function Card() {
             </div>
 
         </section>
-
     );
-
 }
 
 export default Card;

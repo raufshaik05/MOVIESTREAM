@@ -1,0 +1,503 @@
+/* =====================================================
+   TRENDING SECTION
+   ===================================================== */
+
+.trending-section {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TRENDING HEADER
+   ===================================================== */
+
+.trending-section .section-header {
+    width: 100%;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    flex-wrap: nowrap !important;
+
+    gap: 15px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TRENDING TITLE
+   ===================================================== */
+
+.trending-section .trending-title {
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center !important;
+
+    justify-content: flex-start !important;
+
+    flex-wrap: nowrap !important;
+
+    gap: 8px;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    width: auto !important;
+
+    max-width: none !important;
+
+    flex: 1 1 auto;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* =====================================================
+   FIRE ICON
+   ===================================================== */
+
+.trending-section .trending-icon {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: auto;
+
+    height: auto;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   TRENDING TEXT
+   ===================================================== */
+
+.trending-section .trending-text {
+    display: inline-block;
+
+    white-space: nowrap;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   SEE ALL
+   ===================================================== */
+
+.trending-section .see-all {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 auto !important;
+
+    width: auto !important;
+
+    margin: 0 !important;
+
+    white-space: nowrap !important;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   TRENDING CARDS ROW
+   ===================================================== */
+
+.trending-section .series-row {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    gap: 20px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    padding: 20px 0;
+
+    scroll-behavior: smooth;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HIDE SCROLLBAR
+   ===================================================== */
+
+.trending-section .series-row::-webkit-scrollbar {
+    height: 6px;
+}
+
+.trending-section .series-row::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   SERIES CARD
+   ===================================================== */
+
+.trending-section .series-card {
+    position: relative;
+
+    flex: 0 0 250px;
+
+    width: 250px;
+
+    min-width: 250px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   POSTER
+   ===================================================== */
+
+.trending-section .series-card img {
+    display: block;
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+
+/* =====================================================
+   CARD INFORMATION
+   ===================================================== */
+
+.trending-section .series-info {
+    padding: 10px 4px 5px;
+
+    color: #ffffff;
+}
+
+
+.trending-section .series-info h3 {
+    margin: 0 0 6px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.trending-section .series-info p {
+    margin: 0 0 5px;
+
+    font-size: 13px;
+
+    color: #c7c7c7;
+}
+
+
+.trending-section .series-info > span {
+    display: block;
+
+    font-size: 12px;
+
+    color: #9ca3af;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =====================================================
+   CARD SEPARATOR
+   ===================================================== */
+
+.trending-section .card-separator {
+    margin: 0 6px;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   PLAY BUTTON
+   ===================================================== */
+
+.trending-section .play-btn {
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 75px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   NO CONTENT
+   ===================================================== */
+
+.trending-section .no-series {
+    width: 100%;
+
+    margin: 20px 0;
+
+    text-align: center;
+
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    .trending-section .section-header {
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: center !important;
+
+        justify-content: space-between !important;
+
+        flex-wrap: nowrap !important;
+
+        gap: 10px;
+    }
+
+
+    .trending-section .trending-title {
+        font-size: 23px;
+
+        gap: 6px;
+
+        white-space: nowrap !important;
+    }
+
+
+    .trending-section .see-all {
+        flex-shrink: 0 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    .trending-section .series-row {
+        gap: 15px;
+    }
+
+
+    .trending-section .series-card {
+        flex: 0 0 210px;
+
+        width: 210px;
+
+        min-width: 210px;
+    }
+
+
+    .trending-section .series-card img {
+        height: 295px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 500px) {
+
+    .trending-section .section-header {
+        gap: 8px;
+    }
+
+
+    .trending-section .trending-title {
+        font-size: 21px;
+
+        gap: 5px;
+    }
+
+
+    .trending-section .see-all {
+        padding: 7px 10px;
+
+        font-size: 12px;
+    }
+
+
+    .trending-section .series-card {
+        flex: 0 0 180px;
+
+        width: 180px;
+
+        min-width: 180px;
+    }
+
+
+    .trending-section .series-card img {
+        height: 255px;
+    }
+
+
+    .trending-section .play-btn {
+        width: 36px;
+
+        height: 36px;
+
+        right: 9px;
+
+        bottom: 65px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .trending-section .trending-title {
+        font-size: 19px;
+
+        gap: 4px;
+    }
+
+
+    .trending-section .see-all {
+        padding: 6px 8px;
+
+        font-size: 11px;
+    }
+
+
+    .trending-section .series-card {
+        flex: 0 0 160px;
+
+        width: 160px;
+
+        min-width: 160px;
+    }
+
+
+    .trending-section .series-card img {
+        height: 230px;
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL
+   ===================================================== */
+
+@media (max-width: 320px) {
+
+    .trending-section .section-header {
+        gap: 5px;
+    }
+
+
+    .trending-section .trending-title {
+        font-size: 17px;
+    }
+
+
+    .trending-section .see-all {
+        padding: 5px 7px;
+
+        font-size: 10px;
+    }
+
+
+    .trending-section .series-card {
+        flex: 0 0 145px;
+
+        width: 145px;
+
+        min-width: 145px;
+    }
+
+
+    .trending-section .series-card img {
+        height: 205px;
+    }
+
+}
