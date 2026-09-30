@@ -1,0 +1,582 @@
+/* =========================================================
+   MOVIESTREAM WELCOME NAVBAR
+========================================================= */
+
+:root {
+    --background: #080B14;
+    --surface: #0F1422;
+    --card: #151B2F;
+    --navbar: #0C111D;
+    --modal: #181F33;
+    --hover: #202842;
+
+    --primary: #7C3AED;
+    --light: #A855F7;
+    --dark: #5B21B6;
+    --secondary: #9333EA;
+
+    --text: #E5E7EB;
+    --text-light: #9CA3AF;
+    --text-muted: #6B7280;
+
+    --border: #232B3F;
+
+    --gradient-primary: linear-gradient(
+        135deg,
+        #7C3AED,
+        #A855F7
+    );
+
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.NavbarContainer {
+    width: 100%;
+    height: 75px;
+
+    background: var(--navbar);
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo a {
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-size: 24px;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+
+    white-space: nowrap;
+
+    transition: var(--transition);
+}
+
+.logo a span {
+    color: var(--light);
+}
+
+.logo a:hover {
+    text-shadow:
+        0 0 15px rgba(168, 85, 247, 0.45);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.welcome-nav-links {
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 38px;
+}
+
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
+
+.welcome-nav-links a {
+
+    position: relative;
+
+    padding: 27px 0 24px;
+
+    color: var(--text-light);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+.welcome-nav-links a:hover {
+    color: var(--text);
+}
+
+
+/* =========================================================
+   PURPLE UNDERLINE
+========================================================= */
+
+.welcome-nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 14px;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: var(--gradient-primary);
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.8);
+
+    transform: translateX(-50%);
+
+    transition: var(--transition);
+}
+
+.welcome-nav-links a:hover::after,
+.welcome-nav-links a.active::after {
+    width: 35px;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.welcome-navbar-right {
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-btn {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 75px;
+    height: 36px;
+
+    padding: 0 18px;
+
+    color: var(--text);
+
+    background: transparent;
+
+    border: 1px solid var(--primary);
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.login-btn:hover {
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 18px rgba(124, 58, 237, 0.45);
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.hamburger-btn {
+
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    transition: var(--transition);
+}
+
+.hamburger-btn:hover {
+
+    background: var(--hover);
+
+    border-color: var(--primary);
+
+    color: var(--light);
+
+    box-shadow:
+        0 0 15px rgba(124, 58, 237, 0.25);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .NavbarContainer {
+        height: 70px;
+        padding: 0 25px;
+    }
+
+    .welcome-nav-links {
+        gap: 25px;
+    }
+
+    .welcome-nav-links a {
+        padding: 25px 0 22px;
+        font-size: 12px;
+    }
+
+    .welcome-nav-links a::after {
+        bottom: 12px;
+    }
+
+    .logo a {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .NavbarContainer {
+
+        height: 65px;
+
+        padding: 0 16px;
+
+        background: var(--navbar);
+    }
+
+
+    /* -----------------------------------------------------
+       LOGO
+    ----------------------------------------------------- */
+
+    .logo a {
+        font-size: 21px;
+    }
+
+
+    /* -----------------------------------------------------
+       RIGHT SIDE
+    ----------------------------------------------------- */
+
+    .welcome-navbar-right {
+        gap: 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       LOGIN
+    ----------------------------------------------------- */
+
+    .login-btn {
+
+        min-width: 65px;
+
+        height: 34px;
+
+        padding: 0 13px;
+
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       HAMBURGER
+    ----------------------------------------------------- */
+
+    .hamburger-btn {
+
+        display: flex;
+
+        width: 38px;
+        height: 38px;
+
+        background: var(--surface);
+
+        color: var(--text);
+
+        border: 1px solid var(--border);
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE NAV
+    ----------------------------------------------------- */
+
+    .welcome-nav-links {
+
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        background: var(--navbar);
+
+        border-bottom: 1px solid var(--border);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding: 0 18px;
+
+        overflow: hidden;
+
+        max-height: 0;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        box-shadow:
+            0 15px 30px rgba(0, 0, 0, 0.35);
+
+        transition:
+            max-height 0.35s ease,
+            opacity 0.25s ease,
+            transform 0.35s ease,
+            visibility 0.35s ease;
+    }
+
+
+    /* -----------------------------------------------------
+       OPEN MENU
+    ----------------------------------------------------- */
+
+    .welcome-nav-links.mobile-menu-open {
+
+        max-height: 260px;
+
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE LINKS
+    ----------------------------------------------------- */
+
+    .welcome-nav-links a {
+
+        width: 100%;
+
+        height: 50px;
+
+        padding: 0 10px;
+
+        display: flex;
+
+        align-items: center;
+
+        color: var(--text-light);
+
+        font-size: 13px;
+
+        border-bottom: 1px solid rgba(35, 43, 63, 0.6);
+
+        transition:
+            color 0.25s ease,
+            background 0.25s ease,
+            padding-left 0.25s ease;
+    }
+
+
+    .welcome-nav-links a:last-child {
+        border-bottom: none;
+    }
+
+
+    .welcome-nav-links a:hover {
+
+        color: var(--text);
+
+        background: var(--hover);
+
+        padding-left: 17px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE ACTIVE LINK
+    ----------------------------------------------------- */
+
+    .welcome-nav-links a.active {
+
+        color: var(--light);
+
+        background:
+            rgba(124, 58, 237, 0.10);
+    }
+
+
+    .welcome-nav-links a::after {
+
+        left: 0;
+
+        bottom: 0;
+
+        width: 0;
+
+        height: 2px;
+
+        transform: none;
+
+        background: var(--gradient-primary);
+    }
+
+
+    .welcome-nav-links a:hover::after,
+    .welcome-nav-links a.active::after {
+
+        width: 35px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .NavbarContainer {
+        padding: 0 12px;
+    }
+
+
+    .logo a {
+        font-size: 19px;
+    }
+
+
+    .login-btn {
+
+        min-width: 58px;
+
+        height: 32px;
+
+        padding: 0 10px;
+
+        font-size: 11px;
+    }
+
+
+    .hamburger-btn {
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 17px;
+    }
+
+
+    .welcome-nav-links {
+        top: 65px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .welcome-nav-links a {
+        height: 48px;
+        font-size: 12px;
+    }
+}

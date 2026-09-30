@@ -1,0 +1,970 @@
+/* =========================================================
+   MOVIE STREAM
+   WEB SERIES CAROUSEL
+   ========================================================= */
+
+
+/* =========================================================
+   1. MAIN CAROUSEL
+   ========================================================= */
+
+.webCarousel {
+    position: relative;
+
+    width: 100%;
+    height: 720px;
+
+    margin: 0;
+    padding: 0;
+
+    background: #080b14;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   2. CAROUSEL SLIDE
+   ========================================================= */
+
+.webCarousel-slide {
+    position: relative;
+
+    width: 100%;
+    height: 720px;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #080b14;
+
+    border-radius: 0 0 30px 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   3. BACKGROUND IMAGE
+   ========================================================= */
+
+.webCarousel-image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: 75% center;
+
+    z-index: 1;
+
+    /*
+       BLUR EFFECT
+    */
+
+    filter:
+        blur(4px)
+        brightness(0.65)
+        contrast(1.08)
+        saturate(1.08);
+
+    /*
+       Prevent blur edges
+    */
+
+    transform: scale(1.06);
+
+    transition:
+        transform 0.8s ease,
+        filter 0.5s ease;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   4. IMAGE HOVER
+   ========================================================= */
+
+.webCarousel-slide:hover .webCarousel-image {
+
+    transform: scale(1.09);
+
+    filter:
+        blur(4px)
+        brightness(0.72)
+        contrast(1.10)
+        saturate(1.10);
+}
+
+
+/* =========================================================
+   5. DARK OVERLAY
+   ========================================================= */
+
+.webCarousel-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+
+        /* LEFT SIDE */
+
+        linear-gradient(
+            90deg,
+
+            rgba(5, 8, 18, 1) 0%,
+
+            rgba(5, 8, 18, 0.98) 15%,
+
+            rgba(5, 8, 18, 0.90) 30%,
+
+            rgba(5, 8, 18, 0.72) 45%,
+
+            rgba(5, 8, 18, 0.40) 65%,
+
+            rgba(5, 8, 18, 0.05) 100%
+        ),
+
+        /* BOTTOM */
+
+        linear-gradient(
+            180deg,
+
+            rgba(5, 8, 18, 0) 45%,
+
+            rgba(5, 8, 18, 0.25) 65%,
+
+            rgba(5, 8, 18, 0.95) 100%
+        );
+}
+
+
+/* =========================================================
+   6. CONTENT
+   ========================================================= */
+
+.webCarousel-content {
+    position: absolute;
+
+    top: 50%;
+    left: 7%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 48%;
+    max-width: 680px;
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   7. TRENDING BADGE
+   ========================================================= */
+
+.webCarousel-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    margin-bottom: 22px;
+
+    padding: 9px 20px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #a855f7
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    line-height: 1;
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, 0.40);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   8. TITLE
+   ========================================================= */
+
+.webCarousel-title {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 22px 0;
+
+    padding: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(
+            48px,
+            5vw,
+            70px
+        );
+
+    font-weight: 900;
+
+    line-height: 0.95;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    overflow-wrap: break-word;
+
+    word-wrap: break-word;
+
+    text-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.85);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   9. DESCRIPTION
+   ========================================================= */
+
+.webCarousel-description {
+    display: block;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 0 0 25px 0;
+
+    padding: 0;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    overflow-wrap: break-word;
+
+    word-wrap: break-word;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.7);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   10. META INFORMATION
+   ========================================================= */
+
+.webCarousel-meta {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    width: 100%;
+
+    margin: 0 0 28px 0;
+
+    padding: 0;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   11. RATING
+   ========================================================= */
+
+.webCarousel-rating {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #ffd54a;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   12. YEAR
+   ========================================================= */
+
+.webCarousel-year {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   13. DURATION
+   ========================================================= */
+
+.webCarousel-duration {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   14. GENRE
+   ========================================================= */
+
+.webCarousel-genre {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 5px 12px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.28);
+
+    border-radius: 6px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    backdrop-filter: blur(8px);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   15. LANGUAGE
+   ========================================================= */
+
+.webCarousel-language {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 6px 15px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #a855f7
+        );
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 5px 15px rgba(124, 58, 237, 0.25);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   16. BUTTON CONTAINER
+   ========================================================= */
+
+.webCarousel-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   17. WATCH BUTTON
+   ========================================================= */
+
+.webCarousel-watch {
+    width: 175px;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #a855f7
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* WATCH HOVER */
+
+.webCarousel-watch:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(124, 58, 237, 0.55);
+}
+
+
+/* =========================================================
+   18. MORE INFO BUTTON
+   ========================================================= */
+
+.webCarousel-info {
+    width: 175px;
+
+    height: 52px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* INFO HOVER */
+
+.webCarousel-info:hover {
+
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   19. LOADING
+   ========================================================= */
+
+.webCarousel-loading {
+
+    width: 100%;
+
+    height: 720px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #080b14;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   20. LARGE SCREEN
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+    .webCarousel {
+        height: 760px;
+    }
+
+    .webCarousel-slide {
+        height: 760px;
+    }
+
+    .webCarousel-content {
+        left: 8%;
+
+        width: 46%;
+
+        max-width: 720px;
+    }
+
+    .webCarousel-title {
+        font-size: 76px;
+    }
+
+    .webCarousel-description {
+        font-size: 18px;
+
+        max-width: 620px;
+    }
+}
+
+
+/* =========================================================
+   21. TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .webCarousel {
+        height: 680px;
+    }
+
+    .webCarousel-slide {
+        height: 680px;
+    }
+
+    .webCarousel-content {
+        left: 6%;
+
+        width: 55%;
+
+        max-width: 600px;
+    }
+
+    .webCarousel-title {
+        font-size: 54px;
+
+        line-height: 0.98;
+    }
+
+    .webCarousel-description {
+        font-size: 15px;
+
+        line-height: 1.55;
+    }
+
+    .webCarousel-meta {
+        gap: 13px;
+
+        margin-bottom: 24px;
+    }
+
+    .webCarousel-watch,
+    .webCarousel-info {
+        width: 160px;
+
+        height: 50px;
+    }
+}
+
+
+/* =========================================================
+   22. MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .webCarousel {
+        height: 650px;
+    }
+
+    .webCarousel-slide {
+        height: 650px;
+
+        min-height: 650px;
+
+        border-radius: 0;
+    }
+
+
+    /* MOBILE IMAGE */
+
+    .webCarousel-image {
+
+        object-position: 65% center;
+
+        filter:
+            blur(4px)
+            brightness(0.60)
+            contrast(1.08)
+            saturate(1.08);
+
+        transform: scale(1.08);
+    }
+
+
+    /* MOBILE OVERLAY */
+
+    .webCarousel-overlay {
+
+        background:
+
+            linear-gradient(
+                180deg,
+                rgba(5, 8, 18, 0.05) 0%,
+                rgba(5, 8, 18, 0.35) 42%,
+                rgba(5, 8, 18, 0.98) 100%
+            );
+    }
+
+
+    /* MOBILE CONTENT */
+
+    .webCarousel-content {
+
+        top: auto;
+
+        bottom: 40px;
+
+        left: 25px;
+
+        right: 25px;
+
+        transform: none;
+
+        width: auto;
+
+        max-width: none;
+    }
+
+
+    /* BADGE */
+
+    .webCarousel-badge {
+
+        margin-bottom: 14px;
+
+        padding: 8px 15px;
+
+        font-size: 12px;
+    }
+
+
+    /* TITLE */
+
+    .webCarousel-title {
+
+        margin-bottom: 14px;
+
+        font-size: 42px;
+
+        line-height: 1;
+    }
+
+
+    /* DESCRIPTION */
+
+    .webCarousel-description {
+
+        margin-bottom: 18px;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* META */
+
+    .webCarousel-meta {
+
+        gap: 10px;
+
+        margin-bottom: 20px;
+
+        font-size: 13px;
+    }
+
+
+    /* BUTTONS */
+
+    .webCarousel-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        width: 100%;
+    }
+
+    .webCarousel-watch,
+    .webCarousel-info {
+
+        width: 100%;
+
+        height: 50px;
+    }
+}
+
+
+/* =========================================================
+   23. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .webCarousel {
+        height: 650px;
+    }
+
+    .webCarousel-slide {
+        height: 650px;
+
+        min-height: 650px;
+    }
+
+
+    .webCarousel-image {
+
+        object-position: 65% center;
+
+        filter:
+            blur(4px)
+            brightness(0.58)
+            contrast(1.08)
+            saturate(1.05);
+
+        transform: scale(1.09);
+    }
+
+
+    .webCarousel-content {
+
+        left: 20px;
+
+        right: 20px;
+
+        bottom: 30px;
+    }
+
+
+    .webCarousel-badge {
+
+        margin-bottom: 12px;
+
+        padding: 7px 13px;
+
+        font-size: 11px;
+    }
+
+
+    .webCarousel-title {
+
+        margin-bottom: 12px;
+
+        font-size: 34px;
+
+        line-height: 1;
+    }
+
+
+    .webCarousel-description {
+
+        margin-bottom: 16px;
+
+        font-size: 13px;
+
+        line-height: 1.45;
+    }
+
+
+    .webCarousel-meta {
+
+        gap: 8px;
+
+        margin-bottom: 18px;
+
+        font-size: 12px;
+    }
+
+
+    .webCarousel-genre {
+
+        padding: 4px 8px;
+    }
+
+
+    .webCarousel-language {
+
+        padding: 5px 12px;
+    }
+
+
+    .webCarousel-watch,
+    .webCarousel-info {
+
+        height: 48px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   24. VERY SMALL SCREEN
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .webCarousel {
+        height: 620px;
+    }
+
+    .webCarousel-slide {
+        height: 620px;
+    }
+
+
+    .webCarousel-image {
+
+        object-position: 65% center;
+
+        filter:
+            blur(4px)
+            brightness(0.55)
+            contrast(1.08)
+            saturate(1.05);
+
+        transform: scale(1.09);
+    }
+
+
+    .webCarousel-content {
+
+        left: 16px;
+
+        right: 16px;
+
+        bottom: 25px;
+    }
+
+
+    .webCarousel-title {
+        font-size: 30px;
+    }
+
+
+    .webCarousel-description {
+        font-size: 12px;
+    }
+
+
+    .webCarousel-meta {
+        gap: 6px;
+
+        font-size: 11px;
+    }
+}

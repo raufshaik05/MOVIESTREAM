@@ -1,0 +1,303 @@
+
+[
+  {
+    "title": "One Piece",
+    "titleImage": "https://image.tmdb.org/t/p/w500/2eL8a1k3Z5s7Q9X1Y3Z5.jpg",
+    "image": "https://i.pinimg.com/736x/49/e3/94/49e39421ad5fe86f26615ae23aa2c16c.jpg",
+    "description": "Monkey D. Luffy and his pirate crew journey across the Grand Line in search of the legendary treasure known as One Piece.",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "Japanese",
+    "rating": 9.0,
+    "year": 1999,
+    "duration": "24 min/episode",
+    "certificate": "U/A",
+    "director": "Kōnosuke Uda",
+    "cast": [
+      "Mayumi Tanaka",
+      "Kazuya Nakai",
+      "Akemi Okamura",
+      "Kappei Yamaguchi"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=MCb13lbVGE0"
+  },
+  {
+    "title": "Naruto: Shippuden",
+    "titleImage": "https://image.tmdb.org/t/p/w500/naruto-shippuden-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/naruto-shippuden.jpg",
+    "description": "Naruto Uzumaki returns as a teenager and continues his journey to become Hokage while facing powerful enemies and protecting his friends.",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "Japanese",
+    "rating": 8.7,
+    "year": 2007,
+    "duration": "23 min/episode",
+    "certificate": "U/A",
+    "director": "Hayato Date",
+    "cast": [
+      "Junko Takeuchi",
+      "Noriaki Sugiyama",
+      "Chie Nakamura",
+      "Kazuhiko Inoue"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=22R0j8UKRzY"
+  },
+  {
+    "title": "Dragon Ball Z",
+    "titleImage": "https://image.tmdb.org/t/p/w500/dragon-ball-z-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/dragon-ball-z.jpg",
+    "description": "Goku and his friends defend Earth against powerful warriors and supernatural threats while discovering new levels of strength.",
+    "genre": "Action, Adventure, Martial Arts",
+    "language": "Japanese",
+    "rating": 8.8,
+    "year": 1989,
+    "duration": "24 min/episode",
+    "certificate": "U/A",
+    "director": "Daisuke Nishio",
+    "cast": [
+      "Masako Nozawa",
+      "Ryo Horikawa",
+      "Toshio Furukawa",
+      "Mayumi Tanaka"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=QqzZ0b7n4k8"
+  },
+  {
+    "title": "Attack on Titan",
+    "titleImage": "https://image.tmdb.org/t/p/w500/attack-on-titan-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/attack-on-titan.jpg",
+    "description": "Humanity fights for survival behind massive walls after terrifying Titans threaten to destroy civilization.",
+    "genre": "Action, Dark Fantasy, Drama",
+    "language": "Japanese",
+    "rating": 9.1,
+    "year": 2013,
+    "duration": "24 min/episode",
+    "certificate": "A",
+    "director": "Tetsurō Araki",
+    "cast": [
+      "Yuki Kaji",
+      "Yui Ishikawa",
+      "Marina Inoue",
+      "Hiroshi Kamiya"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=MGRm4IzK1SQ"
+  },
+  {
+    "title": "Demon Slayer: Kimetsu no Yaiba",
+    "titleImage": "https://image.tmdb.org/t/p/w500/demon-slayer-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/demon-slayer.jpg",
+    "description": "Tanjiro Kamado becomes a demon slayer after his family is attacked and his sister is transformed into a demon.",
+    "genre": "Action, Fantasy, Adventure",
+    "language": "Japanese",
+    "rating": 8.6,
+    "year": 2019,
+    "duration": "24 min/episode",
+    "certificate": "A",
+    "director": "Haruo Sotozaki",
+    "cast": [
+      "Natsuki Hanae",
+      "Akari Kitō",
+      "Hiro Shimono",
+      "Yoshitsugu Matsuoka"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=VQGCKyvzIM4"
+  },
+  {
+    "title": "Jujutsu Kaisen",
+    "titleImage": "https://image.tmdb.org/t/p/w500/jujutsu-kaisen-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/jujutsu-kaisen.jpg",
+    "description": "Yuji Itadori joins a secret organization of sorcerers after becoming the host of a powerful cursed spirit.",
+    "genre": "Action, Supernatural, Dark Fantasy",
+    "language": "Japanese",
+    "rating": 8.7,
+    "year": 2020,
+    "duration": "24 min/episode",
+    "certificate": "A",
+    "director": "Sunghoo Park",
+    "cast": [
+      "Junya Enoki",
+      "Yuma Uchida",
+      "Yuichi Nakamura",
+      "Asami Seto"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=pkKu9hLT-t8"
+  },
+  {
+    "title": "Death Note",
+    "titleImage": "https://image.tmdb.org/t/p/w500/death-note-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/death-note.jpg",
+    "description": "A brilliant student discovers a mysterious notebook that allows him to kill anyone whose name he writes in it.",
+    "genre": "Mystery, Psychological, Thriller",
+    "language": "Japanese",
+    "rating": 8.9,
+    "year": 2006,
+    "duration": "23 min/episode",
+    "certificate": "A",
+    "director": "Tetsurō Araki",
+    "cast": [
+      "Mamoru Miyano",
+      "Kappei Yamaguchi",
+      "Aya Hirano",
+      "Shidō Nakamura"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=NlJZ-YgAt-c"
+  },
+  {
+    "title": "My Hero Academia",
+    "titleImage": "https://image.tmdb.org/t/p/w500/my-hero-academia-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/my-hero-academia.jpg",
+    "description": "Izuku Midoriya dreams of becoming a hero despite being born without superpowers and eventually enters a prestigious hero academy.",
+    "genre": "Action, Superhero, Adventure",
+    "language": "Japanese",
+    "rating": 8.3,
+    "year": 2016,
+    "duration": "24 min/episode",
+    "certificate": "U/A",
+    "director": "Kenji Nagasaki",
+    "cast": [
+      "Daiki Yamashita",
+      "Justin Briner",
+      "Nobuhiko Okamoto",
+      "Kenta Miyake"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=EPVKCXDhN8A"
+  },
+  {
+    "title": "Hunter x Hunter",
+    "titleImage": "https://image.tmdb.org/t/p/w500/hunter-x-hunter-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/hunter-x-hunter.jpg",
+    "description": "Gon Freecss sets out to become a Hunter and find his missing father while encountering dangerous adventures and powerful friends.",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "Japanese",
+    "rating": 9.0,
+    "year": 2011,
+    "duration": "23 min/episode",
+    "certificate": "U/A",
+    "director": "Hiroshi Kōjina",
+    "cast": [
+      "Megumi Han",
+      "Mariya Ise",
+      "Issei Futamata",
+      "Daisuke Namikawa"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=d6kBeJjTGnY"
+  },
+  {
+    "title": "Fullmetal Alchemist: Brotherhood",
+    "titleImage": "https://image.tmdb.org/t/p/w500/fma-brotherhood-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/fma-brotherhood.jpg",
+    "description": "Two brothers use alchemy to search for the Philosopher's Stone after a failed attempt to bring their mother back to life.",
+    "genre": "Action, Adventure, Fantasy, Drama",
+    "language": "Japanese",
+    "rating": 9.1,
+    "year": 2009,
+    "duration": "24 min/episode",
+    "certificate": "U/A",
+    "director": "Yasuhiro Irie",
+    "cast": [
+      "Romi Park",
+      "Rie Kugimiya",
+      "Shinichiro Miki",
+      "Megumi Takamoto"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=2uq34TeWEdQ"
+  },
+  {
+    "title": "Bleach",
+    "titleImage": "https://image.tmdb.org/t/p/w500/bleach-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/bleach.jpg",
+    "description": "Ichigo Kurosaki gains the powers of a Soul Reaper and becomes responsible for protecting humans from evil spirits.",
+    "genre": "Action, Supernatural, Adventure",
+    "language": "Japanese",
+    "rating": 8.2,
+    "year": 2004,
+    "duration": "24 min/episode",
+    "certificate": "U/A",
+    "director": "Noriyuki Abe",
+    "cast": [
+      "Masakazu Morita",
+      "Fumiko Orikasa",
+      "Hiroki Yasumoto",
+      "Noriaki Sugiyama"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=1plavTMZz9I"
+  },
+  {
+    "title": "Tokyo Ghoul",
+    "titleImage": "https://image.tmdb.org/t/p/w500/tokyo-ghoul-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/tokyo-ghoul.jpg",
+    "description": "Ken Kaneki becomes half-ghoul after a mysterious encounter and struggles to survive between the human and ghoul worlds.",
+    "genre": "Dark Fantasy, Horror, Action",
+    "language": "Japanese",
+    "rating": 7.7,
+    "year": 2014,
+    "duration": "24 min/episode",
+    "certificate": "A",
+    "director": "Shuhei Morita",
+    "cast": [
+      "Natsuki Hanae",
+      "Sora Amamiya",
+      "Kana Hanazawa",
+      "Mamoru Miyano"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=vGuQeQsoRgU"
+  },
+  {
+    "title": "Solo Leveling",
+    "titleImage": "https://image.tmdb.org/t/p/w500/solo-leveling-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/solo-leveling.jpg",
+    "description": "Sung Jinwoo, once considered the weakest hunter, gains a mysterious ability that allows him to level up and become extraordinarily powerful.",
+    "genre": "Action, Fantasy, Adventure",
+    "language": "Japanese",
+    "rating": 8.8,
+    "year": 2024,
+    "duration": "24 min/episode",
+    "certificate": "A",
+    "director": "Shunsuke Nakashige",
+    "cast": [
+      "Taito Ban",
+      "Reina Ueda",
+      "Hiroki Touchi",
+      "Genta Nakamura"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=HkIKAnwLZCw"
+  },
+  {
+    "title": "Chainsaw Man",
+    "titleImage": "https://image.tmdb.org/t/p/w500/chainsaw-man-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/chainsaw-man.jpg",
+    "description": "Denji, a young devil hunter, merges with his pet devil Pochita and becomes the powerful Chainsaw Man.",
+    "genre": "Action, Horror, Dark Fantasy",
+    "language": "Japanese",
+    "rating": 8.5,
+    "year": 2022,
+    "duration": "24 min/episode",
+    "certificate": "A",
+    "director": "Ryū Nakayama",
+    "cast": [
+      "Kikunosuke Toya",
+      "Tomori Kusunoki",
+      "Shogo Sakata",
+      "Fairouz Ai"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=dFlDRhvM4L0"
+  },
+  {
+    "title": "Spy x Family",
+    "titleImage": "https://image.tmdb.org/t/p/w500/spy-family-title.jpg",
+    "image": "https://image.tmdb.org/t/p/original/spy-family.jpg",
+    "description": "A secret agent creates a fake family for a mission, unaware that his wife is an assassin and his adopted daughter can read minds.",
+    "genre": "Action, Comedy, Spy",
+    "language": "Japanese",
+    "rating": 8.5,
+    "year": 2022,
+    "duration": "24 min/episode",
+    "certificate": "U/A",
+    "director": "Kazuhiro Furuhashi",
+    "cast": [
+      "Takuya Eguchi",
+      "Atsumi Tanezaki",
+      "Saori Hayami",
+      "Hiroyuki Yoshino"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=ofXigq9aIpo"
+  }
+]

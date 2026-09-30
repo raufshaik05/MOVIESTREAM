@@ -1,0 +1,900 @@
+/* =====================================================
+   MOVIESTREAM NAVBAR
+===================================================== */
+
+:root {
+    --background: #080B14;
+    --surface: #0F1422;
+    --card: #151B2F;
+    --navbar: #0C111D;
+    --modal: #181F33;
+    --hover: #202842;
+
+    --primary: #7C3AED;
+    --primary-light: #A855F7;
+    --primary-dark: #5B21B6;
+
+    --text: #FFFFFF;
+    --text-light: #E5E7EB;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+
+    --border: #232B3F;
+    --border-light: #313B54;
+
+    --icon: #D1D5DB;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, .25);
+    --shadow-md: 0 6px 20px rgba(0, 0, 0, .35);
+    --shadow-lg: 0 10px 40px rgba(124, 58, 237, .20);
+
+    --gradient-primary:
+        linear-gradient(
+            135deg,
+            #7C3AED,
+            #A855F7
+        );
+
+    --transition: .3s ease;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+
+    background: rgba(12, 17, 29, .96);
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    /*
+        IMPORTANT
+        Sticky navbar
+    */
+    position:fixed;
+    top: 0;
+
+    /*
+        MAIN Z-INDEX
+    */
+    z-index: 1000;
+
+    /*
+        Smooth glass effect
+    */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    position: relative;
+
+    /*
+        Above navbar background
+    */
+    z-index: 1001;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo h2 {
+    color: var(--text);
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+
+/* =====================================================
+   DESKTOP LINKS
+===================================================== */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    list-style: none;
+
+    gap: 14px;
+
+    position: relative;
+
+    z-index: 1001;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    color: var(--text-secondary);
+
+    background: var(--card);
+
+    padding: 11px 20px;
+
+    border: 1px solid transparent;
+
+    border-radius: 30px;
+
+    transition: var(--transition);
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    background: var(--hover);
+
+    color: var(--text);
+
+    border-color: var(--border-light);
+
+    transform: translateY(-2px);
+}
+
+.nav-links .active {
+    background: var(--gradient-primary);
+
+    color: white;
+
+    border: none;
+
+    box-shadow:
+        0 6px 18px
+        rgba(124, 58, 237, .35);
+}
+
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.nav-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    position: relative;
+
+    z-index: 1001;
+}
+
+
+/* =====================================================
+   WISHLIST BUTTON
+===================================================== */
+
+.icon-btn {
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: var(--transition);
+}
+
+.icon-btn:hover {
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 22px
+        rgba(124, 58, 237, .35);
+}
+
+
+/* =====================================================
+   ADMIN / PROFILE
+===================================================== */
+
+.login-btn {
+    text-decoration: none;
+
+    color: var(--text);
+
+    background: var(--primary);
+
+    padding: 11px 24px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow-md);
+
+    white-space: nowrap;
+}
+
+.login-btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* =====================================================
+   HAMBURGER
+===================================================== */
+
+.hamburger-btn {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 21px;
+
+    transition: var(--transition);
+
+    position: relative;
+
+    /*
+        Hamburger is above navbar content
+    */
+    z-index: 1002;
+}
+
+.hamburger-btn:hover {
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: white;
+
+    box-shadow:
+        0 6px 20px
+        rgba(124, 58, 237, .35);
+}
+
+.hamburger-btn.open {
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: white;
+}
+
+
+/* =====================================================
+   MOBILE OVERLAY
+===================================================== */
+
+.mobile-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .65);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
+
+    /*
+        ABOVE NAVBAR
+    */
+    z-index: 1100;
+}
+
+.mobile-overlay.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =====================================================
+   MOBILE SIDE MENU
+===================================================== */
+
+.mobile-menu {
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    width: 320px;
+
+    max-width: 85vw;
+
+    height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0F1422 0%,
+            #080B14 100%
+        );
+
+    border-left: 1px solid var(--border);
+
+    box-shadow:
+        -15px 0 45px rgba(0, 0, 0, .45);
+
+    transform: translateX(110%);
+
+    transition:
+        transform .35s
+        cubic-bezier(.4, 0, .2, 1);
+
+    /*
+        ABOVE OVERLAY
+    */
+    z-index: 1200;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    /*
+        Prevent outside stacking problems
+    */
+    isolation: isolate;
+}
+
+.mobile-menu.show {
+    transform: translateX(0);
+}
+
+
+/* =====================================================
+   MOBILE MENU HEADER
+===================================================== */
+
+.mobile-menu-header {
+    min-height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 22px;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(12, 17, 29, .96);
+
+    position: sticky;
+
+    top: 0;
+
+    /*
+        Above menu content
+    */
+    z-index: 1201;
+}
+
+.mobile-menu-header h3 {
+    font-size: 24px;
+
+    color: var(--text);
+
+    letter-spacing: .5px;
+}
+
+.mobile-menu-header h3 span {
+    color: var(--primary);
+}
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.mobile-close-btn {
+    width: 42px;
+
+    height: 42px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition: var(--transition);
+
+    position: relative;
+
+    /*
+        Above everything inside menu
+    */
+    z-index: 1210;
+}
+
+.mobile-close-btn:hover {
+    background: #EF4444;
+
+    border-color: #EF4444;
+
+    transform: rotate(90deg);
+}
+
+
+/* =====================================================
+   MOBILE LINKS
+===================================================== */
+
+.mobile-nav-links {
+    list-style: none;
+
+    padding: 25px 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    flex: 1;
+}
+
+.mobile-nav-links li {
+    list-style: none;
+}
+
+.mobile-nav-links a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    width: 100%;
+
+    padding: 15px 17px;
+
+    border-radius: 12px;
+
+    color: var(--text-secondary);
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    border: 1px solid transparent;
+
+    transition: var(--transition);
+
+    position: relative;
+
+    z-index: 1202;
+}
+
+.mobile-nav-links a svg {
+    width: 20px;
+
+    min-width: 20px;
+
+    font-size: 18px;
+
+    color: var(--icon);
+
+    transition: var(--transition);
+}
+
+.mobile-nav-links a:hover {
+    color: var(--text);
+
+    background: var(--hover);
+
+    border-color: var(--border-light);
+
+    transform: translateX(4px);
+}
+
+.mobile-nav-links a:hover svg {
+    color: var(--primary-light);
+
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   HOME ACTIVE
+===================================================== */
+
+.mobile-nav-links li:first-child a {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 58, 237, .9),
+            rgba(168, 85, 247, .75)
+        );
+
+    box-shadow:
+        0 7px 20px
+        rgba(124, 58, 237, .22);
+}
+
+.mobile-nav-links li:first-child a svg {
+    color: white;
+}
+
+
+/* =====================================================
+   MOBILE FOOTER
+===================================================== */
+
+.mobile-menu-footer {
+    margin: 0 18px 22px;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, .03);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.mobile-menu-footer span {
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.mobile-menu-footer small {
+    color: var(--text-muted);
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 22px;
+    }
+
+    .logo h2 {
+        font-size: 29px;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        padding: 10px 14px;
+
+        font-size: 14px;
+    }
+
+    .nav-right {
+        gap: 9px;
+    }
+
+    .login-btn {
+        padding: 10px 17px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE / HAMBURGER
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        height: 68px;
+
+        padding: 0 18px;
+
+        position: sticky;
+
+        top: 0;
+
+        /*
+            Keep navbar above page content
+        */
+        z-index: 1000;
+    }
+
+    /*
+        Hide desktop navigation
+    */
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    /*
+        Show hamburger
+    */
+
+    .hamburger-btn {
+        display: flex;
+
+        z-index: 1002;
+    }
+
+    .logo h2 {
+        font-size: 27px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 65px;
+
+        padding: 0 15px;
+    }
+
+    .logo h2 {
+        font-size: 24px;
+
+        letter-spacing: .5px;
+    }
+
+    .hamburger-btn {
+        width: 42px;
+
+        height: 42px;
+
+        border-radius: 11px;
+
+        font-size: 19px;
+    }
+
+    .mobile-menu {
+        width: 300px;
+
+        max-width: 88vw;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        height: 62px;
+
+        padding: 0 12px;
+    }
+
+    .logo h2 {
+        font-size: 21px;
+    }
+
+    .hamburger-btn {
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 18px;
+    }
+
+    .mobile-menu {
+        width: 285px;
+
+        max-width: 90vw;
+    }
+
+    .mobile-menu-header {
+        min-height: 80px;
+
+        padding: 0 18px;
+    }
+
+    .mobile-menu-header h3 {
+        font-size: 21px;
+    }
+
+    .mobile-nav-links {
+        padding: 20px 13px;
+    }
+
+    .mobile-nav-links a {
+        padding: 14px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 320px) {
+
+    .logo h2 {
+        font-size: 19px;
+    }
+
+    .hamburger-btn {
+        width: 38px;
+
+        height: 38px;
+    }
+
+    .mobile-menu {
+        max-width: 92vw;
+    }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .navbar *,
+    .mobile-menu,
+    .mobile-overlay,
+    .hamburger-btn,
+    .mobile-nav-links a {
+        transition: none !important;
+    }
+}

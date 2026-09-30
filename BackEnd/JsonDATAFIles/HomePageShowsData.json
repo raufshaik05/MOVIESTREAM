@@ -1,0 +1,356 @@
+[
+  {
+    "title": "India's Got Talent",
+    "titleImage": "https://example.com/logos/indias-got-talent-logo.png",
+    "image": "https://example.com/images/indias-got-talent-poster.jpg",
+    "description": "A popular Indian reality talent competition where contestants from across the country showcase singing, dancing, magic, comedy, acrobatics, and unique talents to impress the judges.",
+    "genre": "Reality, Talent Show",
+    "language": "Hindi",
+    "rating": 8.6,
+    "year": 2009,
+    "duration": "60-90 Minutes",
+    "certificate": "U",
+    "director": "Fremantle India",
+    "cast": [
+      "Shilpa Shetty",
+      "Badshah",
+      "Kirron Kher",
+      "Arjun Bijlani"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=klf-igt-trailer"
+  },
+  {
+    "title": "Dance India Dance",
+    "titleImage": "https://example.com/logos/dance-india-dance-logo.png",
+    "image": "https://example.com/images/dance-india-dance-poster.jpg",
+    "description": "One of India's biggest dance reality shows featuring talented dancers competing in various dance styles under the guidance of renowned choreographers.",
+    "genre": "Reality, Dance",
+    "language": "Hindi",
+    "rating": 8.5,
+    "year": 2009,
+    "duration": "60 Minutes",
+    "certificate": "U",
+    "director": "Zee TV Productions",
+    "cast": [
+      "Remo D'Souza",
+      "Geeta Kapur",
+      "Terence Lewis",
+      "Jay Bhanushali"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=did-trailer"
+  },
+  {
+    "title": "Khatron Ke Khiladi",
+    "titleImage": "https://example.com/logos/khatron-ke-khiladi-logo.png",
+    "image": "https://example.com/images/khatron-ke-khiladi-poster.jpg",
+    "description": "A thrilling adventure reality show where celebrities perform dangerous stunts and face extreme challenges to win the title.",
+    "genre": "Reality, Adventure",
+    "language": "Hindi",
+    "rating": 8.4,
+    "year": 2008,
+    "duration": "60-90 Minutes",
+    "certificate": "U/A 13+",
+    "director": "Endemol Shine India",
+    "cast": [
+      "Rohit Shetty",
+      "Various Celebrity Contestants"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=kkk-trailer"
+  },
+  {
+    "title": "Indian Idol",
+    "titleImage": "https://example.com/logos/indian-idol-logo.png",
+    "image": "https://example.com/images/indian-idol-poster.jpg",
+    "description": "India's most popular singing reality competition where aspiring singers compete for the title of Indian Idol through performances judged by renowned musicians.",
+    "genre": "Reality, Music",
+    "language": "Hindi",
+    "rating": 8.7,
+    "year": 2004,
+    "duration": "60-90 Minutes",
+    "certificate": "U",
+    "director": "Sony Entertainment Television",
+    "cast": [
+      "Vishal Dadlani",
+      "Shreya Ghoshal",
+      "Kumar Sanu",
+      "Aditya Narayan"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=indian-idol-trailer"
+  },
+  {
+    "title": "Kaun Banega Crorepati",
+    "titleImage": "https://example.com/logos/kbc-logo.png",
+    "image": "https://example.com/images/kbc-poster.jpg",
+    "description": "India's most iconic quiz show where contestants answer multiple-choice questions to win cash prizes, hosted by legendary actor Amitabh Bachchan.",
+    "genre": "Quiz, Reality, Game Show",
+    "language": "Hindi",
+    "rating": 9.0,
+    "year": 2000,
+    "duration": "60 Minutes",
+    "certificate": "U",
+    "director": "BIG Synergy",
+    "cast": [
+      "Amitabh Bachchan"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=fQbA4KBCtrailer"
+  },
+  {
+    "title": "The Kapil Sharma Show",
+    "titleImage": "https://example.com/logos/kapil-sharma-show-logo.png",
+    "image": "https://example.com/images/kapil-sharma-show-poster.jpg",
+    "description": "A comedy talk show featuring celebrity interviews, hilarious sketches, stand-up performances, and entertaining interactions with a live audience.",
+    "genre": "Comedy, Talk Show",
+    "language": "Hindi",
+    "rating": 8.9,
+    "year": 2016,
+    "duration": "60-90 Minutes",
+    "certificate": "U",
+    "director": "Frames Productions",
+    "cast": [
+      "Kapil Sharma",
+      "Archana Puran Singh",
+      "Kiku Sharda",
+      "Krushna Abhishek",
+      "Sunil Grover"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=qvKapilTrailer"
+  },
+  {
+    "title": "Comedy Nights with Kapil",
+    "titleImage": "https://example.com/logos/comedy-nights-logo.png",
+    "image": "https://example.com/images/comedy-nights-poster.jpg",
+    "description": "The comedy show that made Kapil Sharma a household name with celebrity guests, hilarious characters, and family-friendly entertainment.",
+    "genre": "Comedy, Talk Show",
+    "language": "Hindi",
+    "rating": 8.8,
+    "year": 2013,
+    "duration": "60 Minutes",
+    "certificate": "U",
+    "director": "K9 Productions",
+    "cast": [
+      "Kapil Sharma",
+      "Sumona Chakravarti",
+      "Ali Asgar",
+      "Upasana Singh",
+      "Sunil Grover"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=comedyNightTrailer"
+  },
+  {
+    "title": "Bigg Boss",
+    "titleImage": "https://example.com/logos/bigg-boss-logo.png",
+    "image": "https://example.com/images/bigg-boss-poster.jpg",
+    "description": "India's biggest reality show where celebrities live together in a specially designed house while competing in weekly tasks, eliminations, and dramatic challenges.",
+    "genre": "Reality, Entertainment",
+    "language": "Hindi",
+    "rating": 8.5,
+    "year": 2006,
+    "duration": "60-90 Minutes",
+    "certificate": "U/A 16+",
+    "director": "Endemol Shine India",
+    "cast": [
+      "Salman Khan",
+      "Anil Kapoor",
+      "Various Celebrity Contestants"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=biggbossTrailer"
+  },
+
+  {
+    "title": "Jabardasth",
+    "titleImage": "https://example.com/logos/jabardasth-logo.png",
+    "image": "https://example.com/images/jabardasth-poster.jpg",
+    "description": "One of the most popular Telugu comedy shows featuring hilarious skits performed by talented comedy teams and celebrity judges.",
+    "genre": "Comedy, Entertainment",
+    "language": "Telugu",
+    "rating": 8.9,
+    "year": 2013,
+    "duration": "60 Minutes",
+    "certificate": "U",
+    "director": "Mallemala Entertainments",
+    "cast": [
+      "Hyper Aadi",
+      "Sudigali Sudheer",
+      "Rocket Raghava",
+      "Ram Prasad",
+      "Auto Ram Prasad"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=jabardasthTrailer"
+  },
+  {
+    "title": "Extra Jabardasth",
+    "titleImage": "https://example.com/logos/extra-jabardasth-logo.png",
+    "image": "https://example.com/images/extra-jabardasth-poster.jpg",
+    "description": "A weekend comedy entertainment show featuring hilarious skits, celebrity guests, and talented comedians.",
+    "genre": "Comedy, Entertainment",
+    "language": "Telugu",
+    "rating": 8.7,
+    "year": 2014,
+    "duration": "60 Minutes",
+    "certificate": "U",
+    "director": "Mallemala Entertainments",
+    "cast": [
+      "Rashmi Gautam",
+      "Hyper Aadi",
+      "Ram Prasad",
+      "Rocket Raghava"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=extraJabardasthTrailer"
+  },
+  {
+    "title": "Dhee",
+    "titleImage": "https://example.com/logos/dhee-logo.png",
+    "image": "https://example.com/images/dhee-poster.jpg",
+    "description": "A Telugu dance reality show where talented dancers compete with spectacular performances judged by celebrities.",
+    "genre": "Dance, Reality",
+    "language": "Telugu",
+    "rating": 9.2,
+    "year": 2009,
+    "duration": "90 Minutes",
+    "certificate": "U",
+    "director": "Mallemala Entertainments",
+    "cast": [
+      "Pradeep Machiraju",
+      "Shekhar Master",
+      "Poorna",
+      "Ganesh Master"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=dheeTrailer"
+  },
+  {
+    "title": "Bigg Boss Telugu",
+    "titleImage": "https://example.com/logos/bigg-boss-telugu-logo.png",
+    "image": "https://example.com/images/bigg-boss-telugu-poster.jpg",
+    "description": "The Telugu version of India's biggest reality show where celebrities compete by living together under constant surveillance.",
+    "genre": "Reality, Entertainment",
+    "language": "Telugu",
+    "rating": 8.8,
+    "year": 2017,
+    "duration": "60-90 Minutes",
+    "certificate": "U/A 16+",
+    "director": "Endemol Shine India",
+    "cast": [
+      "N. T. Rama Rao Jr.",
+      "Nani",
+      "Nagarjuna Akkineni",
+      "Various Celebrity Contestants"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=biggBossTeluguTrailer"
+  },
+  {
+    "title": "Indian Idol Telugu",
+    "titleImage": "https://example.com/logos/indian-idol-telugu-logo.png",
+    "image": "https://example.com/images/indian-idol-telugu-poster.jpg",
+    "description": "A singing reality competition discovering the best singing talent from Telugu-speaking regions.",
+    "genre": "Music, Reality",
+    "language": "Telugu",
+    "rating": 8.6,
+    "year": 2022,
+    "duration": "75 Minutes",
+    "certificate": "U",
+    "director": "Fremantle India",
+    "cast": [
+      "Sreerama Chandra",
+      "Thaman S",
+      "Geetha Madhuri",
+      "Karthik"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=indianIdolTeluguTrailer"
+  },
+  {
+    "title": "Cash",
+    "titleImage": "https://example.com/logos/cash-logo.png",
+    "image": "https://example.com/images/cash-poster.jpg",
+    "description": "A celebrity game show filled with fun games, comedy, and exciting cash prizes hosted by Suma Kanakala.",
+    "genre": "Game Show, Entertainment",
+    "language": "Telugu",
+    "rating": 8.5,
+    "year": 2010,
+    "duration": "60 Minutes",
+    "certificate": "U",
+    "director": "ETV Telugu",
+    "cast": [
+      "Suma Kanakala",
+      "Various Celebrity Guests"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=cashTrailer"
+  },
+  {
+    "title": "Suma Adda",
+    "titleImage": "https://example.com/logos/suma-adda-logo.png",
+    "image": "https://example.com/images/suma-adda-poster.jpg",
+    "description": "A celebrity talk show where movie stars promote their films through games, comedy, and interviews.",
+    "genre": "Talk Show, Entertainment",
+    "language": "Telugu",
+    "rating": 8.4,
+    "year": 2022,
+    "duration": "60 Minutes",
+    "certificate": "U",
+    "director": "ETV Telugu",
+    "cast": [
+      "Suma Kanakala",
+      "Various Tollywood Celebrities"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=sumaAddaTrailer"
+  },
+  {
+    "title": "Ali Tho Saradaga",
+    "titleImage": "https://example.com/logos/ali-tho-saradaga-logo.png",
+    "image": "https://example.com/images/ali-tho-saradaga-poster.jpg",
+    "description": "A popular celebrity interview show hosted by actor Ali, featuring candid conversations with Tollywood stars.",
+    "genre": "Talk Show",
+    "language": "Telugu",
+    "rating": 8.7,
+    "year": 2016,
+    "duration": "60 Minutes",
+    "certificate": "U",
+    "director": "ETV Telugu",
+    "cast": [
+      "Ali",
+      "Various Tollywood Celebrities"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=aliThoSaradagaTrailer"
+  },
+  {
+    "title": "Padutha Teeyaga",
+    "titleImage": "https://example.com/logos/padutha-teeyaga-logo.png",
+    "image": "https://example.com/images/padutha-teeyaga-poster.jpg",
+    "description": "A legendary Telugu singing reality show that has introduced numerous talented playback singers.",
+    "genre": "Music, Reality",
+    "language": "Telugu",
+    "rating": 9.1,
+    "year": 1996,
+    "duration": "60 Minutes",
+    "certificate": "U",
+    "director": "ETV Telugu",
+    "cast": [
+      "S. P. Balasubrahmanyam",
+      "Sunitha",
+      "Various Contestants"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=paduthaTeeyagaTrailer"
+  },
+  {
+    "title": "Sridevi Drama Company",
+    "titleImage": "https://example.com/logos/sridevi-drama-company-logo.png",
+    "image": "https://example.com/images/sridevi-drama-company-poster.jpg",
+    "description": "A family entertainment show featuring comedy, dance, music performances, and celebrity special episodes.",
+    "genre": "Entertainment, Comedy",
+    "language": "Telugu",
+    "rating": 8.8,
+    "year": 2021,
+    "duration": "90 Minutes",
+    "certificate": "U",
+    "director": "Mallemala Entertainments",
+    "cast": [
+      "Rashmi Gautam",
+      "Hyper Aadi",
+      "Sudheer",
+      "Various TV Artists"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=srideviDramaCompanyTrailer"
+  }
+]
+
+
+

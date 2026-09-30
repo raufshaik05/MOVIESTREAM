@@ -1,0 +1,112 @@
+[
+    {
+        "title": "Stranger Things",
+        "description": "A group of kids uncover supernatural mysteries after a young boy mysteriously disappears in the town of Hawkins.",
+        "image": "https://i.pinimg.com/736x/c3/d0/9c/c3d09c1bacc1a9dfe873ebe76404453a.jpg",
+        "video": "https://www.youtube.com/watch?v=b9EkMc79ZSU",
+        "genre": "Sci-Fi",
+        "language": "English",
+        "rating": 8.7,
+        "year": 2016,
+        "isTrending": true
+    },
+    {
+        "title": "Money Heist",
+        "description": "A criminal mastermind known as The Professor recruits eight thieves to carry out the biggest robbery in history.",
+        "image": "https://i.pinimg.com/1200x/f4/a0/85/f4a08561e97aa50c8abf3d4790cff7da.jpg",
+        "video": "https://www.youtube.com/watch?v=_InqQJRqGW4",
+        "genre": "Crime",
+        "language": "English",
+        "rating": 8.2,
+        "year": 2017,
+        "isTrending": true
+    },
+    {
+        "title": "The Boys",
+        "description": "A group of vigilantes fights corrupt superheroes who abuse their powers for fame and profit.",
+        "image": "https://image.tmdb.org/t/p/original/stTEycfG9928HYGEISBFaG1ngjM.jpg",
+        "video": "https://www.youtube.com/watch?v=M1bhOaLV4FU",
+        "genre": "Action",
+        "language": "English",
+        "rating": 8.7,
+        "year": 2019,
+        "isTrending": true
+    },
+    {
+        "title": "Wednesday",
+        "description": "Wednesday Addams investigates supernatural mysteries while studying at Nevermore Academy.",
+        "image": "https://image.tmdb.org/t/p/original/9PFonBhy4cQy7Jz20NpMygczOkv.jpg",
+        "video": "https://www.youtube.com/watch?v=Di310WS8zLk",
+        "genre": "Fantasy",
+        "language": "English",
+        "rating": 8.1,
+        "year": 2022,
+        "isTrending": true
+    },
+    {
+        "title": "Mirzapur",
+        "description": "Crime, politics, and power struggles dominate the lawless city of Mirzapur.",
+        "image": "https://i.pinimg.com/736x/77/20/8d/77208d1af26d2d39e1ee94adbed94271.jpg",
+        "video": "https://www.youtube.com/watch?v=ZNeGF-PvRHY",
+        "genre": "Crime",
+        "language": "Hindi",
+        "rating": 8.5,
+        "year": 2018,
+        "isTrending": true
+    },
+    {
+        "title": "The Family Man",
+        "description": "A middle-class man secretly works as an intelligence officer while balancing family responsibilities.",
+        "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTv1gBc_zDDv_kf6KUf8YnDUZZqlj4-hf5BiSfdXh-MrXuLqQuj",
+        "video": "https://www.youtube.com/watch?v=XatRGut65VI",
+        "genre": "Action",
+        "language": "Hindi",
+        "rating": 8.7,
+        "year": 2019,
+        "isTrending": true
+    },
+    {
+        "title": "Farzi",
+        "description": "A talented artist becomes involved in the dangerous world of counterfeit currency.",
+        "image": "https://image.tmdb.org/t/p/original/3n0Fj5kK8gXKQW4HnP.jpg",
+        "video": "https://www.youtube.com/watch?v=rcQ_xZdzPBc",
+        "genre": "Crime",
+        "language": "Hindi",
+        "rating": 8.4,
+        "year": 2023,
+        "isTrending": true
+    },
+    {
+        "title": "Suzhal: The Vortex",
+        "description": "The disappearance of a young girl exposes dark secrets in a small Tamil town.",
+        "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT2aMQwk4KozWTzM65GT2sL7V3nyJmM-ppC4p23Zzwex1z1Rrks",
+        "video": "https://www.youtube.com/watch?v=u3kA8WJj4lQ",
+        "genre": "Thriller",
+        "language": "Tamil",
+        "rating": 8.2,
+        "year": 2022,
+        "isTrending": true
+    },
+    {
+        "title": "House of the Dragon",
+        "description": "The Targaryen dynasty reaches the height of its power before a devastating civil war begins.",
+        "image": "https://image.tmdb.org/t/p/original/z2yahl2uefxDCl0nogcRBstwruJ.jpg",
+        "video": "https://www.youtube.com/watch?v=DotnJ7tTA34",
+        "genre": "Fantasy",
+        "language": "English",
+        "rating": 8.5,
+        "year": 2022,
+        "isTrending": true
+    },
+    {
+        "title": "Game of Thrones",
+        "description": "Noble families battle for control of the Iron Throne while an ancient enemy returns.",
+        "image": "https://i.pinimg.com/736x/a9/bc/fd/a9bcfd6754cb9886985f62ae1ac81e31.jpg",
+        "video": "https://www.youtube.com/watch?v=KPLWWIOCOOQ",
+        "genre": "Fantasy",
+        "language": "English",
+        "rating": 9.2,
+        "year": 2011,
+        "isTrending": true
+    }
+]

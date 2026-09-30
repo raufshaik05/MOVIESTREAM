@@ -1,0 +1,750 @@
+[
+  {
+    "title": "Dilwale Dulhania Le Jayenge",
+    "titleImage": "https://example.com/images/ddlj_title.jpg",
+    "image": "https://example.com/images/ddlj.jpg",
+    "description": "Raj and Simran fall in love during a trip across Europe, but Simran's traditional father has already arranged her marriage back in India.",
+    "genre": "Romance",
+    "language": "Hindi",
+    "rating": 8.0,
+    "year": 1995,
+    "duration": "3h 9m",
+    "certificate": "U",
+    "director": "Aditya Chopra",
+    "cast": [
+      "Shah Rukh Khan",
+      "Kajol",
+      "Amrish Puri"
+    ],
+    "trailer": "https://youtube.com/watch?v=ddlj_trailer"
+  },
+  {
+    "title": "3 Idiots",
+    "titleImage": "https://example.com/images/3idiots_title.jpg",
+    "image": "https://example.com/images/3idiots.jpg",
+    "description": "Two friends search for their long-lost companion, revisiting memories of their college days and his unconventional approach to life.",
+    "genre": "Comedy Drama",
+    "language": "Hindi",
+    "rating": 8.4,
+    "year": 2009,
+    "duration": "2h 50m",
+    "certificate": "U",
+    "director": "Rajkumar Hirani",
+    "cast": [
+      "Aamir Khan",
+      "R. Madhavan",
+      "Sharman Joshi"
+    ],
+    "trailer": "https://youtube.com/watch?v=3idiots_trailer"
+  },
+  {
+    "title": "Gully Boy",
+    "titleImage": "https://example.com/images/gullyboy_title.jpg",
+    "image": "https://example.com/images/gullyboy.jpg",
+    "description": "A street rapper from the slums of Mumbai chases his dream of becoming a hip-hop artist despite his difficult circumstances.",
+    "genre": "Musical Drama",
+    "language": "Hindi",
+    "rating": 7.9,
+    "year": 2019,
+    "duration": "2h 34m",
+    "certificate": "UA",
+    "director": "Zoya Akhtar",
+    "cast": [
+      "Ranveer Singh",
+      "Alia Bhatt",
+      "Siddhant Chaturvedi"
+    ],
+    "trailer": "https://youtube.com/watch?v=gullyboy_trailer"
+  },
+  {
+    "title": "Zindagi Na Milegi Dobara",
+    "titleImage": "https://example.com/images/znmd_title.jpg",
+    "image": "https://example.com/images/znmd.jpg",
+    "description": "Three friends embark on a road trip through Spain before one of them gets married, rediscovering themselves along the way.",
+    "genre": "Adventure Drama",
+    "language": "Hindi",
+    "rating": 8.1,
+    "year": 2011,
+    "duration": "2h 35m",
+    "certificate": "UA",
+    "director": "Zoya Akhtar",
+    "cast": [
+      "Hrithik Roshan",
+      "Farhan Akhtar",
+      "Abhay Deol"
+    ],
+    "trailer": "https://youtube.com/watch?v=znmd_trailer"
+  },
+  {
+    "title": "Andhadhun",
+    "titleImage": "https://example.com/images/andhadhun_title.jpg",
+    "image": "https://example.com/images/andhadhun.jpg",
+    "description": "A blind pianist gets embroiled in a murder mystery after witnessing more than he should have.",
+    "genre": "Thriller",
+    "language": "Hindi",
+    "rating": 8.2,
+    "year": 2018,
+    "duration": "2h 19m",
+    "certificate": "UA",
+    "director": "Sriram Raghavan",
+    "cast": [
+      "Ayushmann Khurrana",
+      "Tabu",
+      "Radhika Apte"
+    ],
+    "trailer": "https://youtube.com/watch?v=andhadhun_trailer"
+  },
+  {
+    "title": "Baahubali: The Beginning",
+    "titleImage": "https://example.com/images/baahubali1_title.jpg",
+    "image": "https://example.com/images/baahubali1.jpg",
+    "description": "A young man raised by a tribal family discovers his royal lineage and the truth about his father's fate in the kingdom of Mahishmati.",
+    "genre": "Action Fantasy",
+    "language": "Telugu",
+    "rating": 8.0,
+    "year": 2015,
+    "duration": "2h 39m",
+    "certificate": "UA",
+    "director": "S. S. Rajamouli",
+    "cast": [
+      "Prabhas",
+      "Rana Daggubati",
+      "Anushka Shetty"
+    ],
+    "trailer": "https://youtube.com/watch?v=baahubali1_trailer"
+  },
+  {
+    "title": "Baahubali 2: The Conclusion",
+    "titleImage": "https://example.com/images/baahubali2_title.jpg",
+    "image": "https://example.com/images/baahubali2.jpg",
+    "description": "The mystery behind why Kattappa killed Baahubali is finally revealed as the epic saga reaches its conclusion.",
+    "genre": "Action Fantasy",
+    "language": "Telugu",
+    "rating": 8.2,
+    "year": 2017,
+    "duration": "2h 47m",
+    "certificate": "UA",
+    "director": "S. S. Rajamouli",
+    "cast": [
+      "Prabhas",
+      "Rana Daggubati",
+      "Anushka Shetty"
+    ],
+    "trailer": "https://youtube.com/watch?v=baahubali2_trailer"
+  },
+  {
+    "title": "Arjun Reddy",
+    "titleImage": "https://example.com/images/arjunreddy_title.jpg",
+    "image": "https://example.com/images/arjunreddy.jpg",
+    "description": "A brilliant but short-tempered surgeon spirals into self-destruction after losing the woman he loves.",
+    "genre": "Romance Drama",
+    "language": "Telugu",
+    "rating": 8.1,
+    "year": 2017,
+    "duration": "2h 42m",
+    "certificate": "A",
+    "director": "Sandeep Reddy Vanga",
+    "cast": [
+      "Vijay Deverakonda",
+      "Shalini Pandey"
+    ],
+    "trailer": "https://youtube.com/watch?v=arjunreddy_trailer"
+  },
+  {
+    "title": "Eega",
+    "titleImage": "https://example.com/images/eega_title.jpg",
+    "image": "https://example.com/images/eega.jpg",
+    "description": "A murdered man is reincarnated as a housefly and seeks revenge on the man who killed him and stole his love.",
+    "genre": "Fantasy",
+    "language": "Telugu",
+    "rating": 7.7,
+    "year": 2012,
+    "duration": "2h 20m",
+    "certificate": "U",
+    "director": "S. S. Rajamouli",
+    "cast": [
+      "Nani",
+      "Samantha Ruth Prabhu",
+      "Sudeep"
+    ],
+    "trailer": "https://youtube.com/watch?v=eega_trailer"
+  },
+  {
+    "title": "Jersey",
+    "titleImage": "https://example.com/images/jersey_title.jpg",
+    "image": "https://example.com/images/jersey.jpg",
+    "description": "A failed cricketer decides to make a comeback in his late thirties to fulfill his son's wish for a jersey.",
+    "genre": "Sports Drama",
+    "language": "Telugu",
+    "rating": 8.5,
+    "year": 2019,
+    "duration": "2h 47m",
+    "certificate": "UA",
+    "director": "Gowtam Tinnanuri",
+    "cast": [
+      "Nani",
+      "Shraddha Srinath"
+    ],
+    "trailer": "https://youtube.com/watch?v=jersey_trailer"
+  },
+  {
+    "title": "Rangasthalam",
+    "titleImage": "https://example.com/images/rangasthalam_title.jpg",
+    "image": "https://example.com/images/rangasthalam.jpg",
+    "description": "A partially deaf man fights against a corrupt village president who has been exploiting the villagers for decades.",
+    "genre": "Action Drama",
+    "language": "Telugu",
+    "rating": 8.2,
+    "year": 2018,
+    "duration": "2h 59m",
+    "certificate": "UA",
+    "director": "Sukumar",
+    "cast": [
+      "Ram Charan",
+      "Samantha Ruth Prabhu",
+      "Aadhi Pinisetty"
+    ],
+    "trailer": "https://youtube.com/watch?v=rangasthalam_trailer"
+  },
+  {
+    "title": "Pushpa: The Rise",
+    "titleImage": "https://example.com/images/pushpa_title.jpg",
+    "image": "https://example.com/images/pushpa.jpg",
+    "description": "A laborer rises through the ranks of a red sandalwood smuggling syndicate, clashing with a corrupt police officer along the way.",
+    "genre": "Action",
+    "language": "Telugu",
+    "rating": 7.6,
+    "year": 2021,
+    "duration": "2h 59m",
+    "certificate": "UA",
+    "director": "Sukumar",
+    "cast": [
+      "Allu Arjun",
+      "Rashmika Mandanna",
+      "Fahadh Faasil"
+    ],
+    "trailer": "https://youtube.com/watch?v=pushpa_trailer"
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "titleImage": "https://example.com/images/shawshank_title.jpg",
+    "image": "https://example.com/images/shawshank.jpg",
+    "description": "A banker wrongly convicted of murder forms an unlikely friendship with a fellow inmate while planning his escape over two decades.",
+    "genre": "Drama",
+    "language": "English",
+    "rating": 9.3,
+    "year": 1994,
+    "duration": "2h 22m",
+    "certificate": "A",
+    "director": "Frank Darabont",
+    "cast": [
+      "Tim Robbins",
+      "Morgan Freeman"
+    ],
+    "trailer": "https://youtube.com/watch?v=shawshank_trailer"
+  },
+  {
+    "title": "Inception",
+    "titleImage": "https://example.com/images/inception_title.jpg",
+    "image": "https://example.com/images/inception.jpg",
+    "description": "A skilled thief who steals secrets through dream-sharing technology is given a chance to erase his criminal record by planting an idea instead.",
+    "genre": "Sci-Fi",
+    "language": "English",
+    "rating": 8.8,
+    "year": 2010,
+    "duration": "2h 28m",
+    "certificate": "UA",
+    "director": "Christopher Nolan",
+    "cast": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Elliot Page"
+    ],
+    "trailer": "https://youtube.com/watch?v=inception_trailer"
+  },
+  {
+    "title": "The Dark Knight",
+    "titleImage": "https://example.com/images/darkknight_title.jpg",
+    "image": "https://example.com/images/darkknight.jpg",
+    "description": "Batman faces his greatest psychological and physical test when a criminal mastermind known as the Joker wreaks havoc on Gotham City.",
+    "genre": "Action",
+    "language": "English",
+    "rating": 9.0,
+    "year": 2008,
+    "duration": "2h 32m",
+    "certificate": "UA",
+    "director": "Christopher Nolan",
+    "cast": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart"
+    ],
+    "trailer": "https://youtube.com/watch?v=darkknight_trailer"
+  },
+  {
+    "title": "Interstellar",
+    "titleImage": "https://example.com/images/interstellar_title.jpg",
+    "image": "https://example.com/images/interstellar.jpg",
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival as Earth becomes uninhabitable.",
+    "genre": "Sci-Fi",
+    "language": "English",
+    "rating": 8.7,
+    "year": 2014,
+    "duration": "2h 49m",
+    "certificate": "UA",
+    "director": "Christopher Nolan",
+    "cast": [
+      "Matthew McConaughey",
+      "Anne Hathaway",
+      "Jessica Chastain"
+    ],
+    "trailer": "https://youtube.com/watch?v=interstellar_trailer"
+  },
+  {
+    "title": "Forrest Gump",
+    "titleImage": "https://example.com/images/forrestgump_title.jpg",
+    "image": "https://example.com/images/forrestgump.jpg",
+    "description": "The presidencies of Kennedy and Johnson, the Vietnam War, and other historical events unfold from the perspective of a slow-witted but kind Alabama man.",
+    "genre": "Drama",
+    "language": "English",
+    "rating": 8.8,
+    "year": 1994,
+    "duration": "2h 22m",
+    "certificate": "U",
+    "director": "Robert Zemeckis",
+    "cast": [
+      "Tom Hanks",
+      "Robin Wright",
+      "Gary Sinise"
+    ],
+    "trailer": "https://youtube.com/watch?v=forrestgump_trailer"
+  },
+  {
+    "title": "The Matrix",
+    "titleImage": "https://example.com/images/matrix_title.jpg",
+    "image": "https://example.com/images/matrix.jpg",
+    "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    "genre": "Sci-Fi",
+    "language": "English",
+    "rating": 8.7,
+    "year": 1999,
+    "duration": "2h 16m",
+    "certificate": "A",
+    "director": "Lana Wachowski",
+    "cast": [
+      "Keanu Reeves",
+      "Laurence Fishburne",
+      "Carrie-Anne Moss"
+    ],
+    "trailer": "https://youtube.com/watch?v=matrix_trailer"
+  },
+  {
+    "title": "Parasite",
+    "titleImage": "https://example.com/images/parasite_title.jpg",
+    "image": "https://example.com/images/parasite.jpg",
+    "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between a wealthy family and a poor household.",
+    "genre": "Thriller",
+    "language": "English",
+    "rating": 8.5,
+    "year": 2019,
+    "duration": "2h 12m",
+    "certificate": "UA",
+    "director": "Bong Joon Ho",
+    "cast": [
+      "Song Kang-ho",
+      "Lee Sun-kyun",
+      "Cho Yeo-jeong"
+    ],
+    "trailer": "https://youtube.com/watch?v=parasite_trailer"
+  },
+  {
+    "title": "96",
+    "titleImage": "https://example.com/images/96_title.jpg",
+    "image": "https://example.com/images/96.jpg",
+    "description": "A school reunion reunites two former sweethearts, rekindling memories of their unfinished love story.",
+    "genre": "Romance Drama",
+    "language": "Tamil",
+    "rating": 8.5,
+    "year": 2018,
+    "duration": "2h 38m",
+    "certificate": "U",
+    "director": "C. Prem Kumar",
+    "cast": [
+      "Vijay Sethupathi",
+      "Trisha Krishnan"
+    ],
+    "trailer": "https://youtube.com/watch?v=96_trailer"
+  },
+  {
+    "title": "Vikram",
+    "titleImage": "https://example.com/images/vikram_title.jpg",
+    "image": "https://example.com/images/vikram.jpg",
+    "description": "A special agent investigates a series of murders that lead him to a dangerous drug cartel and a mysterious masked group.",
+    "genre": "Action Thriller",
+    "language": "Tamil",
+    "rating": 8.3,
+    "year": 2022,
+    "duration": "2h 54m",
+    "certificate": "UA",
+    "director": "Lokesh Kanagaraj",
+    "cast": [
+      "Kamal Haasan",
+      "Vijay Sethupathi",
+      "Fahadh Faasil"
+    ],
+    "trailer": "https://youtube.com/watch?v=vikram_trailer"
+  },
+  {
+    "title": "Super Deluxe",
+    "titleImage": "https://example.com/images/superdeluxe_title.jpg",
+    "image": "https://example.com/images/superdeluxe.jpg",
+    "description": "Four interconnected stories explore the complexities of human relationships and morality in unexpected ways.",
+    "genre": "Anthology Drama",
+    "language": "Tamil",
+    "rating": 8.3,
+    "year": 2019,
+    "duration": "2h 56m",
+    "certificate": "A",
+    "director": "Thiagarajan Kumararaja",
+    "cast": [
+      "Vijay Sethupathi",
+      "Fahadh Faasil",
+      "Samantha Ruth Prabhu"
+    ],
+    "trailer": "https://youtube.com/watch?v=superdeluxe_trailer"
+  },
+  {
+    "title": "Asuran",
+    "titleImage": "https://example.com/images/asuran_title.jpg",
+    "image": "https://example.com/images/asuran.jpg",
+    "description": "A farmer and his family go on the run after his son commits a crime against a powerful landlord's family.",
+    "genre": "Action Drama",
+    "language": "Tamil",
+    "rating": 8.4,
+    "year": 2019,
+    "duration": "2h 21m",
+    "certificate": "UA",
+    "director": "Vetrimaaran",
+    "cast": [
+      "Dhanush",
+      "Manju Warrier"
+    ],
+    "trailer": "https://youtube.com/watch?v=asuran_trailer"
+  },
+  {
+    "title": "Master",
+    "titleImage": "https://example.com/images/master_title.jpg",
+    "image": "https://example.com/images/master.jpg",
+    "description": "An alcoholic professor is sent to a juvenile school where he clashes with a ruthless gangster running illegal operations.",
+    "genre": "Action",
+    "language": "Tamil",
+    "rating": 7.3,
+    "year": 2021,
+    "duration": "2h 59m",
+    "certificate": "UA",
+    "director": "Lokesh Kanagaraj",
+    "cast": [
+      "Vijay",
+      "Vijay Sethupathi",
+      "Malavika Mohanan"
+    ],
+    "trailer": "https://youtube.com/watch?v=master_trailer"
+  },
+  {
+    "title": "Soorarai Pottru",
+    "titleImage": "https://example.com/images/soorarai_title.jpg",
+    "image": "https://example.com/images/soorarai.jpg",
+    "description": "A man's dream of starting a low-cost airline for common people faces relentless obstacles from powerful business rivals.",
+    "genre": "Drama",
+    "language": "Tamil",
+    "rating": 8.7,
+    "year": 2020,
+    "duration": "2h 33m",
+    "certificate": "UA",
+    "director": "Sudha Kongara",
+    "cast": [
+      "Suriya",
+      "Aparna Balamurali"
+    ],
+    "trailer": "https://youtube.com/watch?v=soorarai_trailer"
+  },
+  {
+    "title": "KGF: Chapter 1",
+    "titleImage": "https://example.com/images/kgf1_title.jpg",
+    "image": "https://example.com/images/kgf1.jpg",
+    "description": "A poor laborer rises to become a ruthless gangster in order to fulfill his mother's dying wish and take control of a gold mine.",
+    "genre": "Action",
+    "language": "Kannada",
+    "rating": 8.2,
+    "year": 2018,
+    "duration": "2h 35m",
+    "certificate": "UA",
+    "director": "Prashanth Neel",
+    "cast": [
+      "Yash",
+      "Srinidhi Shetty"
+    ],
+    "trailer": "https://youtube.com/watch?v=kgf1_trailer"
+  },
+  {
+    "title": "KGF: Chapter 2",
+    "titleImage": "https://example.com/images/kgf2_title.jpg",
+    "image": "https://example.com/images/kgf2.jpg",
+    "description": "Rocky's rise as the ruler of the Kolar Gold Fields brings him face to face with powerful new enemies who want him dead.",
+    "genre": "Action",
+    "language": "Kannada",
+    "rating": 8.4,
+    "year": 2022,
+    "duration": "2h 48m",
+    "certificate": "UA",
+    "director": "Prashanth Neel",
+    "cast": [
+      "Yash",
+      "Sanjay Dutt",
+      "Raveena Tandon"
+    ],
+    "trailer": "https://youtube.com/watch?v=kgf2_trailer"
+  },
+  {
+    "title": "Kantara",
+    "titleImage": "https://example.com/images/kantara_title.jpg",
+    "image": "https://example.com/images/kantara.jpg",
+    "description": "A tribal man clashes with a forest officer over land rights, while an ancient local tradition connects the village to divine forces.",
+    "genre": "Action Drama",
+    "language": "Kannada",
+    "rating": 8.2,
+    "year": 2022,
+    "duration": "2h 28m",
+    "certificate": "UA",
+    "director": "Rishab Shetty",
+    "cast": [
+      "Rishab Shetty",
+      "Sapthami Gowda"
+    ],
+    "trailer": "https://youtube.com/watch?v=kantara_trailer"
+  },
+  {
+    "title": "Ulidavaru Kandanthe",
+    "titleImage": "https://example.com/images/ulidavaru_title.jpg",
+    "image": "https://example.com/images/ulidavaru.jpg",
+    "description": "The murder of a coastal gangster is narrated through multiple conflicting perspectives, each revealing a different layer of truth.",
+    "genre": "Crime Thriller",
+    "language": "Kannada",
+    "rating": 8.5,
+    "year": 2014,
+    "duration": "2h 12m",
+    "certificate": "UA",
+    "director": "Rakshit Shetty",
+    "cast": [
+      "Rakshit Shetty",
+      "Rakshit Shetty",
+      "Kishore"
+    ],
+    "trailer": "https://youtube.com/watch?v=ulidavaru_trailer"
+  },
+  {
+    "title": "Lucia",
+    "titleImage": "https://example.com/images/lucia_title.jpg",
+    "image": "https://example.com/images/lucia.jpg",
+    "description": "A man suffering from insomnia takes an experimental drug that lets him live out his dreams, blurring the line between fantasy and reality.",
+    "genre": "Sci-Fi Thriller",
+    "language": "Kannada",
+    "rating": 8.3,
+    "year": 2013,
+    "duration": "2h 21m",
+    "certificate": "UA",
+    "director": "Pawan Kumar",
+    "cast": [
+      "Sathish Ninasam",
+      "Sruthi Hariharan"
+    ],
+    "trailer": "https://youtube.com/watch?v=lucia_trailer"
+  },
+  {
+    "title": "777 Charlie",
+    "titleImage": "https://example.com/images/777charlie_title.jpg",
+    "image": "https://example.com/images/777charlie.jpg",
+    "description": "A lonely, disillusioned man's life changes forever when a playful stray dog enters his life and takes him on an unexpected road trip.",
+    "genre": "Drama",
+    "language": "Kannada",
+    "rating": 8.6,
+    "year": 2022,
+    "duration": "2h 44m",
+    "certificate": "U",
+    "director": "Kiranraj K",
+    "cast": [
+      "Rakshit Shetty",
+      "Sangeetha Sringeri"
+    ],
+    "trailer": "https://youtube.com/watch?v=777charlie_trailer"
+  },
+  {
+    "title": "Queen",
+    "titleImage": "https://example.com/images/queen_title.jpg",
+    "image": "https://example.com/images/queen.jpg",
+    "description": "A sheltered Delhi girl decides to go on her honeymoon alone after her fiance calls off their wedding, discovering herself along the way.",
+    "genre": "Comedy Drama",
+    "language": "Hindi",
+    "rating": 8.2,
+    "year": 2013,
+    "duration": "2h 26m",
+    "certificate": "U",
+    "director": "Vikas Bahl",
+    "cast": [
+      "Kangana Ranaut",
+      "Rajkummar Rao",
+      "Lisa Haydon"
+    ],
+    "trailer": "https://youtube.com/watch?v=queen_trailer"
+  },
+  {
+    "title": "Pink",
+    "titleImage": "https://example.com/images/pink_title.jpg",
+    "image": "https://example.com/images/pink.jpg",
+    "description": "Three young women fight a long legal battle after being falsely accused following a night that went wrong, challenging societal norms about consent.",
+    "genre": "Drama",
+    "language": "Hindi",
+    "rating": 8.1,
+    "year": 2016,
+    "duration": "2h 16m",
+    "certificate": "UA",
+    "director": "Aniruddha Roy Chowdhury",
+    "cast": [
+      "Amitabh Bachchan",
+      "Taapsee Pannu"
+    ],
+    "trailer": "https://youtube.com/watch?v=pink_trailer"
+  },
+  {
+    "title": "Lagaan",
+    "titleImage": "https://example.com/images/lagaan_title.jpg",
+    "image": "https://example.com/images/lagaan.jpg",
+    "description": "Villagers in colonial India challenge their British rulers to a cricket match to avoid paying an oppressive tax.",
+    "genre": "Sports Drama",
+    "language": "Hindi",
+    "rating": 8.1,
+    "year": 2001,
+    "duration": "3h 44m",
+    "certificate": "U",
+    "director": "Ashutosh Gowariker",
+    "cast": [
+      "Aamir Khan",
+      "Gracy Singh",
+      "Rachel Shelley"
+    ],
+    "trailer": "https://youtube.com/watch?v=lagaan_trailer"
+  },
+  {
+    "title": "Mahanati",
+    "titleImage": "https://example.com/images/mahanati_title.jpg",
+    "image": "https://example.com/images/mahanati.jpg",
+    "description": "The life story of a legendary South Indian actress is uncovered through the eyes of a journalist decades after her mysterious death.",
+    "genre": "Biography Drama",
+    "language": "Telugu",
+    "rating": 8.6,
+    "year": 2018,
+    "duration": "2h 47m",
+    "certificate": "UA",
+    "director": "Nag Ashwin",
+    "cast": [
+      "Keerthy Suresh",
+      "Dulquer Salmaan",
+      "Samantha Ruth Prabhu"
+    ],
+    "trailer": "https://youtube.com/watch?v=mahanati_trailer"
+  },
+  {
+    "title": "C/o Kancharapalem",
+    "titleImage": "https://example.com/images/cokancharapalem_title.jpg",
+    "image": "https://example.com/images/cokancharapalem.jpg",
+    "description": "Four love stories from different age groups intertwine in a small town, showing that love knows no boundaries of age or class.",
+    "genre": "Romance Drama",
+    "language": "Telugu",
+    "rating": 8.6,
+    "year": 2018,
+    "duration": "2h 21m",
+    "certificate": "UA",
+    "director": "Venkatesh Maha",
+    "cast": [
+      "Subba Rao",
+      "Radha Bessy",
+      "Karthik Rathnam"
+    ],
+    "trailer": "https://youtube.com/watch?v=cokancharapalem_trailer"
+  },
+  {
+    "title": "Ala Vaikunthapurramuloo",
+    "titleImage": "https://example.com/images/ala_title.jpg",
+    "image": "https://example.com/images/ala.jpg",
+    "description": "A young man raised as the son of a poor family discovers he was switched at birth and belongs to a wealthy business family.",
+    "genre": "Family Drama",
+    "language": "Telugu",
+    "rating": 7.4,
+    "year": 2020,
+    "duration": "2h 44m",
+    "certificate": "UA",
+    "director": "Trivikram Srinivas",
+    "cast": [
+      "Allu Arjun",
+      "Pooja Hegde"
+    ],
+    "trailer": "https://youtube.com/watch?v=ala_trailer"
+  },
+  {
+    "title": "RRR",
+    "titleImage": "https://example.com/images/rrr_title.jpg",
+    "image": "https://example.com/images/rrr.jpg",
+    "description": "Two revolutionaries fight against British colonial rule in a fictional retelling set before they became legendary freedom fighters.",
+    "genre": "Action Drama",
+    "language": "Telugu",
+    "rating": 7.8,
+    "year": 2022,
+    "duration": "3h 7m",
+    "certificate": "UA",
+    "director": "S. S. Rajamouli",
+    "cast": [
+      "N. T. Rama Rao Jr.",
+      "Ram Charan",
+      "Alia Bhatt"
+    ],
+    "trailer": "https://youtube.com/watch?v=rrr_trailer"
+  },
+  {
+    "title": "The Godfather",
+    "titleImage": "https://example.com/images/godfather_title.jpg",
+    "image": "https://example.com/images/godfather.jpg",
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his empire to his reluctant son.",
+    "genre": "Crime Drama",
+    "language": "English",
+    "rating": 9.2,
+    "year": 1972,
+    "duration": "2h 55m",
+    "certificate": "A",
+    "director": "Francis Ford Coppola",
+    "cast": [
+      "Marlon Brando",
+      "Al Pacino",
+      "James Caan"
+    ],
+    "trailer": "https://youtube.com/watch?v=godfather_trailer"
+  },
+  {
+    "title": "Fight Club",
+    "titleImage": "https://example.com/images/fightclub_title.jpg",
+    "image": "https://example.com/images/fightclub.jpg",
+    "description": "An insomniac office worker forms an underground fight club with a soap salesman that spirals into something far more dangerous.",
+    "genre": "Drama",
+    "language": "English",
+    "rating": 8.8,
+    "year": 1999,
+    "duration": "2h 19m",
+    "certificate": "A",
+    "director": "David Fincher",
+    "cast": [
+      "Brad Pitt",
+      "Edward Norton",
+      "Helena Bonham Carter"
+    ],
+    "trailer": "https://youtube.com/watch?v=fightclub_trailer"
+  }
+]

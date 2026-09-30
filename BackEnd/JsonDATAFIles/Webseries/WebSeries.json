@@ -1,0 +1,406 @@
+
+    [
+  {
+    "title": "Game of Thrones",
+    "titleImage": "https://image.tmdb.org/t/p/original/1XS1oqL89opfnbLl8WnZlJ5kL3M.jpg",
+    "image": "https://i.pinimg.com/736x/a1/8f/ec/a18fec980dcbfe0bc15ebdb1cfe86728.jpg",
+    "description": "Nine noble families fight for control of the Iron Throne while an ancient supernatural threat rises in the far North.",
+    "genre": "Fantasy, Drama, Action",
+    "language": "English",
+    "rating": 9.2,
+    "year": 2011,
+    "duration": "50-82 min/episode",
+    "certificate": "A",
+    "director": "David Benioff, D. B. Weiss",
+    "cast": [
+      "Emilia Clarke",
+      "Kit Harington",
+      "Peter Dinklage",
+      "Lena Headey",
+      "Maisie Williams"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=KPLWWIOCOOQ"
+  },
+  {
+    "title": "House of the Dragon",
+    "titleImage": "https://image.tmdb.org/t/p/original/t9XkeE7HzOsdQcDDDapMZsC0b5K.jpg",
+    "image": "https://i.pinimg.com/736x/eb/bd/05/ebbd05e1289f1591e1f2961199c87335.jpg",
+    "description": "The Targaryen dynasty descends into a brutal civil war known as the Dance of the Dragons.",
+    "genre": "Fantasy, Drama, Action",
+    "language": "English",
+    "rating": 8.4,
+    "year": 2022,
+    "duration": "50-70 min/episode",
+    "certificate": "A",
+    "director": "Ryan Condal, George R. R. Martin",
+    "cast": [
+      "Matt Smith",
+      "Emma D'Arcy",
+      "Olivia Cooke",
+      "Rhys Ifans",
+      "Fabien Frankel"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=DotnJ7tTA34"
+  },
+  {
+    "title": "The Witcher",
+    "titleImage": "https://image.tmdb.org/t/p/original/cZ0d3rtvXPVvuiX22sP79K3Hmjz.jpg",
+    "image": "https://i.pinimg.com/736x/b0/4a/a9/b04aa90fd37387fbc475af879b92a19d.jpg",
+    "description": "Geralt of Rivia, a monster hunter with supernatural abilities, travels across a dangerous world filled with magic, monsters and political conflict.",
+    "genre": "Fantasy, Action, Adventure",
+    "language": "English",
+    "rating": 8.0,
+    "year": 2019,
+    "duration": "47-67 min/episode",
+    "certificate": "A",
+    "director": "Lauren Schmidt Hissrich",
+    "cast": [
+      "Henry Cavill",
+      "Anya Chalotra",
+      "Freya Allan",
+      "Joey Batey"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=ndl1W4ltcmg"
+  },
+  {
+    "title": "Vikings",
+    "titleImage": "https://image.tmdb.org/t/p/original/whwT9w3V7b4f6V4x0K4K8H7s9K4.jpg",
+    "image": "https://i.pinimg.com/736x/fe/1a/81/fe1a810826ce58d6f00b59b6666b2140.jpg",
+    "description": "Ragnar Lothbrok rises from a farmer to become a legendary Viking warrior and leader who challenges kingdoms across Europe.",
+    "genre": "Action, Drama, History",
+    "language": "English",
+    "rating": 8.5,
+    "year": 2013,
+    "duration": "42-60 min/episode",
+    "certificate": "A",
+    "director": "Michael Hirst",
+    "cast": [
+      "Travis Fimmel",
+      "Katheryn Winnick",
+      "Clive Standen",
+      "Gustaf Skarsgård",
+      "Alexander Ludwig"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=9GgxinPwAGc"
+  },
+  {
+    "title": "Vikings: Valhalla",
+    "titleImage": "https://image.tmdb.org/t/p/original/7fFJX5k5qY0hN5w9z7p2r6M5v8K.jpg",
+    "image": "https://i.pinimg.com/736x/ff/b5/d1/ffb5d1487b7dc16ad5d111c268dd4706.jpg",
+    "description": "A new generation of legendary Viking warriors fights for glory, revenge and survival across England and Scandinavia.",
+    "genre": "Action, Drama, History",
+    "language": "English",
+    "rating": 7.3,
+    "year": 2022,
+    "duration": "44-60 min/episode",
+    "certificate": "A",
+    "director": "Jeb Stuart",
+    "cast": [
+      "Sam Corlett",
+      "Leo Suter",
+      "Frida Gustavsson",
+      "Bradley Freegard"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=YW3y2hJqR7Q"
+  },
+  {
+    "title": "The Last Kingdom",
+    "titleImage": "https://image.tmdb.org/t/p/original/8eJf0hxg3dG0b1D5f8W7s8J2Y3K.jpg",
+    "image": "https://i.pinimg.com/1200x/d1/c9/5c/d1c95cd2f024c97c6d6aedaefb66d81e.jpg",
+    "description": "Uhtred of Bebbanburg fights to reclaim his ancestral home while helping build a united England.",
+    "genre": "Action, Drama, History",
+    "language": "English",
+    "rating": 8.5,
+    "year": 2015,
+    "duration": "50-60 min/episode",
+    "certificate": "A",
+    "director": "Stephen Butchard",
+    "cast": [
+      "Alexander Dreymon",
+      "Emily Cox",
+      "David Dawson",
+      "Eliza Butterworth"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=WxPApTGWwas"
+  },
+  {
+    "title": "Shadow and Bone",
+    "titleImage": "https://image.tmdb.org/t/p/original/1L6ZJZ6b5m0Q9V3Q9J6K3H0X9mS.jpg",
+    "image": "https://i.pinimg.com/1200x/c6/e1/f8/c6e1f87b482acfee33ee101ed4350b86.jpg",
+    "description": "A young soldier discovers a mysterious power that could change the fate of a war-torn world.",
+    "genre": "Fantasy, Adventure, Drama",
+    "language": "English",
+    "rating": 7.5,
+    "year": 2021,
+    "duration": "45-60 min/episode",
+    "certificate": "U/A",
+    "director": "Eric Heisserer",
+    "cast": [
+      "Jessie Mei Li",
+      "Ben Barnes",
+      "Archie Renaux",
+      "Freddy Carter"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=UhjYg7dJ1pM"
+  },
+  {
+    "title": "The Wheel of Time",
+    "titleImage": "https://image.tmdb.org/t/p/original/3E3WQ4w5x5W6k8k2k3V7N8Q5m9M.jpg",
+    "image": "https://i.pinimg.com/736x/42/28/89/42288909a3749feb683dbd5b220ce9a6.jpg",
+    "description": "A powerful woman guides a group of young people on an epic journey as an ancient evil begins to return.",
+    "genre": "Fantasy, Adventure, Drama",
+    "language": "English",
+    "rating": 7.2,
+    "year": 2021,
+    "duration": "50-65 min/episode",
+    "certificate": "U/A",
+    "director": "Rafe Judkins",
+    "cast": [
+      "Rosamund Pike",
+      "Daniel Henney",
+      "Josha Stradowski",
+      "Madeleine Madden"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=11ZozK6j1XU"
+  },
+  {
+    "title": "The Rings of Power",
+    "titleImage": "https://image.tmdb.org/t/p/original/mY7SeH4HFFxW1hiI6cWuwCR4q3M.jpg",
+    "image": "https://i.pinimg.com/736x/e9/96/83/e99683c6c88922e90a9a953ab727587f.jpg",
+    "description": "Set thousands of years before The Lord of the Rings, the series follows the rise of kingdoms and the return of an ancient evil.",
+    "genre": "Fantasy, Adventure, Drama",
+    "language": "English",
+    "rating": 7.0,
+    "year": 2022,
+    "duration": "60-75 min/episode",
+    "certificate": "U/A",
+    "director": "J. D. Payne, Patrick McKay",
+    "cast": [
+      "Morfydd Clark",
+      "Robert Aramayo",
+      "Charlie Vickers",
+      "Markella Kavenagh"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=x8UAUAuKNcU"
+  },
+  {
+    "title": "Spartacus",
+    "titleImage": "https://image.tmdb.org/t/p/original/6J5x8K6H5J5W4Z5J8J4M9N6P7Q.jpg",
+    "image": "https://image.tmdb.org/t/p/original/6J5x8K6H5J5W4Z5J8J4M9N6P7Q.jpg",
+    "description": "A Thracian warrior is forced into slavery and becomes a gladiator before leading a massive rebellion against Rome.",
+    "genre": "Action, Drama, History",
+    "language": "English",
+    "rating": 8.5,
+    "year": 2010,
+    "duration": "50-60 min/episode",
+    "certificate": "A",
+    "director": "Steven S. DeKnight",
+    "cast": [
+      "Andy Whitfield",
+      "Liam McIntyre",
+      "Manu Bennett",
+      "Lucy Lawless"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=yHxn8mTpAJU"
+  },
+  {
+    "title": "Rome",
+    "titleImage": "https://image.tmdb.org/t/p/original/5D4p7N7F8M8G5K6J4Q3V2X1Z0A.jpg",
+    "image": "https://image.tmdb.org/t/p/original/5D4p7N7F8M8G5K6J4Q3V2X1Z0A.jpg",
+    "description": "Two Roman soldiers experience the political struggles, wars and personal ambitions that shape the Roman Republic.",
+    "genre": "Drama, History, War",
+    "language": "English",
+    "rating": 8.7,
+    "year": 2005,
+    "duration": "45-60 min/episode",
+    "certificate": "A",
+    "director": "John Milius, William J. MacDonald, Bruno Heller",
+    "cast": [
+      "Kevin McKidd",
+      "Ray Stevenson",
+      "Polly Walker",
+      "James Purefoy"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=8f8wAXBBYPw"
+  },
+  {
+    "title": "Kingdom",
+    "titleImage": "https://image.tmdb.org/t/p/original/2e4K6V7J8M9N0P1Q2R3S4T5U6V.jpg",
+    "image": "https://image.tmdb.org/t/p/original/2e4K6V7J8M9N0P1Q2R3S4T5U6V.jpg",
+    "description": "In a historical Korean kingdom, a mysterious plague turns people into deadly monsters while political conflict threatens the throne.",
+    "genre": "Horror, Action, Historical",
+    "language": "Korean",
+    "rating": 8.3,
+    "year": 2019,
+    "duration": "45-60 min/episode",
+    "certificate": "A",
+    "director": "Kim Eun-hee",
+    "cast": [
+      "Ju Ji-hoon",
+      "Bae Doona",
+      "Ryu Seung-ryong",
+      "Kim Sung-kyu"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=4l-yByZpaaM"
+  },
+  {
+    "title": "The Sandman",
+    "titleImage": "https://image.tmdb.org/t/p/original/q54qEgagGOYCq5D1903eBVMNkbo.jpg",
+    "image": "https://image.tmdb.org/t/p/original/q54qEgagGOYCq5D1903eBVMNkbo.jpg",
+    "description": "Dream, the immortal ruler of the realm of dreams, escapes captivity and begins a journey to restore his damaged kingdom.",
+    "genre": "Fantasy, Drama, Horror",
+    "language": "English",
+    "rating": 7.7,
+    "year": 2022,
+    "duration": "40-65 min/episode",
+    "certificate": "A",
+    "director": "Neil Gaiman, Allan Heinberg, David S. Goyer",
+    "cast": [
+      "Tom Sturridge",
+      "Boyd Holbrook",
+      "Vivienne Acheampong",
+      "Gwendoline Christie"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=83ClbRPRDXU"
+  },
+  {
+    "title": "Arcane",
+    "titleImage": "https://image.tmdb.org/t/p/original/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
+    "image": "https://image.tmdb.org/t/p/original/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
+    "description": "Two sisters find themselves on opposite sides of a conflict between the wealthy city of Piltover and the underground world of Zaun.",
+    "genre": "Animation, Fantasy, Action",
+    "language": "English",
+    "rating": 9.0,
+    "year": 2021,
+    "duration": "40-45 min/episode",
+    "certificate": "U/A",
+    "director": "Christian Linke, Alex Yee",
+    "cast": [
+      "Hailee Steinfeld",
+      "Ella Purnell",
+      "Kevin Alejandro",
+      "Katie Leung"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=fXmAurh012s"
+  },
+  {
+    "title": "Castlevania",
+    "titleImage": "https://image.tmdb.org/t/p/original/7r7dR6J5k7P8Q9M0N1B2V3C4X5Z.jpg",
+    "image": "https://image.tmdb.org/t/p/original/7r7dR6J5k7P8Q9M0N1B2V3C4X5Z.jpg",
+    "description": "A vampire hunter battles Dracula and his army of monsters after the destruction of the human world.",
+    "genre": "Animation, Fantasy, Horror",
+    "language": "English",
+    "rating": 8.3,
+    "year": 2017,
+    "duration": "23-31 min/episode",
+    "certificate": "A",
+    "director": "Warren Ellis",
+    "cast": [
+      "Richard Armitage",
+      "Theo James",
+      "Adetokumboh M'Cormack",
+      "Alejandra Reynoso"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=m3jNb7IdJHQ"
+  },
+  {
+    "title": "The Dragon Prince",
+    "titleImage": "https://image.tmdb.org/t/p/original/6L3V0V7X8Q9W1Y2Z3A4B5C6D7E.jpg",
+    "image": "https://image.tmdb.org/t/p/original/6L3V0V7X8Q9W1Y2Z3A4B5C6D7E.jpg",
+    "description": "Two human princes and an elven assassin discover a dragon egg and embark on a quest to bring peace to their divided world.",
+    "genre": "Animation, Fantasy, Adventure",
+    "language": "English",
+    "rating": 8.3,
+    "year": 2018,
+    "duration": "25-30 min/episode",
+    "certificate": "U/A",
+    "director": "Aaron Ehasz, Justin Richmond",
+    "cast": [
+      "Jack De Sena",
+      "Sasha Rojen",
+      "Paula Burrows",
+      "Rena Anakwe"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=JSMqZ7p7l9Q"
+  },
+  {
+    "title": "Marco Polo",
+    "titleImage": "https://image.tmdb.org/t/p/original/9L6M7N8B5V4C3X2Z1Q0W9E8R7T.jpg",
+    "image": "https://image.tmdb.org/t/p/original/9L6M7N8B5V4C3X2Z1Q0W9E8R7T.jpg",
+    "description": "Marco Polo becomes entangled in the court of Kublai Khan during the height of the Mongol Empire.",
+    "genre": "Drama, History, Adventure",
+    "language": "English",
+    "rating": 8.0,
+    "year": 2014,
+    "duration": "50-60 min/episode",
+    "certificate": "A",
+    "director": "John Fusco",
+    "cast": [
+      "Lorenzo Richelmy",
+      "Benedict Wong",
+      "Joan Chen",
+      "Tom Wu"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=R6x9JtX7m9Q"
+  },
+  {
+    "title": "Barbarians",
+    "titleImage": "https://image.tmdb.org/t/p/original/4F8J7K9L2M3N5P6Q7R8S9T0U1V.jpg",
+    "image": "https://image.tmdb.org/t/p/original/4F8J7K9L2M3N5P6Q7R8S9T0U1V.jpg",
+    "description": "Germanic warriors unite against the Roman Empire in a brutal struggle for freedom and survival.",
+    "genre": "Action, Drama, History",
+    "language": "German",
+    "rating": 7.2,
+    "year": 2020,
+    "duration": "40-50 min/episode",
+    "certificate": "A",
+    "director": "Arne Nolting, Jan Martin Scharf",
+    "cast": [
+      "Jeanne Goursaud",
+      "David Schütter",
+      "Laurence Rupp",
+      "Bernhard Schütz"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=ojC1g6hJ7zA"
+  },
+  {
+    "title": "Knightfall",
+    "titleImage": "https://image.tmdb.org/t/p/original/5M6N7B8V9C0X1Z2A3S4D5F6G7H.jpg",
+    "image": "https://image.tmdb.org/t/p/original/5M6N7B8V9C0X1Z2A3S4D5F6G7H.jpg",
+    "description": "The Knights Templar face political conspiracies, religious conflict and battles while searching for the Holy Grail.",
+    "genre": "Action, Drama, History",
+    "language": "English",
+    "rating": 6.8,
+    "year": 2017,
+    "duration": "45-50 min/episode",
+    "certificate": "A",
+    "director": "Don Handfield, Richard Rayner",
+    "cast": [
+      "Tom Cullen",
+      "Pádraic Delaney",
+      "Simon Merrells",
+      "Ed Stoppard"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=F9g9sF7mK9Q"
+  },
+  {
+    "title": "Warrior Nun",
+    "titleImage": "https://image.tmdb.org/t/p/original/4x7V5J6K8L9M0N1P2Q3R4S5T6U.jpg",
+    "image": "https://image.tmdb.org/t/p/original/4x7V5J6K8L9M0N1P2Q3R4S5T6U.jpg",
+    "description": "A young woman discovers that she has supernatural powers and is chosen to join an ancient order of warrior nuns.",
+    "genre": "Fantasy, Action, Drama",
+    "language": "English",
+    "rating": 7.0,
+    "year": 2020,
+    "duration": "37-50 min/episode",
+    "certificate": "A",
+    "director": "Simon Barry",
+    "cast": [
+      "Alba Baptista",
+      "Toya Turner",
+      "Thekla Reuten",
+      "Lorena Andrea"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=U9dJ6Y3R8pQ"
+  }
+]

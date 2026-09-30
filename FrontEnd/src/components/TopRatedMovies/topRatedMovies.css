@@ -1,0 +1,54 @@
+.top-rated-section {
+    width: 100%;
+    padding: 20px 28px;
+    box-sizing: border-box;
+}
+
+
+/* Heading */
+
+.top-rated-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.top-rated-title h2 {
+    margin: 0;
+
+    color: #e5e7eb;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.top-rated-title button {
+    border: none;
+    background: transparent;
+
+    color: #a855f7;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+
+/* Cards */
+
+.top-rated-cards {
+    display: flex;
+
+    gap: 24px;
+
+    overflow: hidden;
+}
+
+
+/* Exactly 5 cards */
+
+.top-rated-cards > * {
+    flex: 0 0 250px;
+}

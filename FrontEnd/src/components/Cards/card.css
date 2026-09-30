@@ -1,0 +1,230 @@
+/* =====================================================
+   TRENDING HEADER - FORCE ONE LINE
+   ===================================================== */
+
+.trending-section .section-header {
+    width: 100%;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    flex-wrap: nowrap !important;
+
+    gap: 15px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TRENDING TITLE
+   ===================================================== */
+
+.trending-section .trending-title {
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center !important;
+
+    justify-content: flex-start !important;
+
+    flex-wrap: nowrap !important;
+
+    gap: 8px;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    width: auto !important;
+
+    max-width: none !important;
+
+    flex: 1 1 auto;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* =====================================================
+   FIRE EMOJI
+   ===================================================== */
+
+.trending-section .trending-icon {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: auto;
+
+    height: auto;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   TRENDING TEXT
+   ===================================================== */
+
+.trending-section .trending-text {
+    display: inline-block;
+
+    white-space: nowrap;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   SEE ALL
+   ===================================================== */
+
+.trending-section .see-all {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 auto !important;
+
+    width: auto !important;
+
+    margin: 0 !important;
+
+    white-space: nowrap !important;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    .trending-section .section-header {
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: center !important;
+
+        justify-content: space-between !important;
+
+        flex-wrap: nowrap !important;
+
+        gap: 10px;
+    }
+
+
+    .trending-section .trending-title {
+        font-size: 23px;
+
+        gap: 6px;
+
+        white-space: nowrap !important;
+    }
+
+
+    .trending-section .see-all {
+        flex-shrink: 0 !important;
+
+        white-space: nowrap !important;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 500px) {
+
+    .trending-section .section-header {
+        gap: 8px;
+    }
+
+
+    .trending-section .trending-title {
+        font-size: 21px;
+
+        gap: 5px;
+    }
+
+
+    .trending-section .see-all {
+        padding: 7px 10px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .trending-section .trending-title {
+        font-size: 19px;
+
+        gap: 4px;
+    }
+
+
+    .trending-section .see-all {
+        padding: 6px 8px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 320px) {
+
+    .trending-section .section-header {
+        gap: 5px;
+    }
+
+
+    .trending-section .trending-title {
+        font-size: 17px;
+    }
+
+
+    .trending-section .see-all {
+        padding: 5px 7px;
+
+        font-size: 10px;
+    }
+
+}

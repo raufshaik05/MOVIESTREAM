@@ -1,0 +1,98 @@
+/* ==========================================
+   ANIME SEARCH
+========================================== */
+
+.anime-search-section {
+    width: 100%;
+    padding: 25px 40px 15px;
+    box-sizing: border-box;
+
+    background: #080B14;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ==========================================
+   SEARCH BOX
+========================================== */
+
+.anime-search-box {
+    width: 100%;
+    max-width: 600px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 16px;
+
+    background: #0F1422;
+
+    border: 1px solid #232B3F;
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+}
+
+.anime-search-box:focus-within {
+    border-color: #7C3AED;
+
+    box-shadow:
+        0 0 18px rgba(124, 58, 237, 0.18);
+}
+
+
+/* ==========================================
+   INPUT
+========================================== */
+
+.anime-search-box input {
+    flex: 1;
+
+    width: 100%;
+
+    padding: 14px 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #E5E7EB;
+
+    font-size: 15px;
+}
+
+.anime-search-box input::placeholder {
+    color: #6B7280;
+}
+
+
+/* ==========================================
+   SEARCH ICON
+========================================== */
+
+.anime-search-icon {
+    color: #9CA3AF;
+
+    font-size: 18px;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .anime-search-section {
+        padding: 20px 18px 12px;
+    }
+
+    .anime-search-box input {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,139 @@
+/* =========================================================
+   BUTTON CONTAINER
+========================================================= */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 0;
+
+    width: 100%;
+    padding-top: 25px;
+
+    border-top: 1px solid #232b3f;
+}
+
+
+/* =========================================================
+   RESET BUTTON
+========================================================= */
+
+.reset-btn {
+    width: 75px;
+    height: 38px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    border-radius: 0;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+
+    box-shadow: none;
+
+    appearance: none;
+}
+
+
+/* =========================================================
+   UPDATE CONTENT BUTTON
+========================================================= */
+
+.submit-btn {
+    width: 220px;
+    height: 48px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    border-radius: 13px;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #a855f7
+    );
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 22px rgba(124, 58, 237, 0.40);
+
+    transition: all 0.25s ease;
+
+    appearance: none;
+}
+
+
+/* =========================================================
+   UPDATE HOVER
+========================================================= */
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #b35cff
+    );
+
+    box-shadow:
+        0 12px 28px rgba(124, 58, 237, 0.50);
+}
+
+
+/* =========================================================
+   UPDATE CLICK
+========================================================= */
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESET HOVER
+========================================================= */
+
+.reset-btn:hover {
+    color: #555;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .form-actions {
+        justify-content: center;
+    }
+
+    .reset-btn {
+        width: 75px;
+    }
+
+    .submit-btn {
+        width: 220px;
+    }
+}

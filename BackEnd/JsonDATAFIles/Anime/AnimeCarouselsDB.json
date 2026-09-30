@@ -1,0 +1,114 @@
+
+
+[
+  {
+    "title": "Attack on Titan",
+    "description": "Humanity fights for survival against giant Titans while uncovering the dark secrets behind their world.",
+    "image": "/anime/attack-on-titan.jpg",
+    "video": "https://example.com/attack-on-titan",
+    "genre": "Action, Dark Fantasy, Adventure",
+    "language": "English",
+    "rating": 9.1,
+    "year": 2013,
+    "isTrending": true
+  },
+  {
+    "title": "One Piece",
+    "description": "Monkey D. Luffy and his pirate crew travel across the Grand Line in search of the legendary One Piece treasure.",
+    "image": "/anime/one-piece.jpg",
+    "video": "https://example.com/one-piece",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "English",
+    "rating": 9.0,
+    "year": 1999,
+    "isTrending": true
+  },
+  {
+    "title": "Demon Slayer: Kimetsu no Yaiba",
+    "description": "Tanjiro becomes a demon slayer after his family is attacked and his sister is transformed into a demon.",
+    "image": "/anime/demon-slayer.jpg",
+    "video": "https://example.com/demon-slayer",
+    "genre": "Action, Fantasy, Adventure",
+    "language": "English",
+    "rating": 8.6,
+    "year": 2019,
+    "isTrending": true
+  },
+  {
+    "title": "Jujutsu Kaisen",
+    "description": "Yuji Itadori enters the dangerous world of cursed spirits and powerful Jujutsu sorcerers.",
+    "image": "/anime/jujutsu-kaisen.jpg",
+    "video": "https://example.com/jujutsu-kaisen",
+    "genre": "Action, Supernatural, Dark Fantasy",
+    "language": "English",
+    "rating": 8.5,
+    "year": 2020,
+    "isTrending": true
+  },
+  {
+    "title": "Death Note",
+    "description": "A brilliant student discovers a mysterious notebook that allows him to kill anyone by writing their name in it.",
+    "image": "/anime/death-note.jpg",
+    "video": "https://example.com/death-note",
+    "genre": "Psychological, Thriller, Supernatural",
+    "language": "English",
+    "rating": 8.9,
+    "year": 2006,
+    "isTrending": true
+  },
+  {
+    "title": "Your Name",
+    "description": "Two teenagers mysteriously begin switching bodies and develop a powerful connection across time and distance.",
+    "image": "/anime/your-name.jpg",
+    "video": "https://example.com/your-name",
+    "genre": "Romance, Fantasy, Drama",
+    "language": "English",
+    "rating": 8.4,
+    "year": 2016,
+    "isTrending": true
+  },
+  {
+    "title": "Spirited Away",
+    "description": "A young girl enters a mysterious spirit world and must find a way to save her parents and return home.",
+    "image": "/anime/spirited-away.jpg",
+    "video": "https://example.com/spirited-away",
+    "genre": "Fantasy, Adventure, Drama",
+    "language": "English",
+    "rating": 8.6,
+    "year": 2001,
+    "isTrending": true
+  },
+  {
+    "title": "Demon Slayer: Mugen Train",
+    "description": "Tanjiro and his friends board the Mugen Train and face a powerful demon threatening the passengers.",
+    "image": "/anime/mugen-train.jpg",
+    "video": "https://example.com/mugen-train",
+    "genre": "Action, Fantasy, Adventure",
+    "language": "English",
+    "rating": 8.2,
+    "year": 2020,
+    "isTrending": true
+  },
+  {
+    "title": "A Silent Voice",
+    "description": "A former bully seeks redemption and friendship with a deaf girl he once mistreated during school.",
+    "image": "/anime/a-silent-voice.jpg",
+    "video": "https://example.com/a-silent-voice",
+    "genre": "Drama, Romance, School",
+    "language": "English",
+    "rating": 8.9,
+    "year": 2016,
+    "isTrending": false
+  },
+  {
+    "title": "Jujutsu Kaisen 0",
+    "description": "Yuta Okkotsu joins Jujutsu High and learns to control the powerful curse connected to his childhood friend.",
+    "image": "/anime/jujutsu-kaisen-0.jpg",
+    "video": "https://example.com/jujutsu-kaisen-0",
+    "genre": "Action, Supernatural, Fantasy",
+    "language": "English",
+    "rating": 8.5,
+    "year": 2021,
+    "isTrending": true
+  }
+]

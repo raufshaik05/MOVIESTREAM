@@ -1,0 +1,2034 @@
+/* =========================================================
+   MOVIESTREAM WELCOME PAGE
+========================================================= */
+
+.welcome-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background: var(--background);
+    color: var(--text);
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero-section {
+    position: relative;
+
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 60px 8%;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(124, 58, 237, 0.16),
+            transparent 35%
+        );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.welcome-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 50%;
+    max-width: 620px;
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.welcome-small {
+    color: var(--light);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   MOVIESTREAM TITLE
+========================================================= */
+
+.welcome-content h2 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: clamp(48px, 6vw, 72px);
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+}
+
+.welcome-content h2 span {
+    color: var(--light);
+}
+
+
+/* =========================================================
+   HERO SUBTITLE
+========================================================= */
+
+.welcome-content h3 {
+    margin-top: 22px;
+
+    color: var(--text-light);
+
+    font-size: 22px;
+    font-weight: 500;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.welcome-description {
+    margin-top: 12px;
+
+    max-width: 500px;
+
+    color: var(--text-light);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.welcome-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.get-started,
+.explore-btn {
+    height: 48px;
+
+    padding: 0 22px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================================
+   GET STARTED
+========================================================= */
+
+.get-started {
+    border: none;
+
+    color: #ffffff;
+
+    background: var(--gradient-primary);
+
+    box-shadow:
+        0 8px 25px
+        rgba(124, 58, 237, 0.30);
+}
+
+.get-started:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(124, 58, 237, 0.45);
+}
+
+.play-icon {
+    margin-right: 8px;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.explore-btn {
+    color: var(--text-light);
+
+    background:
+        rgba(255, 255, 255, 0.03);
+
+    border:
+        1px solid var(--border);
+}
+
+.explore-btn:hover {
+    transform: translateY(-3px);
+
+    color: var(--text);
+
+    border-color: var(--light);
+
+    background:
+        rgba(124, 58, 237, 0.10);
+}
+
+
+/* =========================================================
+   HERO POSTERS CONTAINER
+========================================================= */
+
+.hero-posters {
+    position: absolute;
+
+    right: 4%;
+    top: 50%;
+
+    width: 500px;
+    height: 430px;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   COMMON POSTER
+========================================================= */
+
+.poster {
+    position: absolute;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: var(--card);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.45);
+
+    will-change: transform;
+
+    animation-duration: 4.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* =========================================================
+   POSTER IMAGE CONTAINER
+========================================================= */
+
+.poster-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: inherit;
+}
+
+
+/* =========================================================
+   POSTER IMAGE
+========================================================= */
+
+.poster-overlay img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.4s ease;
+}
+
+
+/* =========================================================
+   CINEMATIC OVERLAY
+========================================================= */
+
+.poster-overlay::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8, 11, 20, 0.02) 20%,
+            rgba(8, 11, 20, 0.15) 45%,
+            rgba(8, 11, 20, 0.85) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   POSTER HOVER
+========================================================= */
+
+.poster:hover {
+    box-shadow:
+        0 30px 60px
+        rgba(0, 0, 0, 0.60),
+
+        0 0 30px
+        rgba(124, 58, 237, 0.18);
+}
+
+.poster:hover img {
+    transform: scale(1.06);
+
+    filter:
+        brightness(1.05)
+        saturate(1.08);
+}
+
+
+/* =========================================================
+   LEFT POSTER
+========================================================= */
+
+.poster-one {
+    width: 170px;
+    height: 270px;
+
+    left: 0;
+    top: 90px;
+
+    z-index: 1;
+
+    animation-name: leftPosterMove;
+    animation-delay: 0s;
+}
+
+
+/* =========================================================
+   CENTER POSTER
+========================================================= */
+
+.poster-main {
+    width: 190px;
+    height: 305px;
+
+    left: 145px;
+    top: 30px;
+
+    z-index: 3;
+
+    animation-name: centerPosterMove;
+    animation-delay: 0.5s;
+}
+
+
+/* =========================================================
+   RIGHT POSTER
+========================================================= */
+
+.poster-three {
+    width: 170px;
+    height: 270px;
+
+    right: 0;
+    top: 95px;
+
+    z-index: 1;
+
+    animation-name: rightPosterMove;
+    animation-delay: 1s;
+}
+
+
+/* =========================================================
+   DESKTOP POSTER ANIMATION
+========================================================= */
+
+@keyframes leftPosterMove {
+
+    0% {
+        transform:
+            translateY(5px)
+            rotate(-10deg);
+    }
+
+    100% {
+        transform:
+            translateY(-15px)
+            rotate(-7deg);
+    }
+}
+
+
+@keyframes centerPosterMove {
+
+    0% {
+        transform:
+            translateY(5px)
+            rotate(0deg);
+    }
+
+    100% {
+        transform:
+            translateY(-20px)
+            rotate(1deg);
+    }
+}
+
+
+@keyframes rightPosterMove {
+
+    0% {
+        transform:
+            translateY(5px)
+            rotate(10deg);
+    }
+
+    100% {
+        transform:
+            translateY(-15px)
+            rotate(7deg);
+    }
+}
+
+
+/* =========================================================
+   CATEGORIES SECTION
+========================================================= */
+
+.categories-section {
+    position: relative;
+
+    padding: 110px 8%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--background),
+            var(--surface)
+        );
+}
+
+
+/* =========================================================
+   SECTION SMALL TITLE
+========================================================= */
+
+.section-small {
+    color: var(--light);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.categories-section h2,
+.features-section h2,
+.final-cta h2 {
+    color: var(--text);
+
+    font-size: 34px;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   SECTION DESCRIPTION
+========================================================= */
+
+.section-description {
+    max-width: 550px;
+
+    margin: auto;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CATEGORY CONTAINER
+========================================================= */
+
+.category-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 45px;
+}
+
+
+/* =========================================================
+   CATEGORY CARD
+========================================================= */
+
+.category-card {
+    padding:
+        32px 20px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   CATEGORY ICON
+========================================================= */
+
+.category-card span {
+    display: block;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   CATEGORY TITLE
+========================================================= */
+
+.category-card h3 {
+    color: var(--text);
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   CATEGORY DESCRIPTION
+========================================================= */
+
+.category-card p {
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CATEGORY HOVER
+========================================================= */
+
+.category-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(168, 85, 247, 0.5);
+
+    background:
+        rgba(124, 58, 237, 0.08);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   FEATURES SECTION
+========================================================= */
+
+.features-section {
+    padding:
+        120px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+
+    background:
+        var(--surface);
+}
+
+
+/* =========================================================
+   FEATURE CONTENT
+========================================================= */
+
+.feature-content {
+    width: 35%;
+}
+
+.feature-content h2 span {
+    color: var(--light);
+}
+
+.feature-content > p:last-child {
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FEATURES CONTAINER
+========================================================= */
+
+.features-container {
+    width: 65%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.feature-card {
+    padding:
+        30px 20px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid var(--border);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* =========================================================
+   FEATURE HOVER
+========================================================= */
+
+.feature-card:hover {
+    transform:
+        translateY(-6px);
+
+    border-color:
+        var(--light);
+
+    background:
+        rgba(124, 58, 237, 0.06);
+}
+
+
+/* =========================================================
+   FEATURE ICON
+========================================================= */
+
+.feature-icon {
+    font-size: 28px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   FEATURE TITLE
+========================================================= */
+
+.feature-card h3 {
+    color: var(--text);
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   FEATURE DESCRIPTION
+========================================================= */
+
+.feature-card p {
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta {
+    padding:
+        120px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(124, 58, 237, 0.18),
+            transparent 50%
+        ),
+        var(--background);
+}
+
+
+/* =========================================================
+   CTA DESCRIPTION
+========================================================= */
+
+.final-cta p:not(.section-small) {
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.cta-button {
+    height: 48px;
+
+    padding:
+        0 28px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background:
+        var(--gradient-primary);
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        var(--transition);
+}
+
+.cta-button:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(124, 58, 237, 0.4);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.welcome-footer {
+    padding:
+        50px 8% 30px;
+
+    text-align: center;
+
+    border-top:
+        1px solid var(--border);
+
+    background:
+        var(--navbar);
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+========================================================= */
+
+.welcome-footer h2 {
+    color: var(--text);
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.welcome-footer h2 span {
+    color: var(--light);
+}
+
+
+/* =========================================================
+   FOOTER DESCRIPTION
+========================================================= */
+
+.welcome-footer > p {
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 28px;
+
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: var(--text-light);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition:
+        color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color:
+        var(--light);
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.welcome-footer .copyright {
+    padding-top: 20px;
+
+    border-top:
+        1px solid var(--border);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .hero-section {
+        padding:
+            60px 5%;
+    }
+
+    .welcome-content {
+        width: 52%;
+    }
+
+    .hero-posters {
+        right: 1%;
+
+        width: 500px;
+
+        transform:
+            translateY(-50%)
+            scale(0.90);
+
+        transform-origin:
+            center right;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .hero-section {
+        min-height:
+            calc(100vh - 70px);
+
+        padding:
+            70px 5%;
+    }
+
+    .welcome-content {
+        width: 52%;
+    }
+
+    .welcome-content h2 {
+        font-size: 55px;
+    }
+
+    .welcome-content h3 {
+        font-size: 20px;
+    }
+
+
+    /* -----------------------------------------
+       POSTERS
+    ----------------------------------------- */
+
+    .hero-posters {
+        right: -5px;
+
+        width: 455px;
+        height: 390px;
+
+        transform:
+            translateY(-50%)
+            scale(0.82);
+
+        transform-origin:
+            center right;
+    }
+
+    .poster-one {
+        width: 155px;
+        height: 250px;
+
+        left: 0;
+        top: 90px;
+    }
+
+    .poster-main {
+        width: 175px;
+        height: 280px;
+
+        left: 125px;
+        top: 30px;
+    }
+
+    .poster-three {
+        width: 155px;
+        height: 250px;
+
+        right: 0;
+        top: 95px;
+    }
+
+
+    /* -----------------------------------------
+       CATEGORIES
+    ----------------------------------------- */
+
+    .category-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* -----------------------------------------
+       FEATURES
+    ----------------------------------------- */
+
+    .features-section {
+        gap: 40px;
+    }
+}
+
+
+/* =========================================================
+   SMALL TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* -----------------------------------------
+       HERO
+    ----------------------------------------- */
+
+    .hero-section {
+        min-height: auto;
+
+        padding:
+            80px 25px 70px;
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+
+        text-align:
+            center;
+    }
+
+
+    /* -----------------------------------------
+       CONTENT
+    ----------------------------------------- */
+
+    .welcome-content {
+        width: 100%;
+
+        max-width:
+            600px;
+    }
+
+    .welcome-small {
+        font-size: 10px;
+
+        letter-spacing:
+            2.5px;
+    }
+
+    .welcome-content h2 {
+        font-size:
+            clamp(42px, 10vw, 58px);
+
+        letter-spacing:
+            -1.5px;
+    }
+
+    .welcome-content h3 {
+        margin-top: 18px;
+
+        font-size: 19px;
+    }
+
+    .welcome-description {
+        margin:
+            12px auto 0;
+
+        max-width:
+            520px;
+
+        font-size: 13px;
+    }
+
+
+    /* -----------------------------------------
+       BUTTONS
+    ----------------------------------------- */
+
+    .welcome-buttons {
+        justify-content:
+            center;
+
+        margin-top:
+            25px;
+    }
+
+
+    /* -----------------------------------------
+       POSTER AREA
+    ----------------------------------------- */
+
+    .hero-posters {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width:
+            min(100%, 500px);
+
+        height:
+            330px;
+
+        margin-top:
+            45px;
+
+        transform:
+            none;
+
+        pointer-events:
+            none;
+    }
+
+
+    /* -----------------------------------------
+       LEFT POSTER
+    ----------------------------------------- */
+
+    .poster-one {
+        width:
+            135px;
+
+        height:
+            215px;
+
+        left:
+            0;
+
+        top:
+            75px;
+
+        z-index:
+            1;
+
+        animation-name:
+            mobileLeftPosterMove;
+    }
+
+
+    /* -----------------------------------------
+       CENTER POSTER
+    ----------------------------------------- */
+
+    .poster-main {
+        width:
+            155px;
+
+        height:
+            250px;
+
+        left:
+            50%;
+
+        top:
+            18px;
+
+        z-index:
+            3;
+
+        animation-name:
+            mobileCenterPosterMove;
+    }
+
+
+    /* -----------------------------------------
+       RIGHT POSTER
+    ----------------------------------------- */
+
+    .poster-three {
+        width:
+            135px;
+
+        height:
+            215px;
+
+        right:
+            0;
+
+        top:
+            78px;
+
+        z-index:
+            1;
+
+        animation-name:
+            mobileRightPosterMove;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE POSTER ANIMATION
+    ----------------------------------------- */
+
+    @keyframes mobileLeftPosterMove {
+
+        0% {
+            transform:
+                translateX(0)
+                translateY(4px)
+                rotate(-9deg);
+        }
+
+        100% {
+            transform:
+                translateX(12px)
+                translateY(-12px)
+                rotate(-6deg);
+        }
+    }
+
+
+    @keyframes mobileCenterPosterMove {
+
+        0% {
+            transform:
+                translateX(-50%)
+                translateY(4px)
+                rotate(0deg);
+        }
+
+        100% {
+            transform:
+                translateX(-50%)
+                translateY(-15px)
+                rotate(1deg);
+        }
+    }
+
+
+    @keyframes mobileRightPosterMove {
+
+        0% {
+            transform:
+                translateX(0)
+                translateY(4px)
+                rotate(9deg);
+        }
+
+        100% {
+            transform:
+                translateX(-12px)
+                translateY(-12px)
+                rotate(6deg);
+        }
+    }
+
+
+    /* -----------------------------------------
+       CATEGORIES
+    ----------------------------------------- */
+
+    .categories-section {
+        padding:
+            90px 25px;
+    }
+
+    .category-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            14px;
+
+        margin-top:
+            35px;
+    }
+
+
+    /* -----------------------------------------
+       FEATURES
+    ----------------------------------------- */
+
+    .features-section {
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap:
+            40px;
+
+        padding:
+            90px 25px;
+    }
+
+    .feature-content,
+    .features-container {
+        width:
+            100%;
+    }
+
+    .features-container {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------
+       HERO
+    ----------------------------------------- */
+
+    .hero-section {
+        padding:
+            65px 20px 60px;
+    }
+
+
+    /* -----------------------------------------
+       TITLE
+    ----------------------------------------- */
+
+    .welcome-content h2 {
+        font-size:
+            clamp(38px, 11vw, 52px);
+    }
+
+    .welcome-content h3 {
+        font-size:
+            18px;
+    }
+
+    .welcome-description {
+        font-size:
+            13px;
+
+        line-height:
+            1.7;
+    }
+
+
+    /* -----------------------------------------
+       BUTTONS
+    ----------------------------------------- */
+
+    .welcome-buttons {
+        width:
+            100%;
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+    }
+
+    .get-started,
+    .explore-btn {
+        width:
+            100%;
+
+        max-width:
+            330px;
+
+        margin:
+            0 auto;
+    }
+
+
+    /* -----------------------------------------
+       POSTER AREA
+    ----------------------------------------- */
+
+    .hero-posters {
+        width:
+            100%;
+
+        height:
+            290px;
+
+        margin-top:
+            40px;
+    }
+
+
+    /* -----------------------------------------
+       LEFT POSTER
+    ----------------------------------------- */
+
+    .poster-one {
+        width:
+            115px;
+
+        height:
+            180px;
+
+        left:
+            0;
+
+        top:
+            70px;
+
+        animation-name:
+            smallLeftPosterMove;
+    }
+
+
+    /* -----------------------------------------
+       CENTER POSTER
+    ----------------------------------------- */
+
+    .poster-main {
+        width:
+            140px;
+
+        height:
+            220px;
+
+        left:
+            50%;
+
+        top:
+            12px;
+
+        animation-name:
+            smallCenterPosterMove;
+    }
+
+
+    /* -----------------------------------------
+       RIGHT POSTER
+    ----------------------------------------- */
+
+    .poster-three {
+        width:
+            115px;
+
+        height:
+            180px;
+
+        right:
+            0;
+
+        top:
+            72px;
+
+        animation-name:
+            smallRightPosterMove;
+    }
+
+
+    /* -----------------------------------------
+       SMALL MOBILE ANIMATION
+    ----------------------------------------- */
+
+    @keyframes smallLeftPosterMove {
+
+        0% {
+            transform:
+                translateX(0)
+                translateY(3px)
+                rotate(-9deg);
+        }
+
+        100% {
+            transform:
+                translateX(9px)
+                translateY(-10px)
+                rotate(-6deg);
+        }
+    }
+
+
+    @keyframes smallCenterPosterMove {
+
+        0% {
+            transform:
+                translateX(-50%)
+                translateY(3px)
+                rotate(0deg);
+        }
+
+        100% {
+            transform:
+                translateX(-50%)
+                translateY(-12px)
+                rotate(1deg);
+        }
+    }
+
+
+    @keyframes smallRightPosterMove {
+
+        0% {
+            transform:
+                translateX(0)
+                translateY(3px)
+                rotate(9deg);
+        }
+
+        100% {
+            transform:
+                translateX(-9px)
+                translateY(-10px)
+                rotate(6deg);
+        }
+    }
+
+
+    /* -----------------------------------------
+       CATEGORY
+    ----------------------------------------- */
+
+    .categories-section {
+        padding:
+            75px 20px;
+    }
+
+    .categories-section h2,
+    .features-section h2,
+    .final-cta h2 {
+        font-size:
+            27px;
+    }
+
+    .section-description {
+        font-size:
+            13px;
+    }
+
+    .category-container {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+        margin-top:
+            30px;
+    }
+
+    .category-card {
+        padding:
+            25px 15px;
+    }
+
+
+    /* -----------------------------------------
+       FEATURES
+    ----------------------------------------- */
+
+    .features-section {
+        padding:
+            75px 20px;
+
+        gap:
+            35px;
+    }
+
+    .features-container {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+    }
+
+    .feature-card {
+        padding:
+            25px 18px;
+    }
+
+
+    /* -----------------------------------------
+       FOOTER
+    ----------------------------------------- */
+
+    .welcome-footer {
+        padding:
+            45px 20px 25px;
+    }
+
+    .footer-links {
+        gap:
+            20px;
+
+        flex-wrap:
+            wrap;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE - 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    /* -----------------------------------------
+       HERO
+    ----------------------------------------- */
+
+    .hero-section {
+        padding:
+            55px 15px 50px;
+    }
+
+
+    /* -----------------------------------------
+       TEXT
+    ----------------------------------------- */
+
+    .welcome-small {
+        font-size:
+            9px;
+
+        letter-spacing:
+            2px;
+    }
+
+    .welcome-content h2 {
+        font-size:
+            38px;
+
+        letter-spacing:
+            -1px;
+    }
+
+    .welcome-content h3 {
+        font-size:
+            16px;
+
+        line-height:
+            1.4;
+    }
+
+    .welcome-description {
+        font-size:
+            12px;
+    }
+
+
+    /* -----------------------------------------
+       POSTER AREA
+    ----------------------------------------- */
+
+    .hero-posters {
+        width:
+            100%;
+
+        height:
+            250px;
+
+        margin-top:
+            35px;
+    }
+
+
+    /* -----------------------------------------
+       LEFT POSTER
+    ----------------------------------------- */
+
+    .poster-one {
+        width:
+            100px;
+
+        height:
+            155px;
+
+        left:
+            0;
+
+        top:
+            62px;
+
+        animation-name:
+            tinyLeftPosterMove;
+    }
+
+
+    /* -----------------------------------------
+       CENTER POSTER
+    ----------------------------------------- */
+
+    .poster-main {
+        width:
+            120px;
+
+        height:
+            190px;
+
+        left:
+            50%;
+
+        top:
+            8px;
+
+        animation-name:
+            tinyCenterPosterMove;
+    }
+
+
+    /* -----------------------------------------
+       RIGHT POSTER
+    ----------------------------------------- */
+
+    .poster-three {
+        width:
+            100px;
+
+        height:
+            155px;
+
+        right:
+            0;
+
+        top:
+            64px;
+
+        animation-name:
+            tinyRightPosterMove;
+    }
+
+
+    /* -----------------------------------------
+       TINY MOBILE ANIMATION
+    ----------------------------------------- */
+
+    @keyframes tinyLeftPosterMove {
+
+        0% {
+            transform:
+                translateX(0)
+                translateY(2px)
+                rotate(-8deg);
+        }
+
+        100% {
+            transform:
+                translateX(7px)
+                translateY(-8px)
+                rotate(-5deg);
+        }
+    }
+
+
+    @keyframes tinyCenterPosterMove {
+
+        0% {
+            transform:
+                translateX(-50%)
+                translateY(2px)
+                rotate(0deg);
+        }
+
+        100% {
+            transform:
+                translateX(-50%)
+                translateY(-10px)
+                rotate(1deg);
+        }
+    }
+
+
+    @keyframes tinyRightPosterMove {
+
+        0% {
+            transform:
+                translateX(0)
+                translateY(2px)
+                rotate(8deg);
+        }
+
+        100% {
+            transform:
+                translateX(-7px)
+                translateY(-8px)
+                rotate(5deg);
+        }
+    }
+
+
+    /* -----------------------------------------
+       CATEGORY
+    ----------------------------------------- */
+
+    .categories-section h2,
+    .features-section h2,
+    .final-cta h2 {
+        font-size:
+            24px;
+    }
+
+    .category-card span {
+        font-size:
+            28px;
+    }
+
+    .category-card h3 {
+        font-size:
+            16px;
+    }
+
+
+    /* -----------------------------------------
+       FOOTER
+    ----------------------------------------- */
+
+    .footer-links {
+        gap:
+            15px;
+    }
+
+    .footer-links a {
+        font-size:
+            11px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE - 350px
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .hero-section {
+        padding:
+            50px 12px 45px;
+    }
+
+
+    /* -----------------------------------------
+       TEXT
+    ----------------------------------------- */
+
+    .welcome-content h2 {
+        font-size:
+            34px;
+    }
+
+    .welcome-content h3 {
+        font-size:
+            15px;
+    }
+
+    .welcome-description {
+        font-size:
+            11.5px;
+    }
+
+
+    /* -----------------------------------------
+       POSTER AREA
+    ----------------------------------------- */
+
+    .hero-posters {
+        width:
+            100%;
+
+        height:
+            225px;
+    }
+
+
+    /* -----------------------------------------
+       LEFT POSTER
+    ----------------------------------------- */
+
+    .poster-one {
+        width:
+            88px;
+
+        height:
+            138px;
+
+        left:
+            0;
+
+        top:
+            57px;
+    }
+
+
+    /* -----------------------------------------
+       CENTER POSTER
+    ----------------------------------------- */
+
+    .poster-main {
+        width:
+            105px;
+
+        height:
+            165px;
+
+        left:
+            50%;
+
+        top:
+            7px;
+    }
+
+
+    /* -----------------------------------------
+       RIGHT POSTER
+    ----------------------------------------- */
+
+    .poster-three {
+        width:
+            88px;
+
+        height:
+            138px;
+
+        right:
+            0;
+
+        top:
+            59px;
+    }
+
+
+    /* -----------------------------------------
+       BUTTONS
+    ----------------------------------------- */
+
+    .get-started,
+    .explore-btn {
+        max-width:
+            100%;
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+
+    .poster:hover {
+        box-shadow:
+            0 20px 45px
+            rgba(0, 0, 0, 0.45);
+    }
+
+    .poster:hover img {
+        transform:
+            none;
+
+        filter:
+            none;
+    }
+
+    .category-card:hover {
+        transform:
+            none;
+
+        border-color:
+            var(--border);
+
+        background:
+            rgba(255, 255, 255, 0.025);
+    }
+
+    .feature-card:hover {
+        transform:
+            none;
+
+        border-color:
+            var(--border);
+
+        background:
+            rgba(255, 255, 255, 0.025);
+    }
+
+    .get-started:hover,
+    .explore-btn:hover,
+    .cta-button:hover {
+        transform:
+            none;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .poster {
+        animation: none;
+    }
+
+    .poster-overlay img,
+    .category-card,
+    .feature-card,
+    .get-started,
+    .explore-btn,
+    .cta-button {
+        transition: none;
+    }
+}

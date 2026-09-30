@@ -1,0 +1,928 @@
+/* =========================================================
+   MOVIE STREAM - MAIN CAROUSEL
+   ========================================================= */
+
+
+/* =========================================================
+   1. MAIN CAROUSEL
+   ========================================================= */
+
+.movieCarousel {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    margin: 0;
+    padding: 0;
+    background: #080b14;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   2. CAROUSEL SLIDE
+   ========================================================= */
+
+.movieCarousel-slide {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #080b14;
+    border-radius: 0 0 30px 30px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   3. BACKGROUND IMAGE
+   ========================================================= */
+
+.movieCarousel-image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: 75% center;
+
+    z-index: 1;
+
+    /*
+       BLUR + CINEMATIC EFFECT
+       Keep blur inside the same filter property.
+    */
+    filter:
+        blur(4px)
+        brightness(0.65)
+        contrast(1.08)
+        saturate(1.08);
+
+    /*
+       Scale prevents the blurred edges
+       from becoming visible.
+    */
+    transform: scale(1.05);
+
+    transition:
+        transform 0.8s ease,
+        filter 0.5s ease;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   4. IMAGE HOVER
+   ========================================================= */
+
+.movieCarousel-slide:hover .movieCarousel-image {
+    transform: scale(1.08);
+
+    /*
+       IMPORTANT:
+       Keep blur here too.
+       Otherwise hover removes the blur.
+    */
+    filter:
+        blur(4px)
+        brightness(0.72)
+        contrast(1.10)
+        saturate(1.10);
+}
+
+
+/* =========================================================
+   5. DARK OVERLAY
+   ========================================================= */
+
+.movieCarousel-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+
+        /* LEFT SIDE DARK */
+        linear-gradient(
+            90deg,
+            rgba(5, 8, 18, 1) 0%,
+            rgba(5, 8, 18, 0.98) 15%,
+            rgba(5, 8, 18, 0.90) 30%,
+            rgba(5, 8, 18, 0.72) 45%,
+            rgba(5, 8, 18, 0.40) 65%,
+            rgba(5, 8, 18, 0.05) 100%
+        ),
+
+        /* BOTTOM DARK */
+        linear-gradient(
+            180deg,
+            rgba(5, 8, 18, 0) 45%,
+            rgba(5, 8, 18, 0.25) 65%,
+            rgba(5, 8, 18, 0.95) 100%
+        );
+}
+
+
+/* =========================================================
+   6. CONTENT CONTAINER
+   ========================================================= */
+
+.movieCarousel-content {
+    position: absolute;
+
+    top: 50%;
+    left: 7%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 48%;
+    max-width: 680px;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   7. TRENDING BADGE
+   ========================================================= */
+
+.movieCarousel-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    margin: 0 0 22px 0;
+    padding: 9px 20px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #a855f7
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, 0.40);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   8. MOVIE TITLE
+   ========================================================= */
+
+.movieCarousel-title {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 22px 0;
+    padding: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:
+        clamp(
+            48px,
+            5vw,
+            70px
+        );
+
+    font-weight: 900;
+
+    line-height: 0.95;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    box-sizing: border-box;
+
+    text-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.85);
+}
+
+
+/* =========================================================
+   9. DESCRIPTION
+   ========================================================= */
+
+.movieCarousel-description {
+    display: block;
+
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 0 25px 0;
+    padding: 0;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 17px;
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    box-sizing: border-box;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+/* =========================================================
+   10. MOVIE INFORMATION
+   ========================================================= */
+
+.movieCarousel-meta {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    width: 100%;
+
+    margin: 0 0 28px 0;
+    padding: 0;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   11. RATING
+   ========================================================= */
+
+.movieCarousel-rating {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #ffd54a;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   12. YEAR
+   ========================================================= */
+
+.movieCarousel-year {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   13. DURATION
+   ========================================================= */
+
+.movieCarousel-duration {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   14. CERTIFICATE
+   ========================================================= */
+
+.movieCarousel-certificate {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 10px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.28);
+
+    border-radius: 6px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    backdrop-filter: blur(8px);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   15. LANGUAGE
+   ========================================================= */
+
+.movieCarousel-language {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 15px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #a855f7
+        );
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 5px 15px rgba(124, 58, 237, 0.25);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   16. BUTTON CONTAINER
+   ========================================================= */
+
+.movieCarousel-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   17. WATCH NOW BUTTON
+   ========================================================= */
+
+.movieCarousel-watch {
+    width: 175px;
+    height: 52px;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #a855f7
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+
+/* WATCH HOVER */
+
+.movieCarousel-watch:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(124, 58, 237, 0.55);
+}
+
+
+/* =========================================================
+   18. MORE INFO BUTTON
+   ========================================================= */
+
+.movieCarousel-info {
+    width: 175px;
+    height: 52px;
+
+    margin: 0;
+    padding: 0;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+
+/* INFO HOVER */
+
+.movieCarousel-info:hover {
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   19. LOADING
+   ========================================================= */
+
+.movieCarousel-loading {
+    width: 100%;
+    height: 720px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #080b14;
+
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   20. LARGE SCREEN
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+    .movieCarousel {
+        height: 760px;
+    }
+
+    .movieCarousel-slide {
+        height: 760px;
+    }
+
+    .movieCarousel-content {
+        left: 8%;
+
+        width: 46%;
+        max-width: 720px;
+    }
+
+    .movieCarousel-title {
+        font-size: 76px;
+    }
+
+    .movieCarousel-description {
+        font-size: 18px;
+        max-width: 620px;
+    }
+}
+
+
+/* =========================================================
+   21. TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .movieCarousel {
+        height: 680px;
+    }
+
+    .movieCarousel-slide {
+        height: 680px;
+    }
+
+    .movieCarousel-content {
+        left: 6%;
+
+        width: 55%;
+        max-width: 600px;
+    }
+
+    .movieCarousel-title {
+        font-size: 54px;
+        line-height: 0.98;
+    }
+
+    .movieCarousel-description {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .movieCarousel-meta {
+        gap: 13px;
+        margin-bottom: 24px;
+    }
+
+    .movieCarousel-watch,
+    .movieCarousel-info {
+        width: 160px;
+        height: 50px;
+    }
+}
+
+
+/* =========================================================
+   22. MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .movieCarousel {
+        height: 650px;
+    }
+
+    .movieCarousel-slide {
+        height: 650px;
+        min-height: 650px;
+
+        border-radius: 0;
+    }
+
+
+    /* MOBILE IMAGE */
+
+    .movieCarousel-image {
+        object-position: 65% center;
+
+        /*
+           Keep blur on mobile.
+        */
+        filter:
+            blur(4px)
+            brightness(0.60)
+            contrast(1.08)
+            saturate(1.08);
+
+        transform: scale(1.06);
+    }
+
+
+    /* MOBILE OVERLAY */
+
+    .movieCarousel-overlay {
+        background:
+
+            linear-gradient(
+                180deg,
+                rgba(5, 8, 18, 0.05) 0%,
+                rgba(5, 8, 18, 0.35) 42%,
+                rgba(5, 8, 18, 0.98) 100%
+            );
+    }
+
+
+    /* MOBILE CONTENT */
+
+    .movieCarousel-content {
+        top: auto;
+
+        bottom: 40px;
+
+        left: 25px;
+        right: 25px;
+
+        transform: none;
+
+        width: auto;
+        max-width: none;
+    }
+
+
+    /* BADGE */
+
+    .movieCarousel-badge {
+        margin-bottom: 14px;
+
+        padding: 8px 15px;
+
+        font-size: 12px;
+    }
+
+
+    /* TITLE */
+
+    .movieCarousel-title {
+        margin-bottom: 14px;
+
+        font-size: 42px;
+
+        line-height: 1;
+    }
+
+
+    /* DESCRIPTION */
+
+    .movieCarousel-description {
+        margin-bottom: 18px;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* META */
+
+    .movieCarousel-meta {
+        gap: 10px;
+
+        margin-bottom: 20px;
+
+        font-size: 13px;
+    }
+
+
+    /* BUTTONS */
+
+    .movieCarousel-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        width: 100%;
+    }
+
+    .movieCarousel-watch,
+    .movieCarousel-info {
+        width: 100%;
+        height: 50px;
+    }
+}
+
+
+/* =========================================================
+   23. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .movieCarousel {
+        height: 650px;
+    }
+
+    .movieCarousel-slide {
+        height: 650px;
+        min-height: 650px;
+    }
+
+
+    /* SMALL MOBILE IMAGE */
+
+    .movieCarousel-image {
+        object-position: 65% center;
+
+        filter:
+            blur(4px)
+            brightness(0.58)
+            contrast(1.08)
+            saturate(1.05);
+
+        transform: scale(1.06);
+    }
+
+
+    .movieCarousel-content {
+        left: 20px;
+        right: 20px;
+
+        bottom: 30px;
+    }
+
+
+    .movieCarousel-badge {
+        margin-bottom: 12px;
+
+        padding: 7px 13px;
+
+        font-size: 11px;
+    }
+
+
+    .movieCarousel-title {
+        margin-bottom: 12px;
+
+        font-size: 34px;
+
+        line-height: 1;
+    }
+
+
+    .movieCarousel-description {
+        margin-bottom: 16px;
+
+        font-size: 13px;
+
+        line-height: 1.45;
+    }
+
+
+    .movieCarousel-meta {
+        gap: 8px;
+
+        margin-bottom: 18px;
+
+        font-size: 12px;
+    }
+
+
+    .movieCarousel-certificate {
+        padding: 4px 8px;
+    }
+
+
+    .movieCarousel-language {
+        padding: 5px 12px;
+    }
+
+
+    .movieCarousel-watch,
+    .movieCarousel-info {
+        height: 48px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   24. VERY SMALL SCREEN
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .movieCarousel {
+        height: 620px;
+    }
+
+    .movieCarousel-slide {
+        height: 620px;
+    }
+
+
+    .movieCarousel-image {
+        object-position: 65% center;
+
+        filter:
+            blur(4px)
+            brightness(0.55)
+            contrast(1.08)
+            saturate(1.05);
+
+        transform: scale(1.07);
+    }
+
+
+    .movieCarousel-content {
+        left: 16px;
+        right: 16px;
+
+        bottom: 25px;
+    }
+
+
+    .movieCarousel-title {
+        font-size: 30px;
+    }
+
+
+    .movieCarousel-description {
+        font-size: 12px;
+    }
+
+
+    .movieCarousel-meta {
+        gap: 6px;
+
+        font-size: 11px;
+    }
+}

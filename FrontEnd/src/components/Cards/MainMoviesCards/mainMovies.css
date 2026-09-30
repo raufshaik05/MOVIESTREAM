@@ -1,0 +1,420 @@
+/* ==========================================
+   MOVIE LIBRARY
+========================================== */
+
+.stream-library {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 40px 60px;
+    box-sizing: border-box;
+    background: #080b14;
+}
+
+
+/* ==========================================
+   MOVIE CARD CONTAINER
+========================================== */
+
+.stream-grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* ==========================================
+   MOVIE CARD
+========================================== */
+
+.stream-tile {
+    width: 20px;
+    height: 395px;
+    flex: 0 0 250px;
+
+    background: #151b2f;
+    border: 1px solid #232b3f;
+    border-radius: 12px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ==========================================
+   CARD HOVER
+========================================== */
+
+.stream-tile:hover {
+    transform: translateY(-8px);
+
+    /* border-color: #7c3aed; */
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(124, 58, 237, 0.18);
+}
+
+
+/* ==========================================
+   MOVIE POSTER
+========================================== */
+
+.stream-poster {
+    position: relative;
+
+    width: 100%;
+    height: 310px;
+
+    overflow: hidden;
+
+    background: #0f1422;
+}
+
+
+/* ==========================================
+   POSTER IMAGE
+========================================== */
+
+.stream-poster img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+.stream-tile:hover .stream-poster img {
+    transform: scale(1.06);
+}
+
+
+/* ==========================================
+   HOVER OVERLAY
+========================================== */
+
+.stream-hover-layer {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(8, 11, 20, 0.45);
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+.stream-tile:hover .stream-hover-layer {
+    opacity: 1;
+}
+
+
+/* ==========================================
+   PLAY BUTTON
+========================================== */
+
+.stream-play {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #7c3aed;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+    font-size: 20px;
+
+    padding-left: 3px;
+
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.6);
+
+    transition: transform 0.3s ease;
+}
+
+
+.stream-tile:hover .stream-play {
+    transform: scale(1.08);
+}
+
+
+/* ==========================================
+   MOVIE INFORMATION
+========================================== */
+
+.stream-information {
+    height: 85px;
+
+    padding: 10px 13px;
+
+    box-sizing: border-box;
+
+    background: #151b2f;
+}
+
+
+/* ==========================================
+   MOVIE TITLE
+========================================== */
+
+.stream-name {
+    margin: 0 0 7px;
+
+    color: #e5e7eb;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 20px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================================
+   RATING + YEAR
+========================================== */
+
+.stream-details {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 5px;
+
+    font-size: 13px;
+}
+
+
+.stream-score {
+    color: #ffd54a;
+}
+
+
+.stream-release {
+    color: #9ca3af;
+}
+
+
+/* ==========================================
+   GENRE
+========================================== */
+
+.stream-category {
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================================
+   SHOW MORE AREA
+========================================== */
+
+.stream-more-area {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 45px;
+}
+
+
+/* ==========================================
+   SHOW MORE BUTTON
+========================================== */
+
+.stream-more-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 12px 24px;
+
+    background: #151b2f;
+
+    border: 1px solid #7c3aed;
+    border-radius: 8px;
+
+    color: #e5e7eb;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.stream-more-button:hover {
+    background: #7c3aed;
+
+    box-shadow:
+        0 0 20px rgba(124, 58, 237, 0.35);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   PLUS ICON
+========================================== */
+
+.stream-more-icon {
+    font-size: 20px;
+    line-height: 14px;
+}
+
+
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media (min-width: 1400px) {
+
+    .stream-grid {
+        gap: 30px;
+    }
+
+    .stream-tile {
+        width: 250px;
+        flex-basis: 250px;
+    }
+}
+
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1300px) {
+
+    .stream-library {
+        padding: 30px;
+    }
+
+    .stream-grid {
+        gap: 24px;
+    }
+
+    .stream-tile {
+        width: 230px;
+        flex-basis: 230px;
+        height: 370px;
+    }
+
+    .stream-poster {
+        height: 285px;
+    }
+
+    .stream-information {
+        height: 85px;
+    }
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .stream-library {
+        padding: 25px 20px 50px;
+    }
+
+    .stream-grid {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .stream-tile {
+        width: 210px;
+        flex-basis: 210px;
+        height: 350px;
+    }
+
+    .stream-poster {
+        height: 265px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .stream-library {
+        padding: 20px 12px 40px;
+    }
+
+    .stream-grid {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .stream-tile {
+        width: calc(50% - 8px);
+        flex: 0 0 calc(50% - 8px);
+        height: auto;
+    }
+
+    .stream-poster {
+        height: 250px;
+    }
+
+    .stream-information {
+        height: 82px;
+        padding: 9px 10px;
+    }
+
+    .stream-name {
+        font-size: 14px;
+    }
+
+    .stream-details {
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .stream-category {
+        font-size: 11px;
+    }
+}

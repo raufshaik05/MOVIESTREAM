@@ -1,0 +1,604 @@
+
+[
+  {
+    "title": "One Piece",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000001/onepiece-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000002/onepiece-poster.jpg",
+    "description": "Monkey D. Luffy sets sail with his pirate crew in search of the legendary treasure known as the One Piece to become the King of the Pirates.",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "Japanese",
+    "rating": 9.0,
+    "year": 1999,
+    "duration": "1100+ Episodes",
+    "certificate": "TV-14",
+    "director": "Konosuke Uda",
+    "cast": [
+      "Mayumi Tanaka",
+      "Kazuya Nakai",
+      "Akemi Okamura",
+      "Kappei Yamaguchi",
+      "Hiroaki Hirata"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=MCb13lbVGE0"
+  },
+  {
+    "title": "Naruto",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000003/naruto-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000004/naruto-poster.jpg",
+    "description": "Naruto Uzumaki dreams of becoming the Hokage while overcoming loneliness and powerful enemies with his ninja friends.",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "Japanese",
+    "rating": 8.4,
+    "year": 2002,
+    "duration": "220 Episodes",
+    "certificate": "TV-PG",
+    "director": "Hayato Date",
+    "cast": [
+      "Junko Takeuchi",
+      "Noriaki Sugiyama",
+      "Chie Nakamura",
+      "Kazuhiko Inoue"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=-G9BqkgZXRA"
+  },
+  {
+    "title": "Naruto: Shippuden",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000005/shippuden-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000006/shippuden-poster.jpg",
+    "description": "Naruto returns after years of training to protect the Hidden Leaf Village and stop the Akatsuki organization.",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "Japanese",
+    "rating": 8.7,
+    "year": 2007,
+    "duration": "500 Episodes",
+    "certificate": "TV-14",
+    "director": "Hayato Date",
+    "cast": [
+      "Junko Takeuchi",
+      "Noriaki Sugiyama",
+      "Chie Nakamura",
+      "Satoshi Hino"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=22R0j8UKRzY"
+  },
+  {
+    "title": "Dragon Ball Z",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000007/dbz-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000008/dbz-poster.jpg",
+    "description": "Goku and the Z Fighters defend Earth from powerful enemies including Frieza, Cell and Majin Buu.",
+    "genre": "Action, Adventure, Sci-Fi",
+    "language": "Japanese",
+    "rating": 8.8,
+    "year": 1989,
+    "duration": "291 Episodes",
+    "certificate": "TV-PG",
+    "director": "Daisuke Nishio",
+    "cast": [
+      "Masako Nozawa",
+      "Ryo Horikawa",
+      "Toshio Furukawa",
+      "Mayumi Tanaka"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=Byo4rgMHUM4"
+  },
+  {
+    "title": "Attack on Titan",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000009/aot-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000010/aot-poster.jpg",
+    "description": "Humanity fights for survival against gigantic Titans while uncovering the secrets behind their existence.",
+    "genre": "Action, Drama, Fantasy",
+    "language": "Japanese",
+    "rating": 9.1,
+    "year": 2013,
+    "duration": "89 Episodes",
+    "certificate": "TV-MA",
+    "director": "Tetsuro Araki",
+    "cast": [
+      "Yuki Kaji",
+      "Yui Ishikawa",
+      "Marina Inoue",
+      "Hiroshi Kamiya"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=MGRm4IzK1SQ"
+  },
+  {
+    "title": "Demon Slayer: Kimetsu no Yaiba",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000011/demonslayer-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000012/demonslayer-poster.jpg",
+    "description": "Tanjiro Kamado joins the Demon Slayer Corps after his family is slaughtered and his sister becomes a demon.",
+    "genre": "Action, Fantasy",
+    "language": "Japanese",
+    "rating": 8.7,
+    "year": 2019,
+    "duration": "63+ Episodes",
+    "certificate": "TV-14",
+    "director": "Haruo Sotozaki",
+    "cast": [
+      "Natsuki Hanae",
+      "Akari Kito",
+      "Hiro Shimono",
+      "Yoshitsugu Matsuoka"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=VQGCKyvzIM4"
+  },
+  {
+    "title": "Jujutsu Kaisen",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000013/jjk-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000014/jjk-poster.jpg",
+    "description": "Yuji Itadori becomes involved in the dangerous world of curses after swallowing a cursed object.",
+    "genre": "Action, Supernatural",
+    "language": "Japanese",
+    "rating": 8.6,
+    "year": 2020,
+    "duration": "47+ Episodes",
+    "certificate": "TV-MA",
+    "director": "Sunghoo Park",
+    "cast": [
+      "Junya Enoki",
+      "Yuichi Nakamura",
+      "Yuma Uchida",
+      "Asami Seto"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=pkKu9hLT-t8"
+  },
+  {
+    "title": "Death Note",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000015/deathnote-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000016/deathnote-poster.jpg",
+    "description": "A brilliant student discovers a supernatural notebook that kills anyone whose name is written in it.",
+    "genre": "Psychological, Thriller",
+    "language": "Japanese",
+    "rating": 9.0,
+    "year": 2006,
+    "duration": "37 Episodes",
+    "certificate": "TV-14",
+    "director": "Tetsuro Araki",
+    "cast": [
+      "Mamoru Miyano",
+      "Kappei Yamaguchi",
+      "Shido Nakamura"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=NlJZ-YgAt-c"
+  },
+  {
+    "title": "Bleach",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000017/bleach-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000018/bleach-poster.jpg",
+    "description": "Ichigo Kurosaki gains the powers of a Soul Reaper and protects the living world from evil spirits.",
+    "genre": "Action, Supernatural",
+    "language": "Japanese",
+    "rating": 8.2,
+    "year": 2004,
+    "duration": "392+ Episodes",
+    "certificate": "TV-14",
+    "director": "Noriyuki Abe",
+    "cast": [
+      "Masakazu Morita",
+      "Fumiko Orikasa",
+      "Yuki Matsuoka"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=78WIYzX_m98"
+  },
+  {
+    "title": "Hunter × Hunter",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000019/hxh-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000020/hxh-poster.jpg",
+    "description": "Young Gon Freecss becomes a Hunter to find his legendary father while making lifelong friends.",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "Japanese",
+    "rating": 9.0,
+    "year": 2011,
+    "duration": "148 Episodes",
+    "certificate": "TV-14",
+    "director": "Hiroshi Kojina",
+    "cast": [
+      "Megumi Han",
+      "Mariya Ise",
+      "Miyuki Sawashiro",
+      "Keiji Fujiwara"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=d6kBeJjTGnY"
+  },
+
+  {
+    "title": "Fullmetal Alchemist: Brotherhood",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000021/fmab-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000022/fmab-poster.jpg",
+    "description": "Two brothers use alchemy to search for the Philosopher's Stone after a failed experiment changes their lives forever.",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "Japanese",
+    "rating": 9.1,
+    "year": 2009,
+    "duration": "64 Episodes",
+    "certificate": "TV-14",
+    "director": "Yasuhiro Irie",
+    "cast": [
+      "Romi Park",
+      "Rie Kugimiya",
+      "Shin-ichiro Miki",
+      "Keiji Fujiwara"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=2uq34TeWEdQ"
+  },
+  {
+    "title": "My Hero Academia",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000023/mha-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000024/mha-poster.jpg",
+    "description": "A powerless boy inherits the world's greatest superpower and trains to become the number one hero.",
+    "genre": "Action, Superhero",
+    "language": "Japanese",
+    "rating": 8.4,
+    "year": 2016,
+    "duration": "150+ Episodes",
+    "certificate": "TV-14",
+    "director": "Kenji Nagasaki",
+    "cast": [
+      "Daiki Yamashita",
+      "Nobuhiko Okamoto",
+      "Kenta Miyake",
+      "Ayane Sakura"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=EPVkcwyLQQ8"
+  },
+  {
+    "title": "Chainsaw Man",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000025/chainsawman-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000026/chainsawman-poster.jpg",
+    "description": "Denji merges with his pet devil Pochita and becomes Chainsaw Man to hunt dangerous devils.",
+    "genre": "Action, Horror, Fantasy",
+    "language": "Japanese",
+    "rating": 8.7,
+    "year": 2022,
+    "duration": "12 Episodes",
+    "certificate": "TV-MA",
+    "director": "Ryu Nakayama",
+    "cast": [
+      "Kikunosuke Toya",
+      "Tomori Kusunoki",
+      "Fairouz Ai",
+      "Shogo Sakata"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=eyonP1AgC0k"
+  },
+  {
+    "title": "Solo Leveling",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000027/sololeveling-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000028/sololeveling-poster.jpg",
+    "description": "The weakest hunter, Sung Jin-Woo, gains a mysterious system that allows him to become the strongest.",
+    "genre": "Action, Fantasy",
+    "language": "Japanese",
+    "rating": 8.9,
+    "year": 2024,
+    "duration": "25 Episodes",
+    "certificate": "TV-14",
+    "director": "Shunsuke Nakashige",
+    "cast": [
+      "Taito Ban",
+      "Genta Nakamura",
+      "Haruna Mikawa",
+      "Reina Ueda"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=I6JIwjWOhnQ"
+  },
+  {
+    "title": "Black Clover",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000029/blackclover-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000030/blackclover-poster.jpg",
+    "description": "Asta, a boy born without magic, dreams of becoming the Wizard King through determination and hard work.",
+    "genre": "Action, Fantasy",
+    "language": "Japanese",
+    "rating": 8.3,
+    "year": 2017,
+    "duration": "170 Episodes",
+    "certificate": "TV-14",
+    "director": "Tatsuya Yoshihara",
+    "cast": [
+      "Gakuto Kajiwara",
+      "Nobunaga Shimazaki",
+      "Kana Yuuki",
+      "Junichi Suwabe"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=PrgxJ1_sUcs"
+  },
+  {
+    "title": "Spy × Family",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000031/spyfamily-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000032/spyfamily-poster.jpg",
+    "description": "A spy, an assassin and a telepath pretend to be a perfect family while hiding their secret identities.",
+    "genre": "Action, Comedy",
+    "language": "Japanese",
+    "rating": 8.6,
+    "year": 2022,
+    "duration": "37+ Episodes",
+    "certificate": "TV-14",
+    "director": "Kazuhiro Furuhashi",
+    "cast": [
+      "Takuya Eguchi",
+      "Atsumi Tanezaki",
+      "Saori Hayami",
+      "Kenichiro Matsuda"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=ofXigq9aIpo"
+  },
+  {
+    "title": "Haikyu!!",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000033/haikyu-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000034/haikyu-poster.jpg",
+    "description": "A determined volleyball player joins his high school team to become one of Japan's greatest athletes.",
+    "genre": "Sports, Comedy",
+    "language": "Japanese",
+    "rating": 8.8,
+    "year": 2014,
+    "duration": "85 Episodes",
+    "certificate": "TV-PG",
+    "director": "Susumu Mitsunaka",
+    "cast": [
+      "Ayumu Murase",
+      "Kaito Ishikawa",
+      "Yu Hayashi",
+      "Satoshi Hino"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=JOGp2c7-cKc"
+  },
+  {
+    "title": "Blue Lock",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000035/bluelock-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000036/bluelock-poster.jpg",
+    "description": "Japan creates an intense football training program to produce the world's greatest striker.",
+    "genre": "Sports, Drama",
+    "language": "Japanese",
+    "rating": 8.3,
+    "year": 2022,
+    "duration": "38 Episodes",
+    "certificate": "TV-14",
+    "director": "Tetsuaki Watanabe",
+    "cast": [
+      "Kazuki Ura",
+      "Tasuku Kaito",
+      "Yuki Ono",
+      "Soma Saito"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=IVsII3dLbWc"
+  },
+  {
+    "title": "Vinland Saga",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000037/vinlandsaga-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000038/vinlandsaga-poster.jpg",
+    "description": "Young Thorfinn seeks revenge against the man who killed his father during the Viking era.",
+    "genre": "Action, Historical",
+    "language": "Japanese",
+    "rating": 8.9,
+    "year": 2019,
+    "duration": "48 Episodes",
+    "certificate": "TV-MA",
+    "director": "Shuhei Yabuta",
+    "cast": [
+      "Yuto Uemura",
+      "Naoya Uchida",
+      "Kensho Ono",
+      "Akio Otsuka"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=H3fS-bZ4e2E"
+  },
+  {
+    "title": "Tokyo Ghoul",
+    "titleImage": "https://res.cloudinary.com/demo/image/upload/v1750000039/tokyoghoul-logo.png",
+    "image": "https://res.cloudinary.com/demo/image/upload/v1750000040/tokyoghoul-poster.jpg",
+    "description": "College student Ken Kaneki becomes half-ghoul after a life-changing accident and struggles between two worlds.",
+    "genre": "Action, Horror, Supernatural",
+    "language": "Japanese",
+    "rating": 7.8,
+    "year": 2014,
+    "duration": "48 Episodes",
+    "certificate": "TV-MA",
+    "director": "Shuhei Morita",
+    "cast": [
+      "Natsuki Hanae",
+      "Sora Amamiya",
+      "Kana Hanazawa",
+      "Takahiro Sakurai"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=vGuQeQsoRgU"
+  },
+
+  {
+    "title": "Tokyo Revengers",
+    "titleImage": "https://example.com/logos/tokyo-revengers.png",
+    "image": "https://example.com/images/tokyo-revengers.jpg",
+    "description": "Takemichi Hanagaki travels back in time to save his friends and change the future by infiltrating the Tokyo Manji Gang.",
+    "genre": "Action, Drama, Supernatural",
+    "language": "Japanese",
+    "rating": 8.1,
+    "year": 2021,
+    "duration": "50 Episodes",
+    "certificate": "TV-14",
+    "director": "Koichi Hatsumi",
+    "cast": [
+      "Yuuki Shin",
+      "Azumi Waki",
+      "Ryota Osaka",
+      "Sho Karino"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=idlLFNNpZiI"
+  },
+  {
+    "title": "Code Geass",
+    "titleImage": "https://example.com/logos/code-geass.png",
+    "image": "https://example.com/images/code-geass.jpg",
+    "description": "Exiled prince Lelouch gains the mysterious Geass power and starts a rebellion against the Holy Britannian Empire.",
+    "genre": "Action, Mecha, Sci-Fi",
+    "language": "Japanese",
+    "rating": 8.9,
+    "year": 2006,
+    "duration": "50 Episodes",
+    "certificate": "TV-14",
+    "director": "Gorō Taniguchi",
+    "cast": [
+      "Jun Fukuyama",
+      "Yukana",
+      "Takahiro Sakurai",
+      "Ami Koshimizu"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=Ab9ztHX-DVg"
+  },
+  {
+    "title": "Steins;Gate",
+    "titleImage": "https://example.com/logos/steins-gate.png",
+    "image": "https://example.com/images/steins-gate.jpg",
+    "description": "A self-proclaimed mad scientist accidentally discovers time travel and must prevent a catastrophic future.",
+    "genre": "Sci-Fi, Thriller",
+    "language": "Japanese",
+    "rating": 9.1,
+    "year": 2011,
+    "duration": "24 Episodes",
+    "certificate": "TV-14",
+    "director": "Hiroshi Hamasaki",
+    "cast": [
+      "Mamoru Miyano",
+      "Asami Imai",
+      "Kana Hanazawa",
+      "Tomokazu Seki"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=uMYhjVwp0Fk"
+  },
+  {
+    "title": "Mob Psycho 100",
+    "titleImage": "https://example.com/logos/mob-psycho-100.png",
+    "image": "https://example.com/images/mob-psycho-100.jpg",
+    "description": "A shy psychic teenager struggles to control his overwhelming powers while living a normal life.",
+    "genre": "Action, Comedy, Supernatural",
+    "language": "Japanese",
+    "rating": 8.7,
+    "year": 2016,
+    "duration": "37 Episodes",
+    "certificate": "TV-14",
+    "director": "Yuzuru Tachikawa",
+    "cast": [
+      "Setsuo Ito",
+      "Takahiro Sakurai",
+      "Akio Otsuka",
+      "Miyu Irino"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=Bw-5Lka7gPE"
+  },
+  {
+    "title": "JoJo's Bizarre Adventure",
+    "titleImage": "https://example.com/logos/jojo.png",
+    "image": "https://example.com/images/jojo.jpg",
+    "description": "The Joestar family's generations battle supernatural enemies using unique powers known as Stands.",
+    "genre": "Action, Adventure, Supernatural",
+    "language": "Japanese",
+    "rating": 8.6,
+    "year": 2012,
+    "duration": "190+ Episodes",
+    "certificate": "TV-MA",
+    "director": "Naokatsu Tsuda",
+    "cast": [
+      "Kazuyuki Okitsu",
+      "Daisuke Ono",
+      "Yuki Ono",
+      "Tomokazu Sugita"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=MEWaEH-7TdI"
+  },
+  {
+    "title": "The Promised Neverland",
+    "titleImage": "https://example.com/logos/promised-neverland.png",
+    "image": "https://example.com/images/promised-neverland.jpg",
+    "description": "Gifted children discover the horrifying truth behind their orphanage and plan an impossible escape.",
+    "genre": "Mystery, Thriller, Fantasy",
+    "language": "Japanese",
+    "rating": 8.5,
+    "year": 2019,
+    "duration": "23 Episodes",
+    "certificate": "TV-14",
+    "director": "Mamoru Kanbe",
+    "cast": [
+      "Sumire Morohoshi",
+      "Maaya Uchida",
+      "Mariya Ise",
+      "Yuko Kaida"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=ApLudqucq-s"
+  },
+  {
+    "title": "Re:Zero − Starting Life in Another World",
+    "titleImage": "https://example.com/logos/rezero.png",
+    "image": "https://example.com/images/rezero.jpg",
+    "description": "Subaru Natsuki is transported to another world where he gains the ability to return from death.",
+    "genre": "Fantasy, Adventure, Drama",
+    "language": "Japanese",
+    "rating": 8.5,
+    "year": 2016,
+    "duration": "66 Episodes",
+    "certificate": "TV-14",
+    "director": "Masaharu Watanabe",
+    "cast": [
+      "Yusuke Kobayashi",
+      "Rie Takahashi",
+      "Inori Minase",
+      "Yumi Uchiyama"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=ETWPtIfesyA"
+  },
+  {
+    "title": "Sword Art Online",
+    "titleImage": "https://example.com/logos/sao.png",
+    "image": "https://example.com/images/sao.jpg",
+    "description": "Players trapped inside a virtual reality MMORPG must clear every level to escape alive.",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "Japanese",
+    "rating": 7.7,
+    "year": 2012,
+    "duration": "96 Episodes",
+    "certificate": "TV-14",
+    "director": "Tomohiko Ito",
+    "cast": [
+      "Yoshitsugu Matsuoka",
+      "Haruka Tomatsu",
+      "Kanae Ito",
+      "Ayana Taketatsu"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=W8GAZRYTmtA"
+  },
+  {
+    "title": "Fairy Tail",
+    "titleImage": "https://example.com/logos/fairy-tail.png",
+    "image": "https://example.com/images/fairy-tail.jpg",
+    "description": "Lucy joins the Fairy Tail guild and embarks on magical adventures alongside Natsu and his friends.",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "Japanese",
+    "rating": 8.0,
+    "year": 2009,
+    "duration": "328 Episodes",
+    "certificate": "TV-14",
+    "director": "Shinji Ishihira",
+    "cast": [
+      "Tetsuya Kakihara",
+      "Aya Hirano",
+      "Rie Kugimiya",
+      "Yuichi Nakamura"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=29jsKEZN1ag"
+  },
+  {
+    "title": "Frieren: Beyond Journey's End",
+    "titleImage": "https://example.com/logos/frieren.png",
+    "image": "https://example.com/images/frieren.jpg",
+    "description": "After defeating the Demon King, the elf mage Frieren begins a heartfelt journey to understand humanity and friendship.",
+    "genre": "Fantasy, Adventure, Drama",
+    "language": "Japanese",
+    "rating": 9.3,
+    "year": 2023,
+    "duration": "28 Episodes",
+    "certificate": "TV-14",
+    "director": "Keiichiro Saito",
+    "cast": [
+      "Atsumi Tanezaki",
+      "Kana Ichinose",
+      "Chiaki Kobayashi",
+      "Nobuhiko Okamoto"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=Iwr1aLEDpe4"
+  }
+]

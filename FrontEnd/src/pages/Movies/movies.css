@@ -1,0 +1,582 @@
+/* ==========================================
+   LANGUAGE FILTER
+========================================== */
+
+.language-filter {
+    width: 100%;
+    padding: 25px 40px 15px;
+    box-sizing: border-box;
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.language-filter h2 {
+    width: 100%;
+
+    margin: 0 0 16px;
+
+    color: #e5e7eb;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   LANGUAGE BUTTONS
+========================================== */
+
+.language-buttons {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    margin: 0 auto;
+}
+
+.language-buttons::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ==========================================
+   LANGUAGE BUTTON
+========================================== */
+
+.language-btn {
+    flex-shrink: 0;
+
+    padding: 9px 20px;
+
+    border: 1px solid #2b344d;
+
+    border-radius: 20px;
+
+    background: #111827;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ==========================================
+   BUTTON HOVER
+========================================== */
+
+.language-btn:hover {
+    color: #ffffff;
+
+    border-color: #7c3aed;
+
+    background: #17132b;
+
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.18);
+}
+
+
+/* ==========================================
+   ACTIVE BUTTON
+========================================== */
+
+.language-btn.active {
+    background: #7c3aed;
+
+    border-color: #7c3aed;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 18px rgba(124, 58, 237, 0.25);
+}
+
+
+/* ==========================================
+   WEB SERIES SECTION
+========================================== */
+
+.stream-library {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 20px 40px 60px;
+
+    box-sizing: border-box;
+
+    background: #080b14;
+}
+
+
+/* ==========================================
+   CARD GRID
+========================================== */
+
+.stream-grid {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.stream-tile {
+    width: 250px;
+
+    background: #151b2f;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #232b3f;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ==========================================
+   CARD HOVER
+========================================== */
+
+.stream-tile:hover {
+    transform: translateY(-6px);
+
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 10px 30px rgba(124, 58, 237, 0.20);
+}
+
+
+/* ==========================================
+   POSTER
+========================================== */
+
+.stream-poster {
+    width: 100%;
+
+    height: 330px;
+
+    overflow: hidden;
+}
+
+
+.stream-poster img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* ==========================================
+   POSTER HOVER
+========================================== */
+
+.stream-tile:hover .stream-poster img {
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   INFORMATION
+========================================== */
+
+.stream-information {
+    padding: 13px;
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.stream-name {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================================
+   DETAILS
+========================================== */
+
+.stream-details {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 8px;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   RATING
+========================================== */
+
+.stream-score {
+    color: #ffd54a;
+
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   RELEASE YEAR
+========================================== */
+
+.stream-release {
+    color: #9ca3af;
+}
+
+
+/* ==========================================
+   GENRE
+========================================== */
+
+.stream-category {
+    display: block;
+
+    color: #8f96a8;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================================
+   SHOW MORE AREA
+========================================== */
+
+.stream-more-area {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 35px;
+}
+
+
+/* ==========================================
+   SHOW MORE BUTTON
+========================================== */
+
+.stream-more-button {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 11px 22px;
+
+    border: 1px solid #7c3aed;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #c084fc;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
+}
+
+
+/* ==========================================
+   SHOW MORE HOVER
+========================================== */
+
+.stream-more-button:hover {
+    background: #7c3aed;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, 0.25);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   SHOW MORE ICON
+========================================== */
+
+.stream-more-icon {
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+
+/* ==========================================
+   NO WEB SERIES
+========================================== */
+
+.no-webseries {
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 50px;
+
+    color: #6b7280;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   RESPONSIVE - 1200px
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .stream-grid {
+        justify-content: center;
+    }
+
+    .language-buttons {
+        justify-content: center;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE - 768px
+========================================== */
+
+@media (max-width: 768px) {
+
+    .language-filter {
+        padding: 20px;
+
+        margin-top: 90px;
+    }
+
+
+    .language-filter h2 {
+        font-size: 20px;
+    }
+
+
+    .language-buttons {
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+    }
+
+
+    .stream-library {
+        padding: 20px;
+    }
+
+
+    .stream-grid {
+        gap: 18px;
+
+        justify-content: center;
+    }
+
+
+    .stream-tile {
+        width: 220px;
+    }
+
+
+    .stream-poster {
+        height: 300px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE - 500px
+========================================== */
+
+@media (max-width: 500px) {
+
+    .language-filter {
+        padding: 18px 15px;
+    }
+
+
+    .language-filter h2 {
+        font-size: 19px;
+    }
+
+
+    .language-buttons {
+        justify-content: flex-start;
+
+        gap: 8px;
+    }
+
+
+    .language-btn {
+        padding: 8px 17px;
+
+        font-size: 12px;
+    }
+
+
+    .stream-library {
+        padding: 15px;
+    }
+
+
+    .stream-grid {
+        gap: 15px;
+
+        justify-content: center;
+    }
+
+
+    .stream-tile {
+        width: 180px;
+    }
+
+
+    .stream-poster {
+        height: 270px;
+    }
+
+
+    .stream-information {
+        padding: 11px;
+    }
+
+
+    .stream-name {
+        font-size: 14px;
+    }
+
+
+    .stream-details {
+        font-size: 11px;
+
+        gap: 8px;
+    }
+
+
+    .stream-category {
+        font-size: 10px;
+    }
+
+}
+
+
+/* ==========================================
+   VERY SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    .language-filter {
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+
+    .language-btn {
+        padding: 8px 15px;
+    }
+
+
+    .stream-tile {
+        width: 160px;
+    }
+
+
+    .stream-poster {
+        height: 240px;
+    }
+
+}

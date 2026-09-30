@@ -1,0 +1,560 @@
+
+/* =========================================
+   LATEST DROP
+========================================= */
+
+.latest-drop {
+    width: 100%;
+    padding: 35px 2.5%;
+    background: var(--background);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.latest-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+.latest-heading span {
+    font-size: 24px;
+}
+
+.latest-heading h2 {
+    margin: 0;
+
+    color: #d8b4fe;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.latest-card {
+    position: relative;
+
+    width: 100%;
+    min-height: 325px;
+
+    display: flex;
+    align-items: stretch;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(168, 85, 247, .7);
+
+    background:
+        linear-gradient(
+            90deg,
+            #111827 0%,
+            #16142c 45%,
+            #15152f 100%
+        );
+
+    box-shadow:
+        0 0 20px rgba(124, 58, 237, .15);
+
+    transition: .35s ease;
+}
+
+.latest-card:hover {
+    border-color: var(--primary-light);
+
+    box-shadow:
+        0 0 30px rgba(124, 58, 237, .28);
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.latest-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 55%;
+    height: 100%;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(76, 29, 149, .18)
+        );
+}
+
+
+/* =========================================
+   POSTER
+========================================= */
+
+.latest-poster {
+    position: relative;
+
+    width: 350px;
+    min-width: 350px;
+
+    height: 380px;
+
+    overflow: hidden;
+}
+
+.latest-poster img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: .5s ease;
+}
+
+.latest-card:hover .latest-poster img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   NEW RELEASE POSTER BADGE
+========================================= */
+
+.new-release-poster {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 7px 12px;
+
+    background: #dc2626;
+
+    color: white;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, .35);
+}
+
+
+/* =========================================
+   MOVIE DETAILS
+========================================= */
+
+.latest-details {
+    position: relative;
+
+    z-index: 2;
+
+    flex: 1;
+
+    padding: 28px 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================================
+   NEW RELEASE BADGE
+========================================= */
+
+.new-release-badge {
+    width: fit-content;
+
+    padding: 7px 14px;
+
+    margin-bottom: 15px;
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #581c87,
+            #7c3aed
+        );
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+    box-shadow:
+        0 5px 18px rgba(124, 58, 237, .25);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.latest-details h1 {
+    margin: 0 0 12px;
+
+    color: white;
+
+    font-size: 42px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   META INFORMATION
+========================================= */
+
+.latest-meta {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 13px;
+
+    color: #d1d5db;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.latest-meta .rating {
+    color: #facc15;
+
+    font-weight: 700;
+}
+
+.latest-meta .rating::first-letter {
+    color: #facc15;
+}
+
+.certificate {
+    padding: 3px 7px;
+
+    border: 1px solid rgba(255, 255, 255, .35);
+
+    border-radius: 4px;
+
+    color: #e5e7eb;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   GENRES
+========================================= */
+
+.latest-genres {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 14px;
+
+    color: #c084fc;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.latest-description {
+    max-width: 650px;
+
+    margin: 0 0 22px;
+
+    color: #d1d5db;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.latest-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* WATCH BUTTON */
+
+.latest-watch-btn {
+    width: 145px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #a855f7
+        );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(124, 58, 237, .35);
+
+    transition: .3s ease;
+}
+
+.latest-watch-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(124, 58, 237, .5);
+}
+
+
+/* INFO BUTTON */
+
+.latest-info-btn {
+    width: 135px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, .03);
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition: .3s ease;
+}
+
+.latest-info-btn:hover {
+    background: rgba(255, 255, 255, .1);
+
+    border-color: rgba(255, 255, 255, .4);
+
+    transform: translateY(-3px);
+}
+
+.info-icon {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .latest-poster {
+        width: 280px;
+        min-width: 280px;
+    }
+
+    .latest-details {
+        padding: 25px;
+    }
+
+    .latest-details h1 {
+        font-size: 34px;
+    }
+
+    .latest-description {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .latest-drop {
+        padding: 25px 15px;
+    }
+
+    .latest-card {
+        flex-direction: column;
+    }
+
+    .latest-poster {
+        width: 100%;
+        min-width: 100%;
+        height: 380px;
+    }
+
+    .latest-details {
+        padding: 25px 20px;
+    }
+
+    .latest-details h1 {
+        font-size: 32px;
+    }
+
+    .latest-description {
+        font-size: 14px;
+    }
+
+    .latest-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .latest-poster {
+        height: 320px;
+    }
+
+    .latest-heading h2 {
+        font-size: 19px;
+    }
+
+    .latest-details h1 {
+        font-size: 28px;
+    }
+
+    .latest-meta {
+        font-size: 13px;
+    }
+
+    .latest-watch-btn,
+    .latest-info-btn {
+        width: 125px;
+    }
+
+}
+
+.latest-drop-list {
+    width: 100%;
+    display: flex;
+    gap: 58px;
+    padding: 20px 5px;
+    overflow-x: auto;
+    scrollbar-width: none;
+     margin-left: 30px;
+     margin-bottom: 100px;
+     margin-top: 50px;
+}
+
+.latest-drop-list::-webkit-scrollbar {
+    display: none;
+}
+
+.latest-drop-item {
+    flex: 0 0 275px;
+    height: 300px;
+    border-radius: 15px;
+   
+    overflow: hidden;
+    cursor: pointer;
+    background: #151922;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.latest-drop-poster {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+.latest-drop-item:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.latest-drop-item:hover .latest-drop-poster {
+    transform: scale(1.05);
+}

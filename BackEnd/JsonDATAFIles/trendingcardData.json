@@ -1,0 +1,134 @@
+[
+  {
+    "title": "Spider-Man: No Way Home",
+    "titleImage": "Spider-Man No Way Home",
+    "image": "https://image.tmdb.org/t/p/original/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    "description": "Spider-Man asks Doctor Strange for help after his identity is revealed, creating a multiverse disaster.",
+    "genre": "Action, Adventure, Fantasy",
+    "language": "English",
+    "rating": 8.2,
+    "year": 2021,
+    "type": "Movie"
+  },
+  {
+    "title": "Demon Slayer",
+    "titleImage": "Demon Slayer",
+    "image": "https://image.tmdb.org/t/p/original/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
+    "description": "Tanjiro becomes a demon slayer to save his sister and defeat powerful demons.",
+    "genre": "Action, Fantasy, Anime",
+    "language": "Japanese",
+    "rating": 8.6,
+    "year": 2019,
+    "type": "Anime"
+  },
+  {
+    "title": "Stranger Things",
+    "titleImage": "Stranger Things",
+    "image": "https://image.tmdb.org/t/p/original/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
+    "description": "A group of friends discover supernatural mysteries in their small town.",
+    "genre": "Sci-Fi, Horror, Drama",
+    "language": "English",
+    "rating": 8.7,
+    "year": 2016,
+    "type": "Web Series"
+  },
+  {
+    "title": "Avengers Endgame",
+    "titleImage": "Avengers Endgame",
+    "image": "https://image.tmdb.org/t/p/original/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    "description": "The Avengers unite to defeat Thanos and restore the universe.",
+    "genre": "Action, Adventure, Sci-Fi",
+    "language": "English",
+    "rating": 8.4,
+    "year": 2019,
+    "type": "Movie"
+  },
+  {
+    "title": "Jujutsu Kaisen",
+    "titleImage": "Jujutsu Kaisen",
+    "image": "https://image.tmdb.org/t/p/original/fHpKWq9ayzSk8nSwqRou4K0l8fY.jpg",
+    "description": "Yuji Itadori joins a group of sorcerers to fight dangerous curses.",
+    "genre": "Action, Supernatural, Anime",
+    "language": "Japanese",
+    "rating": 8.5,
+    "year": 2020,
+    "type": "Anime"
+  },
+  {
+    "title": "Money Heist",
+    "titleImage": "Money Heist",
+    "image": "https://image.tmdb.org/t/p/original/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
+    "description": "A criminal mastermind plans the biggest robbery with his team of thieves.",
+    "genre": "Crime, Thriller, Drama",
+    "language": "Spanish",
+    "rating": 8.2,
+    "year": 2017,
+    "type": "Web Series"
+  },
+  {
+    "title": "Pushpa: The Rule",
+    "titleImage": "Pushpa The Rule",
+    "image": "https://image.tmdb.org/t/p/original/5hNcsnMkwU2LknLoru73c76el3z.jpg",
+    "description": "Pushpa continues his rise while facing powerful enemies in the red sandalwood world.",
+    "genre": "Action, Crime, Drama",
+    "language": "Telugu",
+    "rating": 7.6,
+    "year": 2024,
+    "type": "Movie"
+  },
+  {
+    "title": "One Piece",
+    "titleImage": "One Piece",
+    "image": "https://image.tmdb.org/t/p/original/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg",
+    "description": "Monkey D. Luffy and his pirate crew search for the legendary treasure One Piece.",
+    "genre": "Adventure, Fantasy, Anime",
+    "language": "Japanese",
+    "rating": 8.7,
+    "year": 1999,
+    "type": "Anime"
+  },
+  {
+    "title": "The Batman",
+    "titleImage": "The Batman",
+    "image": "https://image.tmdb.org/t/p/original/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+    "description": "Batman investigates corruption in Gotham City while fighting a mysterious villain.",
+    "genre": "Action, Crime, Mystery",
+    "language": "English",
+    "rating": 7.8,
+    "year": 2022,
+    "type": "Movie"
+  },
+  {
+    "title": "Wednesday",
+    "titleImage": "Wednesday",
+    "image": "https://image.tmdb.org/t/p/original/9PFonBhy4cQy7Jz20NpMygczOkv.jpg",
+    "description": "Wednesday Addams investigates strange mysteries at her new school.",
+    "genre": "Comedy, Mystery, Fantasy",
+    "language": "English",
+    "rating": 8.1,
+    "year": 2022,
+    "type": "Web Series"
+  },
+  {
+    "title": "Kalki 2898 AD",
+    "titleImage": "Kalki 2898 AD",
+    "image": "https://image.tmdb.org/t/p/original/8xMR5w9qhkMzNYgXhYb9x3Q9pKp.jpg",
+    "description": "A futuristic epic story about the arrival of a new hope in a dystopian world.",
+    "genre": "Sci-Fi, Action, Fantasy",
+    "language": "Telugu",
+    "rating": 7.7,
+    "year": 2024,
+    "type": "Movie"
+  },
+  {
+    "title": "The Witcher",
+    "titleImage": "The Witcher",
+    "image": "https://image.tmdb.org/t/p/original/cZ0d3rtvXPVvuiX22sP79K3Hmjz.jpg",
+    "description": "A monster hunter travels through a dangerous world filled with magic and monsters.",
+    "genre": "Fantasy, Action, Adventure",
+    "language": "English",
+    "rating": 8.0,
+    "year": 2019,
+    "type": "Web Series"
+  }
+]
