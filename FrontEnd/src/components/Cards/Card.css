@@ -1,26 +1,25 @@
 /* =====================================================
    TRENDING SECTION
-   ===================================================== */
+===================================================== */
 
 .trending-section {
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 
 /* =====================================================
    TRENDING HEADER
-   ===================================================== */
+===================================================== */
 
 .trending-section .section-header {
     width: 100%;
 
     display: flex !important;
-
     flex-direction: row !important;
-
     align-items: center !important;
-
     justify-content: space-between !important;
 
     flex-wrap: nowrap !important;
@@ -33,15 +32,12 @@
 
 /* =====================================================
    TRENDING TITLE
-   ===================================================== */
+===================================================== */
 
 .trending-section .trending-title {
     display: flex !important;
-
     flex-direction: row !important;
-
     align-items: center !important;
-
     justify-content: flex-start !important;
 
     flex-wrap: nowrap !important;
@@ -49,11 +45,9 @@
     gap: 8px;
 
     margin: 0 !important;
-
     padding: 0 !important;
 
     width: auto !important;
-
     max-width: none !important;
 
     flex: 1 1 auto;
@@ -61,30 +55,29 @@
     color: #ffffff;
 
     font-size: 28px;
-
     font-weight: 700;
 
     line-height: 1 !important;
 
     white-space: nowrap !important;
+
+    min-width: 0;
 }
 
 
 /* =====================================================
    FIRE ICON
-   ===================================================== */
+===================================================== */
 
 .trending-section .trending-icon {
     display: inline-flex;
 
     align-items: center;
-
     justify-content: center;
 
     flex-shrink: 0;
 
     width: auto;
-
     height: auto;
 
     line-height: 1;
@@ -93,7 +86,7 @@
 
 /* =====================================================
    TRENDING TEXT
-   ===================================================== */
+===================================================== */
 
 .trending-section .trending-text {
     display: inline-block;
@@ -101,18 +94,20 @@
     white-space: nowrap;
 
     line-height: 1;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
 /* =====================================================
    SEE ALL
-   ===================================================== */
+===================================================== */
 
 .trending-section .see-all {
     display: inline-flex !important;
 
     align-items: center;
-
     justify-content: center;
 
     flex: 0 0 auto !important;
@@ -121,53 +116,73 @@
 
     margin: 0 !important;
 
+    padding: 8px 12px;
+
     white-space: nowrap !important;
 
     cursor: pointer;
-}
-
-
-/* =====================================================
-   TRENDING CARDS ROW
-   ===================================================== */
-
-.trending-section .series-row {
-    width: 100%;
-
-    display: flex;
-
-    flex-direction: row;
-
-    gap: 20px;
-
-    overflow-x: auto;
-
-    overflow-y: hidden;
-
-    padding: 20px 0;
-
-    scroll-behavior: smooth;
 
     box-sizing: border-box;
 }
 
 
 /* =====================================================
-   HIDE SCROLLBAR
-   ===================================================== */
+   TRENDING CARDS ROW
+===================================================== */
+
+.trending-section .series-row {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 20px 0 15px;
+
+    scroll-behavior: smooth;
+
+    box-sizing: border-box;
+
+    /* Prevent cards from wrapping */
+    flex-wrap: nowrap;
+
+    /* Mobile touch scrolling */
+    -webkit-overflow-scrolling: touch;
+
+    /* Snap cards cleanly */
+    scroll-snap-type: x proximity;
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
 
 .trending-section .series-row::-webkit-scrollbar {
-    height: 6px;
+    height: 5px;
+}
+
+.trending-section .series-row::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 .trending-section .series-row::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
 }
 
 
 /* =====================================================
    SERIES CARD
-   ===================================================== */
+===================================================== */
 
 .trending-section .series-card {
     position: relative;
@@ -175,22 +190,35 @@
     flex: 0 0 250px;
 
     width: 250px;
-
     min-width: 250px;
+    max-width: 250px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
 
     overflow: hidden;
 
     border-radius: 12px;
 
+    background: #080B14;
+
     cursor: pointer;
 
     box-sizing: border-box;
+
+    scroll-snap-align: start;
+
+    /* Important for mobile */
+    isolation: isolate;
 }
 
 
 /* =====================================================
-   POSTER
-   ===================================================== */
+   POSTER CONTAINER EFFECT
+===================================================== */
 
 .trending-section .series-card img {
     display: block;
@@ -199,51 +227,110 @@
 
     height: 350px;
 
+    flex: 0 0 350px;
+
     object-fit: cover;
 
+    object-position: center;
+
     border-radius: 12px;
+
+    box-sizing: border-box;
+
+    background: #151B2F;
 }
 
 
 /* =====================================================
    CARD INFORMATION
-   ===================================================== */
+===================================================== */
 
 .trending-section .series-info {
-    padding: 10px 4px 5px;
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 12px 4px 8px;
 
     color: #ffffff;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
 }
 
 
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
 .trending-section .series-info h3 {
-    margin: 0 0 6px;
+    width: 100%;
+
+    margin: 0 0 7px;
+
+    padding: 0;
 
     font-size: 17px;
 
     font-weight: 600;
+
+    line-height: 1.25;
+
+    color: #ffffff;
 
     white-space: nowrap;
 
     overflow: hidden;
 
     text-overflow: ellipsis;
+
+    box-sizing: border-box;
 }
 
 
+/* =====================================================
+   RATING + YEAR
+===================================================== */
+
 .trending-section .series-info p {
-    margin: 0 0 5px;
+    width: 100%;
+
+    margin: 0 0 6px;
+
+    padding: 0;
 
     font-size: 13px;
 
+    line-height: 1.4;
+
     color: #c7c7c7;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    box-sizing: border-box;
 }
 
+
+/* =====================================================
+   GENRE
+===================================================== */
 
 .trending-section .series-info > span {
     display: block;
 
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
     font-size: 12px;
+
+    line-height: 1.4;
 
     color: #9ca3af;
 
@@ -252,34 +339,39 @@
     overflow: hidden;
 
     text-overflow: ellipsis;
+
+    box-sizing: border-box;
 }
 
 
 /* =====================================================
    CARD SEPARATOR
-   ===================================================== */
+===================================================== */
 
 .trending-section .card-separator {
     margin: 0 6px;
 
-    color: #777;
+    color: #777777;
 }
 
 
 /* =====================================================
    PLAY BUTTON
-   ===================================================== */
+   IMPORTANT:
+   Put it on the poster instead of bottom of the
+   complete card so it never mixes with card text.
+===================================================== */
 
 .trending-section .play-btn {
     position: absolute;
 
+    top: 12px;
     right: 12px;
 
-    bottom: 75px;
-
     width: 42px;
-
     height: 42px;
+
+    padding: 0;
 
     border: none;
 
@@ -290,22 +382,25 @@
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.78);
 
     color: #ffffff;
 
     font-size: 15px;
 
-    z-index: 2;
+    line-height: 1;
+
+    z-index: 5;
+
+    box-sizing: border-box;
 }
 
 
 /* =====================================================
    NO CONTENT
-   ===================================================== */
+===================================================== */
 
 .trending-section .no-series {
     width: 100%;
@@ -319,12 +414,48 @@
 
 
 /* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .trending-section .series-row {
+        gap: 18px;
+    }
+
+    .trending-section .series-card {
+        flex: 0 0 230px;
+
+        width: 230px;
+        min-width: 230px;
+        max-width: 230px;
+    }
+
+    .trending-section .series-card img {
+        height: 325px;
+
+        flex-basis: 325px;
+    }
+}
+
+
+/* =====================================================
    MOBILE
-   ===================================================== */
+===================================================== */
 
 @media (max-width: 700px) {
 
+    .trending-section {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* HEADER */
+
     .trending-section .section-header {
+        width: 100%;
+
         display: flex !important;
 
         flex-direction: row !important;
@@ -336,10 +467,18 @@
         flex-wrap: nowrap !important;
 
         gap: 10px;
+
+        box-sizing: border-box;
     }
 
 
+    /* TITLE */
+
     .trending-section .trending-title {
+        flex: 1 1 auto;
+
+        min-width: 0;
+
         font-size: 23px;
 
         gap: 6px;
@@ -348,17 +487,48 @@
     }
 
 
+    .trending-section .trending-text {
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    /* SEE ALL */
+
     .trending-section .see-all {
-        flex-shrink: 0 !important;
+        flex: 0 0 auto !important;
 
         white-space: nowrap !important;
+
+        padding: 7px 10px;
+
+        font-size: 12px;
     }
 
+
+    /* CARD ROW */
 
     .trending-section .series-row {
+        width: 100%;
+
+        max-width: 100%;
+
         gap: 15px;
+
+        padding: 18px 0 12px;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        flex-wrap: nowrap;
+
+        scroll-snap-type: x mandatory;
     }
 
+
+    /* CARD */
 
     .trending-section .series-card {
         flex: 0 0 210px;
@@ -366,19 +536,85 @@
         width: 210px;
 
         min-width: 210px;
+
+        max-width: 210px;
+
+        border-radius: 12px;
+
+        scroll-snap-align: start;
     }
 
+
+    /* POSTER */
 
     .trending-section .series-card img {
+        width: 210px;
+
         height: 295px;
+
+        flex: 0 0 295px;
+
+        border-radius: 12px;
+
+        object-fit: cover;
     }
 
+
+    /* CARD INFO */
+
+    .trending-section .series-info {
+        width: 210px;
+
+        padding: 10px 4px 7px;
+    }
+
+
+    /* TITLE */
+
+    .trending-section .series-info h3 {
+        font-size: 16px;
+
+        line-height: 1.25;
+
+        margin-bottom: 6px;
+    }
+
+
+    /* RATING */
+
+    .trending-section .series-info p {
+        font-size: 13px;
+
+        margin-bottom: 5px;
+    }
+
+
+    /* GENRE */
+
+    .trending-section .series-info > span {
+        font-size: 12px;
+    }
+
+
+    /* PLAY */
+
+    .trending-section .play-btn {
+        top: 10px;
+
+        right: 10px;
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 13px;
+    }
 }
 
 
 /* =====================================================
    SMALL MOBILE
-   ===================================================== */
+===================================================== */
 
 @media (max-width: 500px) {
 
@@ -387,6 +623,8 @@
     }
 
 
+    /* TITLE */
+
     .trending-section .trending-title {
         font-size: 21px;
 
@@ -394,12 +632,27 @@
     }
 
 
-    .trending-section .see-all {
-        padding: 7px 10px;
+    /* SEE ALL */
 
-        font-size: 12px;
+    .trending-section .see-all {
+        padding: 7px 9px;
+
+        font-size: 11px;
     }
 
+
+    /* ROW */
+
+    .trending-section .series-row {
+        gap: 14px;
+
+        padding-top: 16px;
+
+        padding-bottom: 12px;
+    }
+
+
+    /* CARD */
 
     .trending-section .series-card {
         flex: 0 0 180px;
@@ -407,32 +660,80 @@
         width: 180px;
 
         min-width: 180px;
+
+        max-width: 180px;
     }
 
+
+    /* POSTER */
 
     .trending-section .series-card img {
+        width: 180px;
+
         height: 255px;
+
+        flex: 0 0 255px;
+
+        border-radius: 11px;
     }
 
 
-    .trending-section .play-btn {
-        width: 36px;
+    /* INFORMATION */
 
-        height: 36px;
+    .trending-section .series-info {
+        width: 180px;
+
+        padding: 10px 4px 7px;
+    }
+
+
+    .trending-section .series-info h3 {
+        font-size: 15px;
+
+        margin-bottom: 6px;
+    }
+
+
+    .trending-section .series-info p {
+        font-size: 12px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .trending-section .series-info > span {
+        font-size: 11px;
+    }
+
+
+    /* PLAY */
+
+    .trending-section .play-btn {
+        top: 9px;
 
         right: 9px;
 
-        bottom: 65px;
-    }
+        width: 35px;
 
+        height: 35px;
+
+        font-size: 12px;
+    }
 }
 
 
 /* =====================================================
    VERY SMALL MOBILE
-   ===================================================== */
+===================================================== */
 
 @media (max-width: 380px) {
+
+    .trending-section .section-header {
+        gap: 6px;
+    }
+
+
+    /* TITLE */
 
     .trending-section .trending-title {
         font-size: 19px;
@@ -441,32 +742,95 @@
     }
 
 
+    /* SEE ALL */
+
     .trending-section .see-all {
         padding: 6px 8px;
 
-        font-size: 11px;
+        font-size: 10px;
     }
 
+
+    /* ROW */
+
+    .trending-section .series-row {
+        gap: 12px;
+
+        padding-top: 15px;
+    }
+
+
+    /* CARD */
 
     .trending-section .series-card {
-        flex: 0 0 160px;
+        flex: 0 0 165px;
 
-        width: 160px;
+        width: 165px;
 
-        min-width: 160px;
+        min-width: 165px;
+
+        max-width: 165px;
     }
 
+
+    /* POSTER */
 
     .trending-section .series-card img {
-        height: 230px;
+        width: 165px;
+
+        height: 235px;
+
+        flex: 0 0 235px;
     }
 
+
+    /* INFO */
+
+    .trending-section .series-info {
+        width: 165px;
+
+        padding: 9px 3px 6px;
+    }
+
+
+    .trending-section .series-info h3 {
+        font-size: 14px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .trending-section .series-info p {
+        font-size: 11px;
+
+        margin-bottom: 4px;
+    }
+
+
+    .trending-section .series-info > span {
+        font-size: 10px;
+    }
+
+
+    /* PLAY */
+
+    .trending-section .play-btn {
+        top: 8px;
+
+        right: 8px;
+
+        width: 32px;
+
+        height: 32px;
+
+        font-size: 11px;
+    }
 }
 
 
 /* =====================================================
-   EXTRA SMALL
-   ===================================================== */
+   EXTRA SMALL MOBILE
+===================================================== */
 
 @media (max-width: 320px) {
 
@@ -475,29 +839,88 @@
     }
 
 
+    /* TITLE */
+
     .trending-section .trending-title {
         font-size: 17px;
     }
 
 
+    /* SEE ALL */
+
     .trending-section .see-all {
         padding: 5px 7px;
 
+        font-size: 9px;
+    }
+
+
+    /* ROW */
+
+    .trending-section .series-row {
+        gap: 10px;
+    }
+
+
+    /* CARD */
+
+    .trending-section .series-card {
+        flex: 0 0 150px;
+
+        width: 150px;
+
+        min-width: 150px;
+
+        max-width: 150px;
+    }
+
+
+    /* POSTER */
+
+    .trending-section .series-card img {
+        width: 150px;
+
+        height: 215px;
+
+        flex: 0 0 215px;
+    }
+
+
+    /* INFO */
+
+    .trending-section .series-info {
+        width: 150px;
+
+        padding: 8px 3px 6px;
+    }
+
+
+    .trending-section .series-info h3 {
+        font-size: 13px;
+    }
+
+
+    .trending-section .series-info p {
         font-size: 10px;
     }
 
 
-    .trending-section .series-card {
-        flex: 0 0 145px;
-
-        width: 145px;
-
-        min-width: 145px;
+    .trending-section .series-info > span {
+        font-size: 9px;
     }
 
 
-    .trending-section .series-card img {
-        height: 205px;
-    }
+    /* PLAY */
 
+    .trending-section .play-btn {
+        top: 7px;
+
+        right: 7px;
+
+        width: 30px;
+
+        height: 30px;
+
+        font-size: 10px;
+    }
 }

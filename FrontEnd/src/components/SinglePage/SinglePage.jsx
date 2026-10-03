@@ -194,45 +194,62 @@ function SinglePage() {
             );
 
 
-            let url = "";
-
-
             // =================================================
-            // NORMAL MOVIE
+            // NORMAL HOMEPAGE MOVIE
             // =================================================
 
             if (type === "movie") {
 
-                url =
+                const url =
                     `${API_URL}/api/MainMovieCard/${id}`;
 
-            }
+                console.log(
+                    "HOMEPAGE MOVIE URL:",
+                    url
+                );
 
 
-            // =================================================
-            // WEB SERIES
-            // =================================================
-
-            else if (
-                type === "webseries" ||
-                type === "web-series"
-            ) {
-
-                url =
-                    `${API_URL}/api/HomeWebSeriesCard/${id}`;
-
-            }
+                const response =
+                    await axios.get(url);
 
 
-            // =================================================
-            // ANIME
-            // =================================================
+                console.log(
+                    "HOMEPAGE MOVIE RESPONSE:",
+                    response.data
+                );
 
-            else if (type === "anime") {
 
-                url =
-                    `${API_URL}/api/HomePageAnime/${id}`;
+                const content =
+                    response.data?.data ||
+                    response.data?.movie ||
+                    response.data?.content ||
+                    response.data;
 
+
+                if (
+                    content &&
+                    typeof content === "object" &&
+                    !Array.isArray(content)
+                ) {
+
+                    console.log(
+                        "HOMEPAGE MOVIE FOUND:",
+                        content
+                    );
+
+                    setMovie(content);
+
+                } else {
+
+                    console.log(
+                        "HOMEPAGE MOVIE NOT FOUND"
+                    );
+
+                    setMovie(null);
+
+                }
+
+                return;
             }
 
 
@@ -240,11 +257,367 @@ function SinglePage() {
             // ADMIN POSTED MOVIE
             // =================================================
 
-            else if (type === "newmovie") {
+            if (type === "newmovie") {
 
-                url =
+                const url =
                     `${API_URL}/api/newMoviePostData/movie/${id}`;
 
+                console.log(
+                    "ADMIN MOVIE URL:",
+                    url
+                );
+
+
+                const response =
+                    await axios.get(url);
+
+
+                console.log(
+                    "ADMIN MOVIE RESPONSE:",
+                    response.data
+                );
+
+
+                const content =
+                    response.data?.data ||
+                    response.data?.movie ||
+                    response.data?.content ||
+                    response.data;
+
+
+                if (
+                    content &&
+                    typeof content === "object" &&
+                    !Array.isArray(content)
+                ) {
+
+                    console.log(
+                        "ADMIN MOVIE FOUND:",
+                        content
+                    );
+
+                    setMovie(content);
+
+                } else {
+
+                    console.log(
+                        "ADMIN MOVIE NOT FOUND"
+                    );
+
+                    setMovie(null);
+
+                }
+
+                return;
+            }
+
+
+            // =================================================
+            // WEB SERIES
+            // =================================================
+
+            if (
+                type === "webseries" ||
+                type === "web-series"
+            ) {
+
+
+                // =================================================
+                // STEP 1
+                // CHECK ADMIN WEB SERIES
+                // =================================================
+
+                const adminUrl =
+                    `${API_URL}/api/newMoviePostData/webseries/${id}`;
+
+                console.log(
+                    "CHECKING ADMIN WEB SERIES:"
+                );
+
+                console.log(
+                    adminUrl
+                );
+
+
+                try {
+
+                    const adminResponse =
+                        await axios.get(adminUrl);
+
+
+                    console.log(
+                        "ADMIN WEB SERIES RESPONSE:",
+                        adminResponse.data
+                    );
+
+
+                    const adminContent =
+                        adminResponse.data?.data ||
+                        adminResponse.data?.movie ||
+                        adminResponse.data?.content ||
+                        adminResponse.data;
+
+
+                    if (
+                        adminContent &&
+                        typeof adminContent === "object" &&
+                        !Array.isArray(adminContent)
+                    ) {
+
+                        console.log(
+                            "ADMIN WEB SERIES FOUND:",
+                            adminContent
+                        );
+
+                        setMovie(adminContent);
+
+                        return;
+
+                    }
+
+                } catch (adminError) {
+
+                    console.log(
+                        "ADMIN WEB SERIES NOT FOUND"
+                    );
+
+                    console.log(
+                        "ADMIN WEB SERIES STATUS:",
+                        adminError.response?.status
+                    );
+
+                    console.log(
+                        "CHECKING HOMEPAGE WEB SERIES..."
+                    );
+
+                }
+
+
+                // =================================================
+                // STEP 2
+                // CHECK HOMEPAGE WEB SERIES
+                // =================================================
+
+                const homeUrl =
+                    `${API_URL}/api/HomeWebSeriesCard/${id}`;
+
+                console.log(
+                    "HOMEPAGE WEB SERIES URL:",
+                    homeUrl
+                );
+
+
+                try {
+
+                    const homeResponse =
+                        await axios.get(homeUrl);
+
+
+                    console.log(
+                        "HOMEPAGE WEB SERIES RESPONSE:",
+                        homeResponse.data
+                    );
+
+
+                    const homeContent =
+                        homeResponse.data?.data ||
+                        homeResponse.data?.movie ||
+                        homeResponse.data?.content ||
+                        homeResponse.data;
+
+
+                    if (
+                        homeContent &&
+                        typeof homeContent === "object" &&
+                        !Array.isArray(homeContent)
+                    ) {
+
+                        console.log(
+                            "HOMEPAGE WEB SERIES FOUND:",
+                            homeContent
+                        );
+
+                        setMovie(homeContent);
+
+                        return;
+
+                    }
+
+                } catch (homeError) {
+
+                    console.log(
+                        "HOMEPAGE WEB SERIES NOT FOUND"
+                    );
+
+                    console.log(
+                        "HOMEPAGE WEB SERIES STATUS:",
+                        homeError.response?.status
+                    );
+
+                    console.log(
+                        "HOMEPAGE WEB SERIES RESPONSE:",
+                        homeError.response?.data
+                    );
+
+                }
+
+
+                setMovie(null);
+
+                return;
+            }
+
+
+            // =================================================
+            // ANIME
+            // =================================================
+
+            if (type === "anime") {
+
+
+                // =================================================
+                // STEP 1
+                // CHECK ADMIN ANIME
+                // =================================================
+
+                const adminUrl =
+                    `${API_URL}/api/newMoviePostData/anime/${id}`;
+
+                console.log(
+                    "CHECKING ADMIN ANIME:"
+                );
+
+                console.log(
+                    adminUrl
+                );
+
+
+                try {
+
+                    const adminResponse =
+                        await axios.get(adminUrl);
+
+
+                    console.log(
+                        "ADMIN ANIME RESPONSE:",
+                        adminResponse.data
+                    );
+
+
+                    const adminContent =
+                        adminResponse.data?.data ||
+                        adminResponse.data?.movie ||
+                        adminResponse.data?.content ||
+                        adminResponse.data;
+
+
+                    if (
+                        adminContent &&
+                        typeof adminContent === "object" &&
+                        !Array.isArray(adminContent)
+                    ) {
+
+                        console.log(
+                            "ADMIN ANIME FOUND:",
+                            adminContent
+                        );
+
+                        setMovie(adminContent);
+
+                        return;
+
+                    }
+
+                } catch (adminError) {
+
+                    console.log(
+                        "ADMIN ANIME NOT FOUND"
+                    );
+
+                    console.log(
+                        "ADMIN ANIME STATUS:",
+                        adminError.response?.status
+                    );
+
+                    console.log(
+                        "CHECKING HOMEPAGE ANIME..."
+                    );
+
+                }
+
+
+                // =================================================
+                // STEP 2
+                // CHECK HOMEPAGE ANIME
+                // =================================================
+
+                const homeUrl =
+                    `${API_URL}/api/HomePageAnime/${id}`;
+
+                console.log(
+                    "HOMEPAGE ANIME URL:",
+                    homeUrl
+                );
+
+
+                try {
+
+                    const homeResponse =
+                        await axios.get(homeUrl);
+
+
+                    console.log(
+                        "HOMEPAGE ANIME RESPONSE:",
+                        homeResponse.data
+                    );
+
+
+                    const homeContent =
+                        homeResponse.data?.data ||
+                        homeResponse.data?.movie ||
+                        homeResponse.data?.content ||
+                        homeResponse.data;
+
+
+                    if (
+                        homeContent &&
+                        typeof homeContent === "object" &&
+                        !Array.isArray(homeContent)
+                    ) {
+
+                        console.log(
+                            "HOMEPAGE ANIME FOUND:",
+                            homeContent
+                        );
+
+                        setMovie(homeContent);
+
+                        return;
+
+                    }
+
+                } catch (homeError) {
+
+                    console.log(
+                        "HOMEPAGE ANIME NOT FOUND"
+                    );
+
+                    console.log(
+                        "HOMEPAGE ANIME STATUS:",
+                        homeError.response?.status
+                    );
+
+                    console.log(
+                        "HOMEPAGE ANIME RESPONSE:",
+                        homeError.response?.data
+                    );
+
+                }
+
+
+                setMovie(null);
+
+                return;
             }
 
 
@@ -252,85 +625,13 @@ function SinglePage() {
             // INVALID TYPE
             // =================================================
 
-            else {
-
-                console.log(
-                    "INVALID CONTENT TYPE:",
-                    type
-                );
-
-                setMovie(null);
-
-                return;
-
-            }
-
-
-            // =================================================
-            // REQUEST URL
-            // =================================================
-
             console.log(
-                "REQUEST URL:",
-                url
+                "INVALID CONTENT TYPE:",
+                type
             );
 
+            setMovie(null);
 
-            // =================================================
-            // API REQUEST
-            // =================================================
-
-            const response =
-                await axios.get(url);
-
-
-            // =================================================
-            // RESPONSE
-            // =================================================
-
-            console.log(
-                "SINGLE PAGE RESPONSE:",
-                response.data
-            );
-
-
-            // =================================================
-            // GET CONTENT DATA
-            // =================================================
-
-            const content =
-                response.data?.data ||
-                response.data?.movie ||
-                response.data?.content ||
-                response.data;
-
-
-            // =================================================
-            // CHECK CONTENT
-            // =================================================
-
-            if (
-                content &&
-                typeof content === "object" &&
-                !Array.isArray(content)
-            ) {
-
-                console.log(
-                    "CONTENT FOUND:",
-                    content
-                );
-
-                setMovie(content);
-
-            } else {
-
-                console.log(
-                    "CONTENT NOT FOUND"
-                );
-
-                setMovie(null);
-
-            }
 
         } catch (error) {
 

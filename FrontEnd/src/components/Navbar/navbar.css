@@ -21,7 +21,6 @@
 
     --border: #232B3F;
     --border-light: #313B54;
-
     --icon: #D1D5DB;
 
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, .25);
@@ -79,21 +78,14 @@ body {
 
     padding: 0 35px;
 
-    /*
-        IMPORTANT
-        Sticky navbar
-    */
-    position:fixed;
+    /* FIXED ON ALL SCREENS */
+    position: fixed;
     top: 0;
+    left: 0;
 
-    /*
-        MAIN Z-INDEX
-    */
+    /* IMPORTANT */
     z-index: 1000;
 
-    /*
-        Smooth glass effect
-    */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
@@ -111,10 +103,6 @@ body {
 
 .logo {
     position: relative;
-
-    /*
-        Above navbar background
-    */
     z-index: 1001;
 }
 
@@ -124,13 +112,9 @@ body {
 
 .logo h2 {
     color: var(--text);
-
     font-size: 34px;
-
     font-weight: 700;
-
     letter-spacing: 1px;
-
     white-space: nowrap;
 }
 
@@ -145,15 +129,11 @@ body {
 
 .nav-links {
     display: flex;
-
     align-items: center;
-
     list-style: none;
-
     gap: 14px;
 
     position: relative;
-
     z-index: 1001;
 }
 
@@ -163,9 +143,7 @@ body {
 
 .nav-links a {
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     gap: 8px;
@@ -173,19 +151,16 @@ body {
     text-decoration: none;
 
     color: var(--text-secondary);
-
     background: var(--card);
 
     padding: 11px 20px;
 
     border: 1px solid transparent;
-
     border-radius: 30px;
 
     transition: var(--transition);
 
     font-size: 15px;
-
     font-weight: 500;
 
     white-space: nowrap;
@@ -193,7 +168,6 @@ body {
 
 .nav-links a:hover {
     background: var(--hover);
-
     color: var(--text);
 
     border-color: var(--border-light);
@@ -220,13 +194,11 @@ body {
 
 .nav-right {
     display: flex;
-
     align-items: center;
 
     gap: 14px;
 
     position: relative;
-
     z-index: 1001;
 }
 
@@ -240,17 +212,13 @@ body {
     height: 45px;
 
     border: 1px solid var(--border);
-
     border-radius: 50%;
 
     background: var(--card);
-
     color: var(--text);
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     cursor: pointer;
@@ -317,15 +285,12 @@ body {
     height: 44px;
 
     border: 1px solid var(--border);
-
     border-radius: 12px;
 
     background: var(--card);
-
     color: var(--text);
 
     align-items: center;
-
     justify-content: center;
 
     cursor: pointer;
@@ -336,9 +301,7 @@ body {
 
     position: relative;
 
-    /*
-        Hamburger is above navbar content
-    */
+    /* ABOVE NAVBAR */
     z-index: 1002;
 }
 
@@ -387,9 +350,7 @@ body {
         opacity .3s ease,
         visibility .3s ease;
 
-    /*
-        ABOVE NAVBAR
-    */
+    /* ABOVE NAVBAR */
     z-index: 1100;
 }
 
@@ -410,11 +371,9 @@ body {
     position: fixed;
 
     top: 0;
-
     right: 0;
 
     width: 320px;
-
     max-width: 85vw;
 
     height: 100vh;
@@ -437,9 +396,7 @@ body {
         transform .35s
         cubic-bezier(.4, 0, .2, 1);
 
-    /*
-        ABOVE OVERLAY
-    */
+    /* ABOVE OVERLAY */
     z-index: 1200;
 
     display: flex;
@@ -448,9 +405,6 @@ body {
 
     overflow-y: auto;
 
-    /*
-        Prevent outside stacking problems
-    */
     isolation: isolate;
 }
 
@@ -469,7 +423,6 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 
     padding: 0 22px;
@@ -482,9 +435,6 @@ body {
 
     top: 0;
 
-    /*
-        Above menu content
-    */
     z-index: 1201;
 }
 
@@ -507,7 +457,6 @@ body {
 
 .mobile-close-btn {
     width: 42px;
-
     height: 42px;
 
     border: 1px solid var(--border);
@@ -521,7 +470,6 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     cursor: pointer;
@@ -532,9 +480,6 @@ body {
 
     position: relative;
 
-    /*
-        Above everything inside menu
-    */
     z-index: 1210;
 }
 
@@ -709,7 +654,6 @@ body {
 
     .nav-links a {
         padding: 10px 14px;
-
         font-size: 14px;
     }
 
@@ -719,7 +663,6 @@ body {
 
     .login-btn {
         padding: 10px 17px;
-
         font-size: 14px;
     }
 }
@@ -732,41 +675,52 @@ body {
 @media (max-width: 850px) {
 
     .navbar {
+
         height: 68px;
 
         padding: 0 18px;
 
-        position: sticky;
+        /*
+         IMPORTANT:
+         MOBILE NAVBAR IS FIXED
+        */
+        position: fixed;
 
         top: 0;
+        left: 0;
 
         /*
-            Keep navbar above page content
+         IMPORTANT:
+         NAVBAR ABOVE PAGE CONTENT
         */
         z-index: 1000;
+
+        width: 100%;
     }
 
-    /*
-        Hide desktop navigation
-    */
+
+    /* HIDE DESKTOP NAVIGATION */
 
     .nav-links {
         display: none;
     }
 
+
+    /* HIDE RIGHT SIDE */
+
     .nav-right {
         display: none;
     }
 
-    /*
-        Show hamburger
-    */
+
+    /* SHOW HAMBURGER */
 
     .hamburger-btn {
         display: flex;
 
         z-index: 1002;
     }
+
 
     .logo h2 {
         font-size: 27px;
@@ -781,9 +735,20 @@ body {
 @media (max-width: 600px) {
 
     .navbar {
+
         height: 65px;
 
         padding: 0 15px;
+
+        /*
+         KEEP FIXED
+        */
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        z-index: 1000;
     }
 
     .logo h2 {
@@ -793,19 +758,24 @@ body {
     }
 
     .hamburger-btn {
-        width: 42px;
 
+        width: 42px;
         height: 42px;
 
         border-radius: 11px;
 
         font-size: 19px;
+
+        z-index: 1002;
     }
 
     .mobile-menu {
+
         width: 300px;
 
         max-width: 88vw;
+
+        z-index: 1200;
     }
 }
 
@@ -817,9 +787,20 @@ body {
 @media (max-width: 400px) {
 
     .navbar {
+
         height: 62px;
 
         padding: 0 12px;
+
+        /*
+         KEEP FIXED
+        */
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        z-index: 1000;
     }
 
     .logo h2 {
@@ -827,20 +808,26 @@ body {
     }
 
     .hamburger-btn {
-        width: 40px;
 
+        width: 40px;
         height: 40px;
 
         font-size: 18px;
+
+        z-index: 1002;
     }
 
     .mobile-menu {
+
         width: 285px;
 
         max-width: 90vw;
+
+        z-index: 1200;
     }
 
     .mobile-menu-header {
+
         min-height: 80px;
 
         padding: 0 18px;
@@ -868,18 +855,31 @@ body {
 
 @media (max-width: 320px) {
 
+    .navbar {
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        z-index: 1000;
+    }
+
     .logo h2 {
         font-size: 19px;
     }
 
     .hamburger-btn {
-        width: 38px;
 
+        width: 38px;
         height: 38px;
     }
 
     .mobile-menu {
+
         max-width: 92vw;
+
+        z-index: 1200;
     }
 }
 
@@ -895,6 +895,7 @@ body {
     .mobile-overlay,
     .hamburger-btn,
     .mobile-nav-links a {
+
         transition: none !important;
     }
 }

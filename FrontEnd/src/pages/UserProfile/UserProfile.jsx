@@ -11,6 +11,7 @@ import {
     FaCog,
     FaSignOutAlt,
     FaEdit,
+    FaHome,
     FaShieldAlt
 } from "react-icons/fa";
 
@@ -185,7 +186,8 @@ function UserProfile() {
                         className="profile-menu-item"
                     >
 
-                        <FaHeart />
+                        {/* <FaHeart /> */}
+                        <FaHome />
 
                         <span>
                             Home
@@ -194,15 +196,6 @@ function UserProfile() {
                     </Link>
 
 
-                    <button className="profile-menu-item">
-
-                        <FaHeart />
-
-                        <span>
-                            My List
-                        </span>
-
-                    </button>
 
 
                     <button className="profile-menu-item">
